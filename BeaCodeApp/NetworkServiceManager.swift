@@ -6,4 +6,4 @@
 //  Copyright © 2016 Peter Augustín. All rights reserved.
 //
 
-import Foundation
+//ALAMOFIRE
