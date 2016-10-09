@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B4476C81DAAADC700A27F4C /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476C71DAAADC700A27F4C /* CoreLocationManager.swift */; };
+		2B4476CB1DAAAE0100A27F4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4476CA1DAAAE0100A27F4C /* CoreLocation.framework */; };
+		2B4476CD1DAAAE0600A27F4C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4476CC1DAAAE0600A27F4C /* CoreBluetooth.framework */; };
+		2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476E01DAAB88900A27F4C /* NetworkServiceManager.swift */; };
+		2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476E21DAAB89300A27F4C /* NetworkService.swift */; };
+		2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476E51DAAB8F800A27F4C /* NetworkConfig.swift */; };
 		2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABBEB91DA2BD470074842A /* AppDelegate.swift */; };
-		2BABBEBC1DA2BD470074842A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABBEBB1DA2BD470074842A /* ViewController.swift */; };
+		2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABBEBB1DA2BD470074842A /* InitialViewController.swift */; };
 		2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEBD1DA2BD470074842A /* Main.storyboard */; };
-		2BABBEC11DA2BD470074842A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEC01DA2BD470074842A /* Assets.xcassets */; };
 		2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEC21DA2BD470074842A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B4476C71DAAADC700A27F4C /* CoreLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationManager.swift; sourceTree = "<group>"; };
+		2B4476CA1DAAAE0100A27F4C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2B4476CC1DAAAE0600A27F4C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		2B4476E01DAAB88900A27F4C /* NetworkServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceManager.swift; sourceTree = "<group>"; };
+		2B4476E21DAAB89300A27F4C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2B4476E51DAAB8F800A27F4C /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		2BABBEB61DA2BD470074842A /* BeaCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BABBEB91DA2BD470074842A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BABBEBB1DA2BD470074842A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BABBEBB1DA2BD470074842A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2BABBEBE1DA2BD470074842A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2BABBEC01DA2BD470074842A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BABBEC31DA2BD470074842A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BABBEC51DA2BD470074842A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -29,17 +39,219 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4476CD1DAAAE0600A27F4C /* CoreBluetooth.framework in Frameworks */,
+				2B4476CB1DAAAE0100A27F4C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B4476BF1DAAAD8F00A27F4C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476C21DAAAD9C00A27F4C /* Common */,
+				2B4476C11DAAAD9700A27F4C /* Feature */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		2B4476C01DAAAD9300A27F4C /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476C41DAAADA500A27F4C /* Common */,
+				2B4476C31DAAADA100A27F4C /* Feature */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		2B4476C11DAAAD9700A27F4C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476DB1DAAB24F00A27F4C /* Events */,
+				2B4476DA1DAAB24800A27F4C /* Login */,
+				2B4476D51DAAB12300A27F4C /* Initialiaze */,
+				2B4476D11DAAB0E000A27F4C /* UI */,
+			);
+			name = Feature;
+			sourceTree = "<group>";
+		};
+		2B4476C21DAAAD9C00A27F4C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476E41DAAB8EB00A27F4C /* Configuration */,
+				2BABBEB91DA2BD470074842A /* AppDelegate.swift */,
+				2B4476C61DAAADBA00A27F4C /* Managers */,
+				2B4476C51DAAADAF00A27F4C /* Services */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		2B4476C31DAAADA100A27F4C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Feature;
+			sourceTree = "<group>";
+		};
+		2B4476C41DAAADA500A27F4C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		2B4476C51DAAADAF00A27F4C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476E21DAAB89300A27F4C /* NetworkService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		2B4476C61DAAADBA00A27F4C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476DF1DAAB87500A27F4C /* NetworkManager */,
+				2B4476CE1DAAAE9B00A27F4C /* CLLManager */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		2B4476C91DAAAE0100A27F4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476CC1DAAAE0600A27F4C /* CoreBluetooth.framework */,
+				2B4476CA1DAAAE0100A27F4C /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B4476CE1DAAAE9B00A27F4C /* CLLManager */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476C71DAAADC700A27F4C /* CoreLocationManager.swift */,
+			);
+			name = CLLManager;
+			sourceTree = "<group>";
+		};
+		2B4476D11DAAB0E000A27F4C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476DE1DAAB83B00A27F4C /* CollectionViewCells */,
+				2B4476DD1DAAB83400A27F4C /* TableViewCells */,
+				2B4476D31DAAB0F300A27F4C /* Splash */,
+				2B4476D21DAAB0E700A27F4C /* Storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		2B4476D21DAAB0E700A27F4C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2BABBEBD1DA2BD470074842A /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		2B4476D31DAAB0F300A27F4C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				2BABBEC21DA2BD470074842A /* LaunchScreen.storyboard */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		2B4476D51DAAB12300A27F4C /* Initialiaze */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476D91DAAB13700A27F4C /* Resource */,
+				2B4476D81DAAB13300A27F4C /* View */,
+				2B4476D71DAAB12E00A27F4C /* Presentation */,
+				2B4476D61DAAB12A00A27F4C /* Controller */,
+			);
+			name = Initialiaze;
+			sourceTree = "<group>";
+		};
+		2B4476D61DAAB12A00A27F4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2B4476D71DAAB12E00A27F4C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		2B4476D81DAAB13300A27F4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BABBEBB1DA2BD470074842A /* InitialViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2B4476D91DAAB13700A27F4C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		2B4476DA1DAAB24800A27F4C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		2B4476DB1DAAB24F00A27F4C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		2B4476DD1DAAB83400A27F4C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		2B4476DE1DAAB83B00A27F4C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		2B4476DF1DAAB87500A27F4C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476E01DAAB88900A27F4C /* NetworkServiceManager.swift */,
+			);
+			name = NetworkManager;
+			sourceTree = "<group>";
+		};
+		2B4476E41DAAB8EB00A27F4C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2B4476E51DAAB8F800A27F4C /* NetworkConfig.swift */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		2BABBEAD1DA2BD470074842A = {
 			isa = PBXGroup;
 			children = (
 				2BABBEB81DA2BD470074842A /* BeaCodeApp */,
 				2BABBEB71DA2BD470074842A /* Products */,
+				2B4476C91DAAAE0100A27F4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +266,8 @@
 		2BABBEB81DA2BD470074842A /* BeaCodeApp */ = {
 			isa = PBXGroup;
 			children = (
-				2BABBEB91DA2BD470074842A /* AppDelegate.swift */,
-				2BABBEBB1DA2BD470074842A /* ViewController.swift */,
-				2BABBEBD1DA2BD470074842A /* Main.storyboard */,
-				2BABBEC01DA2BD470074842A /* Assets.xcassets */,
-				2BABBEC21DA2BD470074842A /* LaunchScreen.storyboard */,
+				2B4476C01DAAAD9300A27F4C /* Generic */,
+				2B4476BF1DAAAD8F00A27F4C /* Core */,
 				2BABBEC51DA2BD470074842A /* Info.plist */,
 			);
 			path = BeaCodeApp;
@@ -96,6 +305,7 @@
 				TargetAttributes = {
 					2BABBEB51DA2BD470074842A = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 844FD2PFN8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */,
-				2BABBEC11DA2BD470074842A /* Assets.xcassets in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BABBEBC1DA2BD470074842A /* ViewController.swift in Sources */,
+				2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */,
+				2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */,
+				2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */,
 				2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */,
+				2B4476C81DAAADC700A27F4C /* CoreLocationManager.swift in Sources */,
+				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +471,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 844FD2PFN8;
 				INFOPLIST_FILE = BeaCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beaCode.BeaCodeApp;
@@ -270,6 +485,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 844FD2PFN8;
 				INFOPLIST_FILE = BeaCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beaCode.BeaCodeApp;
@@ -297,6 +514,7 @@
 				2BABBECA1DA2BD470074842A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
