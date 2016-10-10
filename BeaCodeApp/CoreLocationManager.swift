@@ -28,7 +28,6 @@ public class CoreLocationManager: NSObject, CLLocationManagerDelegate, CoreLocat
     
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-
     }
 
     func startMonitoring() {
