@@ -27,10 +27,14 @@ extension EventDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 300
+        switch indexPath.section {
+        case 0:
+            return 360
+        case 1:
+            return 120
+        default:
+            return 60
         }
-        return 125
     }
 }
 
@@ -44,16 +48,25 @@ extension EventDetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell_ID", for: indexPath)
-            
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventPhotoSliderTableViewCell_ID", for: indexPath)
-            
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)
-            
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "ABOUT"
+        case 1:
+            return "PHOTOS"
+        default:
+            return String()
+        }
+    }
+    
 }

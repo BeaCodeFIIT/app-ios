@@ -15,6 +15,7 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.eventDetailTable.tableFooterView = UIView() //delete empty cells
     }
 
     override func didReceiveMemoryWarning() {

@@ -28,6 +28,10 @@
 		EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE1C1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift */; };
 		EA5EEE211DC9126D00C30D69 /* EventDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */; };
 		EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE221DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift */; };
+		EA5EEE261DC937E400C30D69 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE251DC937E400C30D69 /* Event.swift */; };
+		EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE271DC9381800C30D69 /* Exhibit.swift */; };
+		EA5EEE2A1DC93E6C00C30D69 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5EEE291DC93E6C00C30D69 /* Media.xcassets */; };
+		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		EA5EEE1C1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPhotoSliderTableViewCell.swift; sourceTree = "<group>"; };
 		EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventDetailViewController+TableView.swift"; sourceTree = "<group>"; };
 		EA5EEE221DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNavigationStarterTableViewCell.swift; sourceTree = "<group>"; };
+		EA5EEE251DC937E400C30D69 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		EA5EEE271DC9381800C30D69 /* Exhibit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exhibit.swift; sourceTree = "<group>"; };
+		EA5EEE291DC93E6C00C30D69 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +247,8 @@
 		2B4476DB1DAAB24F00A27F4C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				EA5EEE2B1DC93EF100C30D69 /* MockService */,
+				EA5EEE241DC937D100C30D69 /* Model */,
 				EA5EEE1E1DC911E900C30D69 /* View */,
 			);
 			name = Events;
@@ -300,6 +310,7 @@
 		2BABBEB81DA2BD470074842A /* BeaCodeApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA5EEE291DC93E6C00C30D69 /* Media.xcassets */,
 				2B4476C01DAAAD9300A27F4C /* Generic */,
 				2B4476BF1DAAAD8F00A27F4C /* Core */,
 				2BABBEC51DA2BD470074842A /* Info.plist */,
@@ -333,6 +344,23 @@
 				EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		EA5EEE241DC937D100C30D69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA5EEE251DC937E400C30D69 /* Event.swift */,
+				EA5EEE271DC9381800C30D69 /* Exhibit.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EA5EEE2B1DC93EF100C30D69 /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */,
+			);
+			name = MockService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */,
+				EA5EEE2A1DC93E6C00C30D69 /* Media.xcassets in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +495,8 @@
 				EA5EEE1B1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift in Sources */,
 				EA1C22AF1DC8E9B3005481AB /* MyEventsViewController.swift in Sources */,
 				2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */,
+				EA5EEE261DC937E400C30D69 /* Event.swift in Sources */,
+				EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */,
 				EA1C22B31DC8EABF005481AB /* MyEventTableViewCell.swift in Sources */,
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
@@ -474,6 +505,7 @@
 				EA1C22B71DC8EC12005481AB /* EventDetailViewController.swift in Sources */,
 				EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */,
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
+				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,9 +11,11 @@ import UIKit
 
 class MyEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var eventsTable: UITableView!
+    var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        events = mockEvents()
     }
     
     override func didReceiveMemoryWarning() {
@@ -21,12 +23,34 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.eventsTable.dequeueReusableCell(withIdentifier: "MyEventTableViewCell_ID", for: indexPath) as! MyEventTableViewCell
+        var cell = self.eventsTable.dequeueReusableCell(withIdentifier: "MyEventTableViewCell_ID", for: indexPath) as! MyEventTableViewCell
+        cell = fillCell(cell: cell, event: events[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "TODAY"
+    }
+    
+    func fillCell(cell: MyEventTableViewCell, event: Event) -> MyEventTableViewCell {
+        cell.eventImage.image = event.thumbnail
+        cell.eventTitle.text = event.title
+        cell.eventSubtitle.text = event.description
+        return cell
+    }
+    
+    func mockEvents() -> [Event] {
+        let eventFactory = EventFactory()
+        var events = [Event]()
+        events.append(eventFactory.getEvent(set: mockSet.ces))
+        events.append(eventFactory.getEvent(set: mockSet.flora))
+        events.append(eventFactory.getEvent(set: mockSet.geneva))
+        events.append(eventFactory.getEvent(set: mockSet.tutan))
+        return events
     }
     
 }
