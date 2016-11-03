@@ -57,7 +57,7 @@ class EventFactory {
     
     func loadImages(prefix: String, count: Int) -> [UIImage] {
         var images = [UIImage]()
-        for index in 0...5 {
+        for index in 0...count {
             images.append(UIImage(named: "\(prefix)\(index)")!)
         }
         return images

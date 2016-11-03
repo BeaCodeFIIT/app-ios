@@ -22,3 +22,18 @@ class EventPhotoSliderTableViewCell: UITableViewCell {
     }
 
 }
+
+extension EventPhotoSliderTableViewCell : UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("\n\n\n \(SharingManager.sharedInstance.selectedEvent.photos.count) \n\n\n")
+        return SharingManager.sharedInstance.selectedEvent.photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photo_cell", for: indexPath) as! PhotoCell
+        cell.photo.image = SharingManager.sharedInstance.selectedEvent.photos[indexPath.row]
+        return cell
+    }
+    
+}

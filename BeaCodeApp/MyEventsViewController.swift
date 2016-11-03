@@ -17,6 +17,7 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         events = mockEvents()
+        setTitle(titleText: "MY EVENTS")
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +40,7 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
+        print("\n\n\nevent -> \(SharingManager.sharedInstance.selectedEvent.photos.count) \n\n\n")
     }
     
     func fillCell(cell: MyEventTableViewCell, event: Event) -> MyEventTableViewCell {
@@ -56,6 +58,26 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         events.append(eventFactory.getEvent(set: mockSet.geneva))
         events.append(eventFactory.getEvent(set: mockSet.tutan))
         return events
+    }
+    
+    func setTitle(titleText: String) {
+        let navBar = self.navigationController!.navigationBar
+        navBar.barTintColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1)
+        navBar.tintColor = UIColor.white
+        navBar.isTranslucent = false
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        if let navButtons = self.navigationController?.navigationBar.items {
+            if navButtons.count > 0 {
+                navButtons[0].title = ""
+            }
+        }
+        
+        let titleLable = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+        navigationItem.titleView = titleLable
+        titleLable.text = titleText
+        titleLable.textColor = UIColor.white
+        titleLable.font = titleLable.font.withSize(CGFloat(24))
     }
     
 }

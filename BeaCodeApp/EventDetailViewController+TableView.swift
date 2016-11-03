@@ -15,6 +15,14 @@ extension EventDetailViewController: UITableViewDelegate {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 1 {
+            return 115
+        } else {
+            return UITableViewAutomaticDimension
+        }
+    }
+    
 }
 
 extension EventDetailViewController: UITableViewDataSource {

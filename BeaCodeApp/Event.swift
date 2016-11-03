@@ -37,5 +37,6 @@ class Event {
         self.date = date
         self.organizer = organizer
         self.location = location
+        self.photos = photos
     }
 }
