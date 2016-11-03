@@ -24,6 +24,7 @@
 		EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B41DC8EADE005481AB /* SearchItemTableViewCell.swift */; };
 		EA1C22B71DC8EC12005481AB /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B61DC8EC12005481AB /* EventDetailViewController.swift */; };
 		EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */; };
+		EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA274A351DCAA46100C005D9 /* SharingManager.swift */; };
 		EA5EEE1B1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE1A1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift */; };
 		EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE1C1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift */; };
 		EA5EEE211DC9126D00C30D69 /* EventDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */; };
@@ -56,6 +57,7 @@
 		EA1C22B41DC8EADE005481AB /* SearchItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemTableViewCell.swift; sourceTree = "<group>"; };
 		EA1C22B61DC8EC12005481AB /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		EA274A351DCAA46100C005D9 /* SharingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
 		EA5EEE1A1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		EA5EEE1C1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPhotoSliderTableViewCell.swift; sourceTree = "<group>"; };
 		EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventDetailViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		2B4476DB1DAAB24F00A27F4C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				EA274A341DCAA44700C005D9 /* Manager */,
 				EA5EEE2B1DC93EF100C30D69 /* MockService */,
 				EA5EEE241DC937D100C30D69 /* Model */,
 				EA5EEE1E1DC911E900C30D69 /* View */,
@@ -325,6 +328,14 @@
 				22FCC914006020FCE9F45BC0 /* Pods-BeaCodeApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA274A341DCAA44700C005D9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EA274A351DCAA46100C005D9 /* SharingManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		EA5EEE1E1DC911E900C30D69 /* View */ = {
@@ -505,6 +516,7 @@
 				EA1C22B71DC8EC12005481AB /* EventDetailViewController.swift in Sources */,
 				EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */,
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
+				EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */,
 				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

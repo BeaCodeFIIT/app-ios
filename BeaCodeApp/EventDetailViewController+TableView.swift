@@ -12,30 +12,9 @@ import UIKit
 extension EventDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        default:
-            return 1
-        }
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 360
-        case 1:
-            return 120
-        default:
-            return 60
-        }
-    }
 }
 
 extension EventDetailViewController: UITableViewDataSource {
@@ -47,7 +26,10 @@ extension EventDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell_ID", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell_ID", for: indexPath) as! EventDetailInfoTableViewCell
+            let event = SharingManager.sharedInstance.selectedEvent
+            cell.eventDescription.text = event.description
+            cell.eventImage.image = event.thumbnail
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventPhotoSliderTableViewCell_ID", for: indexPath)

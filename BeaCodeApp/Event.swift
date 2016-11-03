@@ -20,6 +20,7 @@ class Event {
     var photos = [UIImage]()
     var exhibits = [Exhibit]()
     
+    
     init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String) {
         self.title = title
         self.description = description

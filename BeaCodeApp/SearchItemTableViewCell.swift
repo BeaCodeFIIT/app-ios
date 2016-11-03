@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchItemTableViewCell: UITableViewCell {
+    @IBOutlet weak var searchItemLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

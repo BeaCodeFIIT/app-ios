@@ -14,7 +14,7 @@ class EventDetailInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        initDefaults()
+//        initDefaults()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

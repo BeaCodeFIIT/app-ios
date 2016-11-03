@@ -15,7 +15,13 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.eventDetailTable.tableFooterView = UIView() //delete empty cells
+        
+        //delete empty cells
+        self.eventDetailTable.tableFooterView = UIView()
+        
+        //resize cells based on content
+        self.eventDetailTable.estimatedRowHeight = 100
+        self.eventDetailTable.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {

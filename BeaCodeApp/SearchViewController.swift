@@ -13,9 +13,22 @@ import UIKit
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var searchTable: UITableView!
     
+    var events = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //hide keyboard on tap
         self.hideKeyboardWhenTappedAround()
+        
+        //delete empty cells
+        self.searchTable.tableFooterView = UIView()
+        
+        //resize cells based on content
+        self.searchTable.estimatedRowHeight = 100
+        self.searchTable.rowHeight = UITableViewAutomaticDimension
+        
+        events = mockEvents()
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,12 +36,23 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.searchTable.dequeueReusableCell(withIdentifier: "SearchItemTableViewCell_ID", for: indexPath) as! SearchItemTableViewCell
+        cell.searchItemLabel.text = events[indexPath.row].title
         return cell
+    }
+    
+    func mockEvents() -> [Event] {
+        let eventFactory = EventFactory()
+        var events = [Event]()
+        events.append(eventFactory.getEvent(set: mockSet.ces))
+        events.append(eventFactory.getEvent(set: mockSet.flora))
+        events.append(eventFactory.getEvent(set: mockSet.geneva))
+        events.append(eventFactory.getEvent(set: mockSet.tutan))
+        return events
     }
 }
 

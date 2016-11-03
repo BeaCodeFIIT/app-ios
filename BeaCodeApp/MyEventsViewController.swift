@@ -11,6 +11,7 @@ import UIKit
 
 class MyEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var eventsTable: UITableView!
+    
     var events = [Event]()
     
     override func viewDidLoad() {
@@ -34,6 +35,10 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "TODAY"
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
     }
     
     func fillCell(cell: MyEventTableViewCell, event: Event) -> MyEventTableViewCell {
