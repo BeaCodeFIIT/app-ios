@@ -350,6 +350,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="searchItemLabel" destination="5fg-52-5k8" id="toY-le-vAn"/>
+                                            <segue destination="C7V-S3-onu" kind="show" id="5jq-iU-3AB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -454,4 +455,7 @@
             <point key="canvasLocation" x="3054" y="56"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5jq-iU-3AB"/>
+    </inferredMetricsTieBreakers>
 </document>

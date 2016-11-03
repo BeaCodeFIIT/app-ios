@@ -29,10 +29,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.searchTable.rowHeight = UITableViewAutomaticDimension
         
         events = mockEvents()
+        
+        setTitle(titleText: "SEARCH")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
+        print(SharingManager.sharedInstance.selectedEvent.title)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +61,22 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         events.append(eventFactory.getEvent(set: mockSet.tutan))
         return events
     }
+    
+    func setTitle(titleText: String) {
+        let navBar = self.navigationController!.navigationBar
+        navBar.barTintColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1)
+        navBar.tintColor = UIColor.white
+        navBar.isTranslucent = false
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        
+        let titleLable = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+        navigationItem.titleView = titleLable
+        titleLable.text = titleText
+        titleLable.textColor = UIColor.white
+        titleLable.font = titleLable.font.withSize(CGFloat(24))
+    }
+
 }
 
 extension UIViewController {

@@ -40,7 +40,6 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
-        print("\n\n\nevent -> \(SharingManager.sharedInstance.selectedEvent.photos.count) \n\n\n")
     }
     
     func fillCell(cell: MyEventTableViewCell, event: Event) -> MyEventTableViewCell {
