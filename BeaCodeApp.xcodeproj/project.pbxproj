@@ -26,6 +26,7 @@
 		EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */; };
 		EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA274A351DCAA46100C005D9 /* SharingManager.swift */; };
 		EA274A381DCAC9D600C005D9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA274A371DCAC9D600C005D9 /* PhotoCell.swift */; };
+		EA274A3C1DCB676800C005D9 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */; };
 		EA5EEE1B1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE1A1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift */; };
 		EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE1C1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift */; };
 		EA5EEE211DC9126D00C30D69 /* EventDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */; };
@@ -60,6 +61,7 @@
 		EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		EA274A351DCAA46100C005D9 /* SharingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
 		EA274A371DCAC9D600C005D9 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		EA5EEE1A1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		EA5EEE1C1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPhotoSliderTableViewCell.swift; sourceTree = "<group>"; };
 		EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventDetailViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		2B4476C11DAAAD9700A27F4C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA274A391DCB674000C005D9 /* Navigation */,
 				2B4476DB1DAAB24F00A27F4C /* Events */,
 				2B4476DA1DAAB24800A27F4C /* Login */,
 				2B4476D51DAAB12300A27F4C /* Initialiaze */,
@@ -341,6 +344,22 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
+		EA274A391DCB674000C005D9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EA274A3A1DCB674A00C005D9 /* View */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		EA274A3A1DCB674A00C005D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		EA5EEE1E1DC911E900C30D69 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +532,7 @@
 				EA5EEE261DC937E400C30D69 /* Event.swift in Sources */,
 				EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */,
 				EA1C22B31DC8EABF005481AB /* MyEventTableViewCell.swift in Sources */,
+				EA274A3C1DCB676800C005D9 /* NavigationViewController.swift in Sources */,
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
 				2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */,

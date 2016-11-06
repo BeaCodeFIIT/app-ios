@@ -69,6 +69,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         navBar.isTranslucent = false
         navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
+        if let navButtons = self.navigationController?.navigationBar.items {
+            if navButtons.count > 0 {
+                navButtons[0].title = ""
+            }
+        }
         
         let titleLable = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
         navigationItem.titleView = titleLable

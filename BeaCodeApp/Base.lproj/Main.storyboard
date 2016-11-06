@@ -47,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aV0-44-BI4" id="hxT-0w-3GS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QmD-GE-EIG">
@@ -126,7 +126,7 @@
         <!--Event Detail View Controller-->
         <scene sceneID="tPz-CR-eC9">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="C7V-S3-onu" customClass="EventDetailViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="C7V-S3-onu" customClass="EventDetailViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kCD-S1-44x"/>
                         <viewControllerLayoutGuide type="bottom" id="2J9-aK-VFi"/>
@@ -336,7 +336,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZR4-JF-eYq" id="nQ9-W4-JVb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-52-5k8">
@@ -436,10 +436,10 @@
             </objects>
             <point key="canvasLocation" x="-242" y="751"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="24t-zW-88h">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="sZ1-Zn-h2V" sceneMemberID="viewController">
+                <viewController id="sZ1-Zn-h2V" customClass="NavigationViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zcO-fZ-ygf"/>
                         <viewControllerLayoutGuide type="bottom" id="U58-5I-C5S"/>
