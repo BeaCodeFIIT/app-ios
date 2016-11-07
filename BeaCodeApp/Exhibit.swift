@@ -11,12 +11,12 @@ import UIKit
 
 class Exhibit {
     var title: String
-    var thumbnail: UIImage
+    var photo: UIImage
     var descrition: String
 
     init(title: String, description: String, thumbnail: UIImage) {
         self.title = title
         self.descrition = description
-        self.thumbnail = thumbnail
+        self.photo = thumbnail
     }
 }

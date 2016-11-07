@@ -12,7 +12,12 @@ import UIKit
 extension EventDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section {
+        case 2:
+            return SharingManager.sharedInstance.selectedEvent.exhibits.count
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -28,7 +33,7 @@ extension EventDetailViewController: UITableViewDelegate {
 extension EventDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,6 +47,14 @@ extension EventDetailViewController: UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventPhotoSliderTableViewCell_ID", for: indexPath)
             return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
+            if SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty {return cell}
+            let exhibit = SharingManager.sharedInstance.selectedEvent.exhibits[indexPath.row]
+            cell.exhibitTitle.text = exhibit.title
+            cell.exhibitDescription.text = exhibit.descrition
+            cell.exhibitPhoto.image = exhibit.photo
+            return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)
             return cell
@@ -53,7 +66,11 @@ extension EventDetailViewController: UITableViewDataSource {
         case 0:
             return "ABOUT"
         case 1:
+            if SharingManager.sharedInstance.selectedEvent.photos.isEmpty {return String()}
             return "PHOTOS"
+        case 2:
+            if SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty {return String()}
+            return "EXHIBITS"
         default:
             return String()
         }

@@ -235,8 +235,60 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExhibitCell_ID" rowHeight="100" id="z4j-gA-gkL" customClass="ExhibitTableViewCell" customModule="BeaCodeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="406" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z4j-gA-gkL" id="v37-6O-fYq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZH-Kj-5ZS">
+                                                    <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="84" id="9NJ-3V-26j"/>
+                                                        <constraint firstAttribute="height" constant="84" id="pi8-0p-YfM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us7-vG-B6d">
+                                                    <rect key="frame" x="100" y="8" width="267" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="EsZ-R3-h8L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-jm-OeS">
+                                                    <rect key="frame" x="100" y="37" width="267" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="SHd-xC-Niu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fZH-Kj-5ZS" firstAttribute="bottom" secondItem="v37-6O-fYq" secondAttribute="bottomMargin" id="Eq1-Hr-wqd"/>
+                                                <constraint firstItem="fZH-Kj-5ZS" firstAttribute="top" secondItem="v37-6O-fYq" secondAttribute="topMargin" id="RfX-Q3-LLh"/>
+                                                <constraint firstItem="Us7-vG-B6d" firstAttribute="leading" secondItem="fZH-Kj-5ZS" secondAttribute="trailing" constant="8" id="Rk0-je-xWO"/>
+                                                <constraint firstItem="HHk-jm-OeS" firstAttribute="top" secondItem="Us7-vG-B6d" secondAttribute="bottom" constant="7" id="TVp-iZ-1ya"/>
+                                                <constraint firstItem="fZH-Kj-5ZS" firstAttribute="leading" secondItem="v37-6O-fYq" secondAttribute="leadingMargin" id="ZS7-Fs-ZXn"/>
+                                                <constraint firstItem="HHk-jm-OeS" firstAttribute="trailing" secondItem="v37-6O-fYq" secondAttribute="trailingMargin" id="d19-br-8Ql"/>
+                                                <constraint firstItem="HHk-jm-OeS" firstAttribute="bottom" secondItem="v37-6O-fYq" secondAttribute="bottomMargin" id="hRG-5P-V1Y"/>
+                                                <constraint firstItem="HHk-jm-OeS" firstAttribute="leading" secondItem="fZH-Kj-5ZS" secondAttribute="trailing" constant="8" id="htv-hZ-V60"/>
+                                                <constraint firstItem="Us7-vG-B6d" firstAttribute="top" secondItem="v37-6O-fYq" secondAttribute="topMargin" id="j6g-al-kKN"/>
+                                                <constraint firstItem="Us7-vG-B6d" firstAttribute="trailing" secondItem="v37-6O-fYq" secondAttribute="trailingMargin" id="lvy-Yz-22Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exhibitDescription" destination="HHk-jm-OeS" id="fNX-o8-PLw"/>
+                                            <outlet property="exhibitPhoto" destination="fZH-Kj-5ZS" id="JbX-hv-r8L"/>
+                                            <outlet property="exhibitTitle" destination="Us7-vG-B6d" id="hNe-j2-jus"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventNavigationStarterTableViewCell_ID" rowHeight="60" id="nN8-of-rop" customClass="EventNavigationStarterTableViewCell" customModule="BeaCodeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="408" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="508" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nN8-of-rop" id="qDV-mX-hKS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
