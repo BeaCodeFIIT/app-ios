@@ -13,6 +13,7 @@ class ExhibitTableViewCell: UITableViewCell {
     @IBOutlet weak var exhibitPhoto: UIImageView!
     @IBOutlet weak var exhibitTitle: UILabel!
     @IBOutlet weak var exhibitDescription: UILabel!
+    @IBOutlet weak var checkbox: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +25,14 @@ class ExhibitTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func checkboxTapped(_ sender: Any) {
+        if checkbox.titleLabel?.text == "☑" {
+            checkbox.setTitle("☐", for: .normal)
+        } else {
+            self.checkbox.setTitle("☑", for: .normal)
+        }
+    }
+    
 
 }
