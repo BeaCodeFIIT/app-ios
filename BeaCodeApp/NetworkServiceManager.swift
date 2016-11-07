@@ -9,24 +9,18 @@
 //ALAMOFIRE
 import Alamofire
 
-public class NetworkServiceManager {
+protocol NetworkServiceManagerProtocol {
+    func makeRequest(method: HTTPMethod, url: String, parameteres: Any?)
+}
+
+public class NetworkServiceManager: NetworkServiceManagerProtocol {
     
     static let sharedInstance = NetworkServiceManager()
-    typealias JSONStandard = [String: AnyObject]
+    var header = ["Content-type": "application/json"]
     
-    func request(url: String) {
-        Alamofire.request(url).responseJSON(completionHandler: {
-        response in
-            self.parseData(JSONData: response.data!)
-        })
-    }
-    
-    func parseData(JSONData: Data) {
-        do {
-            let JSONDataReadable = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as? JSONStandard
-            print(JSONDataReadable)
-        } catch {
-            print(error)
+    func makeRequest(method: HTTPMethod, url: String, parameteres: Any?) {
+        Alamofire.request(url, method: method, parameters: parameteres, encoding: .JSON, headers: header).responseJSON { result in
+            
         }
     }
 

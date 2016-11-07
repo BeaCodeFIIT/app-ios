@@ -10,5 +10,6 @@ target 'BeaCodeApp' do
   pod 'Alamofire', '~> 4.0'
   pod 'DLRadioButton', '~> 1.4'
   pod 'TagListView', '~> 1.0'
+  pod 'ObjectMapper', '~> 2.2'
 
 end

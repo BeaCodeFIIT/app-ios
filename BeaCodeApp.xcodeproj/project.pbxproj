@@ -37,6 +37,9 @@
 		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
 		EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */; };
 		EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */; };
+		EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AC1DD0AA8E0049D28B /* EventDto.swift */; };
+		EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AE1DD0AC790049D28B /* EventConverter.swift */; };
+		EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019B01DD0B0570049D28B /* GetEventResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFactory.swift; sourceTree = "<group>"; };
 		EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitTableViewCell.swift; sourceTree = "<group>"; };
 		EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDetailViewController.swift; sourceTree = "<group>"; };
+		EAE019AC1DD0AA8E0049D28B /* EventDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDto.swift; sourceTree = "<group>"; };
+		EAE019AE1DD0AC790049D28B /* EventConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConverter.swift; sourceTree = "<group>"; };
+		EAE019B01DD0B0570049D28B /* GetEventResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetEventResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,10 +264,10 @@
 		2B4476DB1DAAB24F00A27F4C /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				EA274A341DCAA44700C005D9 /* Manager */,
+				EAE019A41DD0A7E00049D28B /* Event Dashboard */,
+				EAE019A31DD0A7D80049D28B /* Event Detail */,
 				EA5EEE2B1DC93EF100C30D69 /* MockService */,
 				EA5EEE241DC937D100C30D69 /* Model */,
-				EA5EEE1E1DC911E900C30D69 /* View */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -341,14 +347,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		EA274A341DCAA44700C005D9 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				EA274A351DCAA46100C005D9 /* SharingManager.swift */,
-			);
-			name = Manager;
-			sourceTree = "<group>";
-		};
 		EA274A391DCB674000C005D9 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,7 +386,6 @@
 		EA5EEE241DC937D100C30D69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA5EEE251DC937E400C30D69 /* Event.swift */,
 				EA5EEE271DC9381800C30D69 /* Exhibit.swift */,
 			);
 			name = Model;
@@ -400,6 +397,66 @@
 				EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */,
 			);
 			name = MockService;
+			sourceTree = "<group>";
+		};
+		EAE019A21DD0A74E0049D28B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA274A351DCAA46100C005D9 /* SharingManager.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAE019A31DD0A7D80049D28B /* Event Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Event Detail";
+			sourceTree = "<group>";
+		};
+		EAE019A41DD0A7E00049D28B /* Event Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EAE019A61DD0A9F20049D28B /* Resource */,
+				EA5EEE1E1DC911E900C30D69 /* View */,
+				EAE019A21DD0A74E0049D28B /* Controller */,
+			);
+			name = "Event Dashboard";
+			sourceTree = "<group>";
+		};
+		EAE019A61DD0A9F20049D28B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EAE019A91DD0AA020049D28B /* Converter */,
+				EAE019A81DD0A9FE0049D28B /* Dto */,
+				EAE019A71DD0A9F70049D28B /* Domain */,
+				EAE019B01DD0B0570049D28B /* GetEventResource.swift */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		EAE019A71DD0A9F70049D28B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA5EEE251DC937E400C30D69 /* Event.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		EAE019A81DD0A9FE0049D28B /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				EAE019AC1DD0AA8E0049D28B /* EventDto.swift */,
+			);
+			name = Dto;
+			sourceTree = "<group>";
+		};
+		EAE019A91DD0AA020049D28B /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				EAE019AE1DD0AC790049D28B /* EventConverter.swift */,
+			);
+			name = Converter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */,
+				EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */,
 				EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */,
 				2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */,
 				2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */,
@@ -541,6 +599,7 @@
 				EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */,
 				EA1C22B31DC8EABF005481AB /* MyEventTableViewCell.swift in Sources */,
 				EA274A3C1DCB676800C005D9 /* NavigationViewController.swift in Sources */,
+				EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */,
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
 				2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */,
@@ -550,6 +609,7 @@
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
 				EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */,
 				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,
+				EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

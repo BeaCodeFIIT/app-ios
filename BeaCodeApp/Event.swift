@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Event {
+struct Event {
     var title: String
     var description: String
     var thumbnail: UIImage
@@ -38,5 +38,9 @@ class Event {
         self.organizer = organizer
         self.location = location
         self.photos = photos
+    }
+    
+    func downloadImage(imageUrl: String) -> UIImage {
+        return UIImage()
     }
 }
