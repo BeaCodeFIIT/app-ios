@@ -1,37 +1,32 @@
 //
-//  EventDetailViewController.swift
+//  ExhibitDetailViewController.swift
 //  BeaCodeApp
 //
-//  Created by Marek Bruchatý on 01/11/2016.
+//  Created by Marek Bruchatý on 07/11/2016.
 //  Copyright © 2016 Peter Augustín. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class EventDetailViewController: UIViewController {
-    
-    @IBOutlet weak var eventDetailTable: UITableView!
+class ExhibitDetailViewController: UIViewController {
+    @IBOutlet weak var exhibitPhoto: UIImageView!
+    @IBOutlet weak var exhibitDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        exhibitPhoto.image = SharingManager.sharedInstance.selectedExhibit.photo
+        exhibitDescription.text = SharingManager.sharedInstance.selectedExhibit.descrition
+        setTitle(titleText: SharingManager.sharedInstance.selectedExhibit.title)
         
-        //delete empty cells
-        self.eventDetailTable.tableFooterView = UIView()
-        
-        //resize cells based on content
-        self.eventDetailTable.estimatedRowHeight = 100
-        self.eventDetailTable.rowHeight = UITableViewAutomaticDimension
-        
-        setTitle(titleText: SharingManager.sharedInstance.selectedEvent.title)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent.exhibits[indexPath.row]
+    override func viewDidLayoutSubviews() {
+        exhibitDescription.sizeToFit()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     func setTitle(titleText: String) {
@@ -53,6 +48,5 @@ class EventDetailViewController: UIViewController {
         titleLable.textColor = UIColor.white
         titleLable.font = titleLable.font.withSize(CGFloat(24))
     }
-
     
 }

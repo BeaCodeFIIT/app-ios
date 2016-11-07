@@ -17,5 +17,9 @@ class SharingManager {
                                      organizer: "",
                                      location: "")
     
+    var selectedExhibit: Exhibit = Exhibit(title: "",
+                                           description: "",
+                                           thumbnail: UIImage())
+    
     static let sharedInstance = SharingManager()
 }

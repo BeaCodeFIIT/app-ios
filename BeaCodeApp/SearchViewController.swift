@@ -12,9 +12,20 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var searchTable: UITableView!
+    @IBOutlet weak var searchBar: UITextField!
     
     var events = [Event]()
+    var allEvents = [Event]()
     
+    @IBAction func searchChange(_ sender: Any) {
+        events = [Event]()
+        for event in allEvents {
+            if event.title.lowercased().hasPrefix(searchBar.text!.lowercased()) {
+                events.append(event)
+            }
+        }
+        searchTable.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +39,22 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.searchTable.estimatedRowHeight = 100
         self.searchTable.rowHeight = UITableViewAutomaticDimension
         
-        events = mockEvents()
+        allEvents = mockEvents()
+        events.append(contentsOf: allEvents)
         
         setTitle(titleText: "SEARCH")
+        addSearchIcon(searchBar: searchBar)
+    }
+    
+    func addSearchIcon(searchBar: UITextField) {
+        let imageView = UIImageView();
+        let image = UIImage(named: "ic_search_36pt")
+        imageView.image = image;
+        imageView.frame = CGRect(x: 10, y: 5, width: 20, height: 20)
+        searchBar.addSubview(imageView)
+        let leftView = UIView.init(frame: CGRect(x: 10, y: 0, width: 30, height: 30))
+        searchBar.leftView = leftView;
+        searchBar.leftViewMode = UITextFieldViewMode.always
     }
     
     override func didReceiveMemoryWarning() {
