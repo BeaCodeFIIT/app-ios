@@ -27,10 +27,12 @@ class ExhibitTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkboxTapped(_ sender: Any) {
-        if checkbox.titleLabel?.text == "☑" {
+        if checkbox.titleLabel?.text == "☑\u{0000FE0E}" {
             checkbox.setTitle("☐", for: .normal)
+            checkbox.titleLabel?.font = UIFont(name: self.exhibitTitle.font.fontName, size: 24.0)
         } else {
-            self.checkbox.setTitle("☑", for: .normal)
+            self.checkbox.setTitle("☑\u{0000FE0E}", for: .normal)
+            checkbox.titleLabel?.font = UIFont(name: self.exhibitTitle.font.fontName, size: 32.0)
         }
     }
     
