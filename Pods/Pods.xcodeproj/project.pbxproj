@@ -7,100 +7,123 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08087EFF0F1EB3DF657F4469181DECCC /* Pods-BeaCodeApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BBBAE87354D462D47B3DED4123279F0 /* Pods-BeaCodeApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DDFD4F612C8817690249B8A77E935D /* Notifications.swift */; };
-		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA956AA27E521F9B1366D1715332E5 /* Request.swift */; };
-		1FA6F55238D2BC35915AECD626884F1D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A57210D2CFC64715E3F2F4398F1E15BF /* DLRadioButton.m */; };
-		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D5BFF5296D355664BEB8904E579821 /* Timeline.swift */; };
-		5F5B910D306CC0849640D0372E2ADB43 /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC6762DEA242496815329694EB9ABF6 /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708CE070041E1BF3D78E86B54F82843 /* AFError.swift */; };
-		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B996922F1F938479D1BB9C21CD117A76 /* Alamofire.swift */; };
-		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF09FABCF4EA83B03784E61AC431D /* Response.swift */; };
-		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C183CB3BCC679A714E4EB503E8F795 /* Alamofire-dummy.m */; };
-		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AAA0F6E63DC0E18C8DF6DDF2AD43A /* SessionDelegate.swift */; };
+		0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4AE13D545B5667E7A54E46D16EC608 /* Notifications.swift */; };
+		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF881FD776DD17D2FF7D6B3AC51D41AD /* Request.swift */; };
+		1FA6F55238D2BC35915AECD626884F1D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE27A5B962418DD43385977B4F12503 /* DLRadioButton.m */; };
+		2F44FDDAF954382F8EC54852A724463A /* TagListView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACCF3F27CF227718B7178F28B2E2E6 /* TagListView-dummy.m */; };
+		2F6572D90A4371A1AE8FE4D8A734489A /* TagListView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D59164C99F79359659252CC1E0FFE8 /* TagListView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5880F22C0E0C251CF8BF71DF4A6573 /* Timeline.swift */; };
+		5F5B910D306CC0849640D0372E2ADB43 /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 729A177FC39B2C090732773798BA4A69 /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60A2892EDF645588916E9BEB3FAABAB8 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DD2907DC0DC8E0CB38E7700503427C /* TagView.swift */; };
+		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77008686DAC3E16F61CAA15B20A606 /* AFError.swift */; };
+		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95EEFB29E1E25EEDE671089C73CAE63 /* Alamofire.swift */; };
+		7E1F49EA3D596D8C24FBC926673FFF3E /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D0590FAEF6E0F8F88EA739DA588EA /* TagListView.swift */; };
+		7EA3B83318D297F74DE6302896B35EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F70B2F500F2A40A4F20DE380CE373F /* Response.swift */; };
+		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 096ECD2724C9D00C0D0AACA957FAFFD4 /* Alamofire-dummy.m */; };
+		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066DD51316C387A44F5FC7D299C64033 /* SessionDelegate.swift */; };
 		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5BECC0B0D1CC6968E206F0DED0F446C /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97A89A20B11D086E28E6E1B2A9DDF71E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		A028112A4C3A43DAA9BFB281C6AC8ACB /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D1A960AC196CA5DF5E93D16EF4A9E2 /* DLRadioButton-dummy.m */; };
-		A38305D1E1B72AD9242C61E0FECBC457 /* Pods-BeaCodeApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC08F9FF99CE54B4F5AEA414146F161 /* Pods-BeaCodeApp-dummy.m */; };
-		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C034511AE6DAF91A674CC7DC0A85C /* SessionManager.swift */; };
-		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69300AC52AED3AE079ABCFA8A41099 /* ParameterEncoding.swift */; };
-		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA33999F1EE9ABFA8EABE99B720904 /* ResponseSerialization.swift */; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8F8FF07E8058B0F407F9882A362404 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948FAC9613576D2AF02EC864C6D9A0F7 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF5967844CA8913CAEACA28FBBB6F4 /* CloseButton.swift */; };
+		A028112A4C3A43DAA9BFB281C6AC8ACB /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB86AE0187A442EC51F3B5BD9FB4ECD /* DLRadioButton-dummy.m */; };
+		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739B573E5B7D39C8D7AB8EE5DDAA99C7 /* SessionManager.swift */; };
+		A8142FCE1501006320BD563721C5B454 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B177789D9C84768E9C83E70F80B3B4D /* ParameterEncoding.swift */; };
+		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73B1BEB4F980A69339D1EB13E2FF99 /* ResponseSerialization.swift */; };
 		BE6738C0C0FD368B7299C7037B773694 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493F66D1CDB4DF0EC6996818FBC69F1 /* ServerTrustPolicy.swift */; };
-		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F415320C8594CB7D05F5698200737F7C /* MultipartFormData.swift */; };
-		C7AB837F3200D41BF676DC49D222EBAC /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 575CE898DDF0B98215E40E0511B6FD63 /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9EB9377AC349CE71971EEDA5C55C7C /* Result.swift */; };
-		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FC5A9DEE2E8B1BB0ECB83FBDEE2A44 /* TaskDelegate.swift */; };
-		E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0641238C0D2A0CB1690A6B7C5D877 /* DispatchQueue+Alamofire.swift */; };
-		E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4536238338AFE16BB09B0CBB36389CE /* NetworkReachabilityManager.swift */; };
-		FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE786B07725A8BEC80BF5C9BAE814334 /* Validation.swift */; };
+		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370365277D536E032D8979DC1CB98FC5 /* ServerTrustPolicy.swift */; };
+		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5472ED2DB7C63B5E06E07AF5FA7A90 /* MultipartFormData.swift */; };
+		C7AB837F3200D41BF676DC49D222EBAC /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42C8CDA6389610C2370109679F4BA3AD /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA46775E399E22BEEBB4F544BC7DF50C /* Pods-BeaCodeApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BBBAE87354D462D47B3DED4123279F0 /* Pods-BeaCodeApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46E9C59E82613F2D2AA8BF198DCD49 /* Result.swift */; };
+		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF97922E625B47964DC97D732C2781 /* TaskDelegate.swift */; };
+		E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47723705AB95B16E4C113E2F966A505D /* DispatchQueue+Alamofire.swift */; };
+		E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE63FD3B10813F87AE8B0D81FC1A11 /* NetworkReachabilityManager.swift */; };
+		F5BEB6C57179F4AA8DE3DD07E61D0362 /* Pods-BeaCodeApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC08F9FF99CE54B4F5AEA414146F161 /* Pods-BeaCodeApp-dummy.m */; };
+		FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280EBAE80D05186D1869B0013E1BA89 /* Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2353F9F05D8E68F59504DA185AE5FBD3 /* PBXContainerItemProxy */ = {
+		440791F2ABB74A2292F87CEEA5EC167D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = DCF6E0B3D6507BF3A986026462CB7DC6;
+			remoteInfo = TagListView;
 		};
-		719B29B4D9D8E1E121C7C077FC4E8493 /* PBXContainerItemProxy */ = {
+		816C4C9347595B6E3D8B50331D880824 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F3990E3EAC160D4E4F89177D966FC1E9;
 			remoteInfo = DLRadioButton;
 		};
+		822F135A5351EED9C163DCBAB26F9B19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		056F35E5C0260D91568DEEC9044FDB1C /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		05C57162F3D1462176606F9F9E1D9C2F /* TagListView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagListView-prefix.pch"; sourceTree = "<group>"; };
+		066DD51316C387A44F5FC7D299C64033 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		096ECD2724C9D00C0D0AACA957FAFFD4 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		0BB86AE0187A442EC51F3B5BD9FB4ECD /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
 		0BBBAE87354D462D47B3DED4123279F0 /* Pods-BeaCodeApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BeaCodeApp-umbrella.h"; sourceTree = "<group>"; };
-		12DDFD4F612C8817690249B8A77E935D /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		14D1A960AC196CA5DF5E93D16EF4A9E2 /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
+		1280EBAE80D05186D1869B0013E1BA89 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		16AF476DADBC93093911B210F8030DFC /* Pods-BeaCodeApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeaCodeApp-resources.sh"; sourceTree = "<group>"; };
-		17C183CB3BCC679A714E4EB503E8F795 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		1B177789D9C84768E9C83E70F80B3B4D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		1E46E9C59E82613F2D2AA8BF198DCD49 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		1EB96C0D2C5C2B3F74FF2A0F510D933F /* TagListView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TagListView.xcconfig; sourceTree = "<group>"; };
 		243D13E69B2171A5FE0198BC45446B06 /* Pods-BeaCodeApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeaCodeApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		2C66EFFF2EBBA72EC11544E5CAA6C9C9 /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
 		2D441D54E3C85D35E54CB905CA3F9BBC /* Pods-BeaCodeApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BeaCodeApp.modulemap"; sourceTree = "<group>"; };
-		303C034511AE6DAF91A674CC7DC0A85C /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		306ABEB9610625D161B1E39639AB2D23 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		338DC466A0563C018A2219869DF0B538 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BEA33999F1EE9ABFA8EABE99B720904 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		2F8F8FF07E8058B0F407F9882A362404 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		370365277D536E032D8979DC1CB98FC5 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		40DD2907DC0DC8E0CB38E7700503427C /* TagView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = TagListView/TagView.swift; sourceTree = "<group>"; };
+		42C8CDA6389610C2370109679F4BA3AD /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
+		47723705AB95B16E4C113E2F966A505D /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		4AB64D6A72549C89823EAEC9CF7D62DD /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		4BE27A5B962418DD43385977B4F12503 /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
+		4C8D0590FAEF6E0F8F88EA739DA588EA /* TagListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagListView.swift; path = TagListView/TagListView.swift; sourceTree = "<group>"; };
 		4EBB480D621C4472EA5C39BF6070539F /* Pods-BeaCodeApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeaCodeApp-frameworks.sh"; sourceTree = "<group>"; };
 		54A1E60B3D2020DEE3DA857090079B4C /* Pods-BeaCodeApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BeaCodeApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		575CE898DDF0B98215E40E0511B6FD63 /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
+		5BB8ACB9DA5B4797F98B8B0488B12E57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C5880F22C0E0C251CF8BF71DF4A6573 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		5FC08F9FF99CE54B4F5AEA414146F161 /* Pods-BeaCodeApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BeaCodeApp-dummy.m"; sourceTree = "<group>"; };
-		64DE2510AF2C80D38C95575062E11434 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		6F69300AC52AED3AE079ABCFA8A41099 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		7133A43457E28972281EB0ED66597D0C /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
-		7AEF9F40AEC015AB9DEB503CB37C944C /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		8290AFED110884B20ACFEF173B36E310 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		8BBBF09FABCF4EA83B03784E61AC431D /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		90F0641238C0D2A0CB1690A6B7C5D877 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		6747401F5FF4AD2E06C834CF81C3EDBD /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		729A177FC39B2C090732773798BA4A69 /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
+		739B573E5B7D39C8D7AB8EE5DDAA99C7 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		88AF97922E625B47964DC97D732C2781 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F9B2A45FBB4F4D22A2F717040C0F612 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC6762DEA242496815329694EB9ABF6 /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
-		A2CB93A25B7633211C36713B3F837637 /* Pods_BeaCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A57210D2CFC64715E3F2F4398F1E15BF /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
-		B5BECC0B0D1CC6968E206F0DED0F446C /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		B996922F1F938479D1BB9C21CD117A76 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		BB29BD84150A5897E06075BBE7D4F248 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF9AAA0F6E63DC0E18C8DF6DDF2AD43A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		C1FC5A9DEE2E8B1BB0ECB83FBDEE2A44 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		C493F66D1CDB4DF0EC6996818FBC69F1 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		C708CE070041E1BF3D78E86B54F82843 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		9E4AE13D545B5667E7A54E46D16EC608 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		A2004B556B0830290BA342EF4B8AF19F /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		A6D639F2D71813EE14B354C60CAFBA40 /* DLRadioButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.xcconfig; sourceTree = "<group>"; };
+		A7122F18C3674FA691765874863B7638 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A95EEFB29E1E25EEDE671089C73CAE63 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		AA77008686DAC3E16F61CAA15B20A606 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		AD6D99758AF4273AD5F156FFA89223AE /* Pods_BeaCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62706593251D56F19F97270CBDAE834 /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
+		BCFF5967844CA8913CAEACA28FBBB6F4 /* CloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloseButton.swift; path = TagListView/CloseButton.swift; sourceTree = "<group>"; };
+		BF881FD776DD17D2FF7D6B3AC51D41AD /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		C0D59164C99F79359659252CC1E0FFE8 /* TagListView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagListView-umbrella.h"; sourceTree = "<group>"; };
+		C1CE83E1BCCE3082528791EFF5C5B0E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32712A271ED6E045EB274D118D1C6E5 /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
+		CB5472ED2DB7C63B5E06E07AF5FA7A90 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		CD73B1BEB4F980A69339D1EB13E2FF99 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF9EB9377AC349CE71971EEDA5C55C7C /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		D303E89F98B947CB0865030EC7C65F6D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B456EF1AD81740CC18F5155FD2F3A8 /* Pods-BeaCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeaCodeApp.release.xcconfig"; sourceTree = "<group>"; };
 		DC20C477E355A8E42BED7D6C3FF11FC8 /* Pods-BeaCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeaCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E0D5BFF5296D355664BEB8904E579821 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		E4536238338AFE16BB09B0CBB36389CE /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		EBF7E1657E1DBED5A909582856B929AE /* DLRadioButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.xcconfig; sourceTree = "<group>"; };
-		EE786B07725A8BEC80BF5C9BAE814334 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		F415320C8594CB7D05F5698200737F7C /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		E1F70B2F500F2A40A4F20DE380CE373F /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		E2D75E03AA91E0575B62DEFD56899FAA /* TagListView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TagListView.modulemap; sourceTree = "<group>"; };
+		EAFE63FD3B10813F87AE8B0D81FC1A11 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		F2C27FD38EA5DDFC5CE6960B81B51DA7 /* TagListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TagListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5ACCF3F27CF227718B7178F28B2E2E6 /* TagListView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TagListView-dummy.m"; sourceTree = "<group>"; };
 		F95A3AE63EC9095E88923BF71C272812 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFBA956AA27E521F9B1366D1715332E5 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,42 +143,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2C6362CAB8836726011F062BE5F8501 /* Frameworks */ = {
+		E79F09FE964B9A0C93B04651BC5D5186 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A89A20B11D086E28E6E1B2A9DDF71E /* Foundation.framework in Frameworks */,
+				7EA3B83318D297F74DE6302896B35EFC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F373F3ACC2EB680A5D98EB89D9D431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8142FCE1501006320BD563721C5B454 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB30007F8AB60FB6C56826A043C0695 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1CE83E1BCCE3082528791EFF5C5B0E0 /* Info.plist */,
+				E2D75E03AA91E0575B62DEFD56899FAA /* TagListView.modulemap */,
+				1EB96C0D2C5C2B3F74FF2A0F510D933F /* TagListView.xcconfig */,
+				F5ACCF3F27CF227718B7178F28B2E2E6 /* TagListView-dummy.m */,
+				05C57162F3D1462176606F9F9E1D9C2F /* TagListView-prefix.pch */,
+				C0D59164C99F79359659252CC1E0FFE8 /* TagListView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TagListView";
+			sourceTree = "<group>";
+		};
+		21C43DEFB6C221DEC2744EAEEB98D108 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8795A6C8431C03710B54AB3C4EA8C6B6 /* Alamofire */,
+				EC2EDB01889E35CFE16C23F437091B1D /* DLRadioButton */,
+				EB1A1C68BC725FA261497BC0BD1760C1 /* TagListView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		284BDD75B176DC475542BB92D0DB119C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C32712A271ED6E045EB274D118D1C6E5 /* DLRadioButton.modulemap */,
+				A6D639F2D71813EE14B354C60CAFBA40 /* DLRadioButton.xcconfig */,
+				0BB86AE0187A442EC51F3B5BD9FB4ECD /* DLRadioButton-dummy.m */,
+				B62706593251D56F19F97270CBDAE834 /* DLRadioButton-prefix.pch */,
+				42C8CDA6389610C2370109679F4BA3AD /* DLRadioButton-umbrella.h */,
+				5BB8ACB9DA5B4797F98B8B0488B12E57 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DLRadioButton";
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		42CFDB15B71DFCB0B85B9F48D84F323E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BC906F53E3E1EBC8663A3457E452D300 /* Alamofire */,
-				5EEBB8325CCF8FEAB5A41A694A46AD89 /* DLRadioButton */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5EEBB8325CCF8FEAB5A41A694A46AD89 /* DLRadioButton */ = {
-			isa = PBXGroup;
-			children = (
-				9FC6762DEA242496815329694EB9ABF6 /* DLRadioButton.h */,
-				A57210D2CFC64715E3F2F4398F1E15BF /* DLRadioButton.m */,
-				A0B80482ABFFA137FB1334AACDD152FB /* Support Files */,
-			);
-			path = DLRadioButton;
 			sourceTree = "<group>";
 		};
 		75F8D39E6EA099D9D0286AF05B71BB74 /* Pods-BeaCodeApp */ = {
@@ -176,43 +226,51 @@
 			path = "Target Support Files/Pods-BeaCodeApp";
 			sourceTree = "<group>";
 		};
+		7CAC6FCE1157CF62B5B77451751AA39D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D303E89F98B947CB0865030EC7C65F6D /* Alamofire.framework */,
+				6747401F5FF4AD2E06C834CF81C3EDBD /* DLRadioButton.framework */,
+				AD6D99758AF4273AD5F156FFA89223AE /* Pods_BeaCodeApp.framework */,
+				F2C27FD38EA5DDFC5CE6960B81B51DA7 /* TagListView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				42CFDB15B71DFCB0B85B9F48D84F323E /* Pods */,
-				BB419850BF1E60CB161CED03AC93ED9E /* Products */,
+				21C43DEFB6C221DEC2744EAEEB98D108 /* Pods */,
+				7CAC6FCE1157CF62B5B77451751AA39D /* Products */,
 				ADBD5C3834EF447F92076CDE2ED5EE58 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A0B80482ABFFA137FB1334AACDD152FB /* Support Files */ = {
+		8795A6C8431C03710B54AB3C4EA8C6B6 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				7133A43457E28972281EB0ED66597D0C /* DLRadioButton.modulemap */,
-				EBF7E1657E1DBED5A909582856B929AE /* DLRadioButton.xcconfig */,
-				14D1A960AC196CA5DF5E93D16EF4A9E2 /* DLRadioButton-dummy.m */,
-				2C66EFFF2EBBA72EC11544E5CAA6C9C9 /* DLRadioButton-prefix.pch */,
-				575CE898DDF0B98215E40E0511B6FD63 /* DLRadioButton-umbrella.h */,
-				338DC466A0563C018A2219869DF0B538 /* Info.plist */,
+				AA77008686DAC3E16F61CAA15B20A606 /* AFError.swift */,
+				A95EEFB29E1E25EEDE671089C73CAE63 /* Alamofire.swift */,
+				47723705AB95B16E4C113E2F966A505D /* DispatchQueue+Alamofire.swift */,
+				CB5472ED2DB7C63B5E06E07AF5FA7A90 /* MultipartFormData.swift */,
+				EAFE63FD3B10813F87AE8B0D81FC1A11 /* NetworkReachabilityManager.swift */,
+				9E4AE13D545B5667E7A54E46D16EC608 /* Notifications.swift */,
+				1B177789D9C84768E9C83E70F80B3B4D /* ParameterEncoding.swift */,
+				BF881FD776DD17D2FF7D6B3AC51D41AD /* Request.swift */,
+				E1F70B2F500F2A40A4F20DE380CE373F /* Response.swift */,
+				CD73B1BEB4F980A69339D1EB13E2FF99 /* ResponseSerialization.swift */,
+				1E46E9C59E82613F2D2AA8BF198DCD49 /* Result.swift */,
+				370365277D536E032D8979DC1CB98FC5 /* ServerTrustPolicy.swift */,
+				066DD51316C387A44F5FC7D299C64033 /* SessionDelegate.swift */,
+				739B573E5B7D39C8D7AB8EE5DDAA99C7 /* SessionManager.swift */,
+				88AF97922E625B47964DC97D732C2781 /* TaskDelegate.swift */,
+				5C5880F22C0E0C251CF8BF71DF4A6573 /* Timeline.swift */,
+				1280EBAE80D05186D1869B0013E1BA89 /* Validation.swift */,
+				D4FCD8DF451950FA780486A3D5426C84 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DLRadioButton";
-			sourceTree = "<group>";
-		};
-		ABD6AF63FE1A2E23D9B116861BF20827 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				64DE2510AF2C80D38C95575062E11434 /* Alamofire.modulemap */,
-				8290AFED110884B20ACFEF173B36E310 /* Alamofire.xcconfig */,
-				17C183CB3BCC679A714E4EB503E8F795 /* Alamofire-dummy.m */,
-				7AEF9F40AEC015AB9DEB503CB37C944C /* Alamofire-prefix.pch */,
-				B5BECC0B0D1CC6968E206F0DED0F446C /* Alamofire-umbrella.h */,
-				306ABEB9610625D161B1E39639AB2D23 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		ADBD5C3834EF447F92076CDE2ED5EE58 /* Targets Support Files */ = {
@@ -223,16 +281,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BB419850BF1E60CB161CED03AC93ED9E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9F9B2A45FBB4F4D22A2F717040C0F612 /* Alamofire.framework */,
-				BB29BD84150A5897E06075BBE7D4F248 /* DLRadioButton.framework */,
-				A2CB93A25B7633211C36713B3F837637 /* Pods_BeaCodeApp.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,29 +289,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BC906F53E3E1EBC8663A3457E452D300 /* Alamofire */ = {
+		D4FCD8DF451950FA780486A3D5426C84 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C708CE070041E1BF3D78E86B54F82843 /* AFError.swift */,
-				B996922F1F938479D1BB9C21CD117A76 /* Alamofire.swift */,
-				90F0641238C0D2A0CB1690A6B7C5D877 /* DispatchQueue+Alamofire.swift */,
-				F415320C8594CB7D05F5698200737F7C /* MultipartFormData.swift */,
-				E4536238338AFE16BB09B0CBB36389CE /* NetworkReachabilityManager.swift */,
-				12DDFD4F612C8817690249B8A77E935D /* Notifications.swift */,
-				6F69300AC52AED3AE079ABCFA8A41099 /* ParameterEncoding.swift */,
-				FFBA956AA27E521F9B1366D1715332E5 /* Request.swift */,
-				8BBBF09FABCF4EA83B03784E61AC431D /* Response.swift */,
-				3BEA33999F1EE9ABFA8EABE99B720904 /* ResponseSerialization.swift */,
-				CF9EB9377AC349CE71971EEDA5C55C7C /* Result.swift */,
-				C493F66D1CDB4DF0EC6996818FBC69F1 /* ServerTrustPolicy.swift */,
-				BF9AAA0F6E63DC0E18C8DF6DDF2AD43A /* SessionDelegate.swift */,
-				303C034511AE6DAF91A674CC7DC0A85C /* SessionManager.swift */,
-				C1FC5A9DEE2E8B1BB0ECB83FBDEE2A44 /* TaskDelegate.swift */,
-				E0D5BFF5296D355664BEB8904E579821 /* Timeline.swift */,
-				EE786B07725A8BEC80BF5C9BAE814334 /* Validation.swift */,
-				ABD6AF63FE1A2E23D9B116861BF20827 /* Support Files */,
+				4AB64D6A72549C89823EAEC9CF7D62DD /* Alamofire.modulemap */,
+				A2004B556B0830290BA342EF4B8AF19F /* Alamofire.xcconfig */,
+				096ECD2724C9D00C0D0AACA957FAFFD4 /* Alamofire-dummy.m */,
+				056F35E5C0260D91568DEEC9044FDB1C /* Alamofire-prefix.pch */,
+				2F8F8FF07E8058B0F407F9882A362404 /* Alamofire-umbrella.h */,
+				A7122F18C3674FA691765874863B7638 /* Info.plist */,
 			);
-			path = Alamofire;
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		EB1A1C68BC725FA261497BC0BD1760C1 /* TagListView */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF5967844CA8913CAEACA28FBBB6F4 /* CloseButton.swift */,
+				4C8D0590FAEF6E0F8F88EA739DA588EA /* TagListView.swift */,
+				40DD2907DC0DC8E0CB38E7700503427C /* TagView.swift */,
+				0DB30007F8AB60FB6C56826A043C0695 /* Support Files */,
+			);
+			path = TagListView;
+			sourceTree = "<group>";
+		};
+		EC2EDB01889E35CFE16C23F437091B1D /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				729A177FC39B2C090732773798BA4A69 /* DLRadioButton.h */,
+				4BE27A5B962418DD43385977B4F12503 /* DLRadioButton.m */,
+				284BDD75B176DC475542BB92D0DB119C /* Support Files */,
+			);
+			path = DLRadioButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +336,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D660FC1A1F18C3A6B51F419EAE957D9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA46775E399E22BEEBB4F544BC7DF50C /* Pods-BeaCodeApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFDF3B631BBB965A372347705CA14854 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,11 +352,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F463A2E28391E2D0D7B98340271BDDE3 /* Headers */ = {
+		F3392DC80133F4F5DACEDEA9F9EF335D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08087EFF0F1EB3DF657F4469181DECCC /* Pods-BeaCodeApp-umbrella.h in Headers */,
+				2F6572D90A4371A1AE8FE4D8A734489A /* TagListView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,26 +377,44 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 9F9B2A45FBB4F4D22A2F717040C0F612 /* Alamofire.framework */;
+			productReference = D303E89F98B947CB0865030EC7C65F6D /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		84DE34603D496414CAA083C5C547AEE8 /* Pods-BeaCodeApp */ = {
+		DCF6E0B3D6507BF3A986026462CB7DC6 /* TagListView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BDB5E0F5D949C06BADB7C4E7C793236 /* Build configuration list for PBXNativeTarget "Pods-BeaCodeApp" */;
+			buildConfigurationList = 46FF7F8ADBCF7D91699DDE67222A4043 /* Build configuration list for PBXNativeTarget "TagListView" */;
 			buildPhases = (
-				7106072A00EEC3C3D91C9D25700B0EE0 /* Sources */,
-				F2C6362CAB8836726011F062BE5F8501 /* Frameworks */,
-				F463A2E28391E2D0D7B98340271BDDE3 /* Headers */,
+				F8447237DA27B6137D4CF6D73EE3646B /* Sources */,
+				E79F09FE964B9A0C93B04651BC5D5186 /* Frameworks */,
+				F3392DC80133F4F5DACEDEA9F9EF335D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9F5F6E023E9B2552E85F4DB1E9D6F60B /* PBXTargetDependency */,
-				5CD0F45BA2CD2EB39FAEFA11665EA052 /* PBXTargetDependency */,
+			);
+			name = TagListView;
+			productName = TagListView;
+			productReference = F2C27FD38EA5DDFC5CE6960B81B51DA7 /* TagListView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC566245BCE2D950798EF250685BBD48 /* Pods-BeaCodeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376A802F34B64D4E8138519F7E58F11D /* Build configuration list for PBXNativeTarget "Pods-BeaCodeApp" */;
+			buildPhases = (
+				D3258CDA9C7798ECCAF92D0913223C97 /* Sources */,
+				E7F373F3ACC2EB680A5D98EB89D9D431 /* Frameworks */,
+				D660FC1A1F18C3A6B51F419EAE957D9B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEF94732BD8829D6899DF842D33388D9 /* PBXTargetDependency */,
+				4EB9BE9B666F79A38CA47BBEF5E5AB1B /* PBXTargetDependency */,
+				6D35135456A1FF0660FD54BCDB1ABDE9 /* PBXTargetDependency */,
 			);
 			name = "Pods-BeaCodeApp";
 			productName = "Pods-BeaCodeApp";
-			productReference = A2CB93A25B7633211C36713B3F837637 /* Pods_BeaCodeApp.framework */;
+			productReference = AD6D99758AF4273AD5F156FFA89223AE /* Pods_BeaCodeApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F3990E3EAC160D4E4F89177D966FC1E9 /* DLRadioButton */ = {
@@ -347,7 +431,7 @@
 			);
 			name = DLRadioButton;
 			productName = DLRadioButton;
-			productReference = BB29BD84150A5897E06075BBE7D4F248 /* DLRadioButton.framework */;
+			productReference = 6747401F5FF4AD2E06C834CF81C3EDBD /* DLRadioButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -367,13 +451,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BB419850BF1E60CB161CED03AC93ED9E /* Products */;
+			productRefGroup = 7CAC6FCE1157CF62B5B77451751AA39D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
 				F3990E3EAC160D4E4F89177D966FC1E9 /* DLRadioButton */,
-				84DE34603D496414CAA083C5C547AEE8 /* Pods-BeaCodeApp */,
+				EC566245BCE2D950798EF250685BBD48 /* Pods-BeaCodeApp */,
+				DCF6E0B3D6507BF3A986026462CB7DC6 /* TagListView */,
 			);
 		};
 /* End PBXProject section */
@@ -413,35 +498,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7106072A00EEC3C3D91C9D25700B0EE0 /* Sources */ = {
+		D3258CDA9C7798ECCAF92D0913223C97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38305D1E1B72AD9242C61E0FECBC457 /* Pods-BeaCodeApp-dummy.m in Sources */,
+				F5BEB6C57179F4AA8DE3DD07E61D0362 /* Pods-BeaCodeApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8447237DA27B6137D4CF6D73EE3646B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948FAC9613576D2AF02EC864C6D9A0F7 /* CloseButton.swift in Sources */,
+				2F44FDDAF954382F8EC54852A724463A /* TagListView-dummy.m in Sources */,
+				7E1F49EA3D596D8C24FBC926673FFF3E /* TagListView.swift in Sources */,
+				60A2892EDF645588916E9BEB3FAABAB8 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5CD0F45BA2CD2EB39FAEFA11665EA052 /* PBXTargetDependency */ = {
+		4EB9BE9B666F79A38CA47BBEF5E5AB1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DLRadioButton;
 			target = F3990E3EAC160D4E4F89177D966FC1E9 /* DLRadioButton */;
-			targetProxy = 719B29B4D9D8E1E121C7C077FC4E8493 /* PBXContainerItemProxy */;
+			targetProxy = 816C4C9347595B6E3D8B50331D880824 /* PBXContainerItemProxy */;
 		};
-		9F5F6E023E9B2552E85F4DB1E9D6F60B /* PBXTargetDependency */ = {
+		6D35135456A1FF0660FD54BCDB1ABDE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TagListView;
+			target = DCF6E0B3D6507BF3A986026462CB7DC6 /* TagListView */;
+			targetProxy = 440791F2ABB74A2292F87CEEA5EC167D /* PBXContainerItemProxy */;
+		};
+		CEF94732BD8829D6899DF842D33388D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 2353F9F05D8E68F59504DA185AE5FBD3 /* PBXContainerItemProxy */;
+			targetProxy = 822F135A5351EED9C163DCBAB26F9B19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		02551D8BD7075FA0E62139C6500F5677 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBF7E1657E1DBED5A909582856B929AE /* DLRadioButton.xcconfig */;
+			baseConfigurationReference = A6D639F2D71813EE14B354C60CAFBA40 /* DLRadioButton.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -515,9 +617,9 @@
 			};
 			name = Debug;
 		};
-		7F93EF234CD87F7448472375CC1EFA96 /* Debug */ = {
+		2E5DEE4FC6D8D39FAF54AEAA0B36B2EC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8290AFED110884B20ACFEF173B36E310 /* Alamofire.xcconfig */;
+			baseConfigurationReference = DC20C477E355A8E42BED7D6C3FF11FC8 /* Pods-BeaCodeApp.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -530,57 +632,28 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-BeaCodeApp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BeaCodeApp;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		8A69A0E3FDDC3006970CBDCF295E9420 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBF7E1657E1DBED5A909582856B929AE /* DLRadioButton.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DLRadioButton/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DLRadioButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BB76B3B63B3D2AC33CD0FD21E99DF417 /* Release */ = {
+		36C32D203A274EE1AD8C2A60CFBEEEBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8B456EF1AD81740CC18F5155FD2F3A8 /* Pods-BeaCodeApp.release.xcconfig */;
 			buildSettings = {
@@ -615,9 +688,139 @@
 			};
 			name = Release;
 		};
+		4BB639FD63BF3EF64DF7BE0112D40644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB96C0D2C5C2B3F74FF2A0F510D933F /* TagListView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TagListView/TagListView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TagListView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TagListView/TagListView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TagListView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EF144922FFDB8903DA1B92B5E50EFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB96C0D2C5C2B3F74FF2A0F510D933F /* TagListView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TagListView/TagListView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TagListView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TagListView/TagListView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TagListView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7F93EF234CD87F7448472375CC1EFA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2004B556B0830290BA342EF4B8AF19F /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A69A0E3FDDC3006970CBDCF295E9420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D639F2D71813EE14B354C60CAFBA40 /* DLRadioButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8290AFED110884B20ACFEF173B36E310 /* Alamofire.xcconfig */;
+			baseConfigurationReference = A2004B556B0830290BA342EF4B8AF19F /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -687,54 +890,9 @@
 			};
 			name = Release;
 		};
-		E7D0FD994BD90E8D0C24718BB978DEB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC20C477E355A8E42BED7D6C3FF11FC8 /* Pods-BeaCodeApp.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BeaCodeApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BeaCodeApp;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BDB5E0F5D949C06BADB7C4E7C793236 /* Build configuration list for PBXNativeTarget "Pods-BeaCodeApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7D0FD994BD90E8D0C24718BB978DEB3 /* Debug */,
-				BB76B3B63B3D2AC33CD0FD21E99DF417 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -744,11 +902,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		376A802F34B64D4E8138519F7E58F11D /* Build configuration list for PBXNativeTarget "Pods-BeaCodeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E5DEE4FC6D8D39FAF54AEAA0B36B2EC /* Debug */,
+				36C32D203A274EE1AD8C2A60CFBEEEBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F93EF234CD87F7448472375CC1EFA96 /* Debug */,
 				DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FF7F8ADBCF7D91699DDE67222A4043 /* Build configuration list for PBXNativeTarget "TagListView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF144922FFDB8903DA1B92B5E50EFEA /* Debug */,
+				4BB639FD63BF3EF64DF7BE0112D40644 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

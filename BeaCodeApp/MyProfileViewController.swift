@@ -8,12 +8,19 @@
 
 import Foundation
 import UIKit
+import TagListView
 
 class MyProfileViewController: UIViewController {
+    
+    @IBOutlet var tagView: TagListView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle(titleText: "MY PROFILE")
+        tagView.addTag("cars")
+        tagView.addTag("technology")
+        tagView.addTag("space")
+        tagView.addTag("flight")
     }
     
     override func didReceiveMemoryWarning() {

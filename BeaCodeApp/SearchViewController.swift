@@ -32,6 +32,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         //hide keyboard on tap
         self.hideKeyboardWhenTappedAround()
         
+        searchBar.delegate = self
+        
         //delete empty cells
         self.searchTable.tableFooterView = UIView()
         
@@ -108,10 +110,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
 }
 
+extension SearchViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
     }
     
     func dismissKeyboard() {

@@ -31,6 +31,7 @@ class EventDetailViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent.exhibits[indexPath.row]
     }
     
