@@ -16,7 +16,7 @@ class EventNavigationStarterTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        initDefaults()
+        applyButtonBorder(button: navigationStartButton)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,11 +25,11 @@ class EventNavigationStarterTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func initDefaults() {
-        navigationStartButton.backgroundColor = UIColor.clear
-        navigationStartButton.layer.cornerRadius = 5
-        navigationStartButton.layer.borderWidth = 1
-        navigationStartButton.layer.borderColor = beacodeBlue.cgColor
+    func applyButtonBorder(button: UIButton) {
+        button.backgroundColor = UIColor.clear
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = beacodeBlue.cgColor
     }
 
 }

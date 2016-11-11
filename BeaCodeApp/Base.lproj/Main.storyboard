@@ -514,42 +514,111 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Wau-Oc-pi7" kind="relationship" relationship="rootViewController" id="vBT-9z-0ad"/>
+                        <segue destination="dhm-Lu-kqU" kind="relationship" relationship="rootViewController" id="gAd-0O-h9f"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpo-SH-K9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="646" y="1516"/>
         </scene>
-        <!--MY PROFILE-->
-        <scene sceneID="m9n-8d-8ql">
+        <!--My Profile View Controller-->
+        <scene sceneID="VZQ-ZH-iCP">
             <objects>
-                <viewController id="Wau-Oc-pi7" customClass="MyProfileViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dhm-Lu-kqU" customClass="MyProfileViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1my-lf-Lev"/>
-                        <viewControllerLayoutGuide type="bottom" id="Oos-gg-xHQ"/>
+                        <viewControllerLayoutGuide type="top" id="KZH-ys-0ra"/>
+                        <viewControllerLayoutGuide type="bottom" id="mIf-ew-mh8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2XZ-W7-ToW" customClass="TagListView" customModule="TagListView">
+                    <view key="view" contentMode="scaleToFill" id="ORQ-4w-jpD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDu-b4-IsE" customClass="TagListView" customModule="TagListView">
+                                <rect key="frame" x="16" y="347" width="343" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barack" translatesAutoresizingMaskIntoConstraints="NO" id="Ve9-dH-IBg">
+                                <rect key="frame" x="87" y="72" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0Gr-4M-N2H"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="3IR-c1-xaz"/>
+                                    <constraint firstAttribute="height" constant="200" id="ARW-0o-bPk"/>
+                                    <constraint firstAttribute="width" constant="200" id="dqt-VN-g4Y"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barack Hussein Obama" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxC-Bf-Yky">
+                                <rect key="frame" x="16" y="280" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pbm-Vh-YYU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWg-pL-bAI">
+                                <rect key="frame" x="16" y="570" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Z8-M2-cHY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ADD INTEREST"/>
+                                <connections>
+                                    <action selector="addTag:" destination="dhm-Lu-kqU" eventType="touchUpInside" id="9sI-bb-S90"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTERESTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQj-zQ-TXM">
+                                <rect key="frame" x="16" y="318" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aP1-kj-DKB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
-                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="3"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <constraints>
+                            <constraint firstItem="UxC-Bf-Yky" firstAttribute="leading" secondItem="ORQ-4w-jpD" secondAttribute="leadingMargin" id="2Jn-8Q-yMf"/>
+                            <constraint firstItem="mIf-ew-mh8" firstAttribute="top" secondItem="jDu-b4-IsE" secondAttribute="bottom" constant="46" id="5nI-Fe-mn2"/>
+                            <constraint firstItem="UxC-Bf-Yky" firstAttribute="top" secondItem="Ve9-dH-IBg" secondAttribute="bottom" constant="8" id="D0E-Ni-tbs"/>
+                            <constraint firstItem="jDu-b4-IsE" firstAttribute="top" secondItem="eQj-zQ-TXM" secondAttribute="bottom" constant="8" symbolic="YES" id="E8U-um-P3R"/>
+                            <constraint firstItem="jDu-b4-IsE" firstAttribute="leading" secondItem="eQj-zQ-TXM" secondAttribute="leading" id="F0v-wV-AEq"/>
+                            <constraint firstItem="eQj-zQ-TXM" firstAttribute="leading" secondItem="ORQ-4w-jpD" secondAttribute="leadingMargin" id="Ll5-cv-gQc"/>
+                            <constraint firstItem="eQj-zQ-TXM" firstAttribute="top" secondItem="UxC-Bf-Yky" secondAttribute="bottom" constant="8" id="Pq1-Vw-A45"/>
+                            <constraint firstItem="Ve9-dH-IBg" firstAttribute="top" secondItem="KZH-ys-0ra" secondAttribute="bottom" constant="8" id="TQ6-dZ-UxV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ve9-dH-IBg" secondAttribute="trailing" constant="72" id="Xhs-YM-Aft"/>
+                            <constraint firstItem="UxC-Bf-Yky" firstAttribute="trailing" secondItem="ORQ-4w-jpD" secondAttribute="trailingMargin" id="XvO-W0-IgD"/>
+                            <constraint firstItem="SWg-pL-bAI" firstAttribute="leading" secondItem="ORQ-4w-jpD" secondAttribute="leadingMargin" id="hDw-el-cd7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SWg-pL-bAI" secondAttribute="trailing" id="n7b-jd-InV"/>
+                            <constraint firstItem="mIf-ew-mh8" firstAttribute="top" secondItem="SWg-pL-bAI" secondAttribute="bottom" constant="8" id="s8d-Vs-Kxj"/>
+                            <constraint firstItem="Ve9-dH-IBg" firstAttribute="leading" secondItem="ORQ-4w-jpD" secondAttribute="leadingMargin" constant="71" id="sEp-xa-r7d"/>
+                            <constraint firstItem="eQj-zQ-TXM" firstAttribute="trailing" secondItem="ORQ-4w-jpD" secondAttribute="trailingMargin" id="w3Q-MW-kod"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MY PROFILE" id="v4h-YC-egT"/>
+                    <navigationItem key="navigationItem" id="ffE-gf-8i5"/>
                     <connections>
-                        <outlet property="tagView" destination="2XZ-W7-ToW" id="URs-rB-43b"/>
+                        <outlet property="addTagButton" destination="SWg-pL-bAI" id="kTT-nI-faj"/>
+                        <outlet property="profileImage" destination="Ve9-dH-IBg" id="8fu-V1-Sk9"/>
+                        <outlet property="tagView" destination="jDu-b4-IsE" id="Fld-0J-b6Z"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zKd-Pn-Kv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOB-16-fBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="1516"/>
+            <point key="canvasLocation" x="1452" y="1514.392803598201"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WgM-9P-NWm">
@@ -591,6 +660,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="barack" width="1040" height="1040"/>
         <image name="ic_account_circle_36pt" width="36" height="36"/>
         <image name="ic_menu_36pt" width="36" height="36"/>
         <image name="ic_search_36pt" width="36" height="36"/>
