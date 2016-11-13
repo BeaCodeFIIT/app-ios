@@ -34,7 +34,12 @@ extension EventDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
+        
     }
+    
+//    func getUniqueDates(dates: [Date]) {
+//        
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
