@@ -8,5 +8,7 @@ target 'BeaCodeApp' do
 
   # Pods for BeaCodeApp
   pod 'Alamofire', '~> 4.0'
+  pod 'DLRadioButton', '~> 1.4'
+  pod 'TagListView', '~> 1.0'
 
 end
