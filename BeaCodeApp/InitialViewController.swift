@@ -14,7 +14,7 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let testURL = "https://api.spotify.com/v1/search?q=Drake&type=album"
-        NetworkServiceManager.sharedInstance.request(url: testURL)
+        //NetworkServiceManager.sharedInstance.request(url: testURL)
     }
     
     override func didReceiveMemoryWarning() {

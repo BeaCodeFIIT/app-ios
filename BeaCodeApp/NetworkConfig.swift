@@ -6,7 +6,7 @@
 //  Copyright © 2016 Peter Augustín. All rights reserved.
 //
 
-public let SERVER_URL = "www..."
+public let SERVER_URL = "http://team06-16.studenti.fiit.stuba.sk/beacode_dev/current/web/app.php/api"
 
 enum ResponseStatusCode {
     case ResponseStatusOk                       //Call Ok

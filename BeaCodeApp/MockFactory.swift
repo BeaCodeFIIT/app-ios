@@ -21,7 +21,7 @@ class EventFactory {
     func getEvent(set: mockSet) -> Event {
         switch set {
         case .ces:
-            let event = Event(title: "Consumer Electronics Show 2016",
+            var event = Event(title: "Consumer Electronics Show 2016",
                          description: "CES is a global consumer electronics and consumer technology tradeshow that takes place every January in Las Vegas, Nevada.",
                          date: "2016-12-10 20:00:00".toDateTime(),
                          thumbnail: UIImage(named: "ces0")!,
@@ -47,7 +47,7 @@ class EventFactory {
                          location: "Bratislava, Slovakia",
                          photos: loadImages(prefix: "flora", count: 5))
         case .geneva:
-            let event = Event(title: "Geneva Motor Show 2017",
+            var event = Event(title: "Geneva Motor Show 2017",
                          description: "From the first car exhibition in Switzerland in 1905 to the international motor show of nowadays; the Geneva International Motor Show is one of the top five events worldwide not to be missed. An exciting adventure to discover.",
                          date: "2017-02-18 19:00:00".toDateTime(),
                          thumbnail: UIImage(named: "geneva0")!,

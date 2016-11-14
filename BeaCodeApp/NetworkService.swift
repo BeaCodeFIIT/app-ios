@@ -7,12 +7,10 @@
 //
 
 public enum ServiceMethod {
-
     case GET
     case POST
     case PUT
     case DELETE
-
 }
 
 public struct NetworkService {

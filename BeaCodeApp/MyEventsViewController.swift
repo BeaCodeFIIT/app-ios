@@ -18,6 +18,16 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         events = mockEvents()
         setTitle(titleText: "MY EVENTS")
+
+        //API TEST CALL
+        var serviceCall = ServiceCall()
+        serviceCall.requestMethod = .get
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/app/starred-events/show"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            print(result)
+        })
     }
     
     override func didReceiveMemoryWarning() {
