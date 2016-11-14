@@ -11,5 +11,14 @@ target 'BeaCodeApp' do
   pod 'DLRadioButton', '~> 1.4'
   pod 'TagListView', '~> 1.0'
   pod 'ObjectMapper', '~> 2.2'
+  pod 'Fabric'
+  pod 'Crashlytics'
+end
 
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
 end
