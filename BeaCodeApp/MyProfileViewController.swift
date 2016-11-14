@@ -10,22 +10,51 @@ import Foundation
 import UIKit
 import TagListView
 
-class MyProfileViewController: UIViewController {
+class MyProfileViewController: UIViewController, TagListViewDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var addTagButton: UIButton!
+    @IBOutlet weak var tagView: TagListView!
     
     @IBAction func addTag(_ sender: Any) {
-        tagView.addTag("new tag")
+        
+        let alert = UIAlertController(title: "Add tag", message: "Enter a keyword and press \"Ok\"", preferredStyle:
+            UIAlertControllerStyle.alert)
+        
+        alert.addTextField(configurationHandler: textFieldHandler)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ (UIAlertAction) in
+            if let fields = alert.textFields {
+                if let tag = fields[0].text {
+                    self.tagView.addTag(tag)
+                }
+            }
+        }))
+        
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:{ (UIAlertAction) in }))
+        
+        self.present(alert, animated: true, completion: nil)
         tagView.reloadInputViews()
     }
     
-    @IBOutlet weak var tagView: TagListView!
+    var isEditingState = false
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+//        print("Tag pressed: \(title), \(sender)")
+        sender.removeTag(title)
+    }
+    
+    func textFieldHandler(textField: UITextField!) {
+        if (textField) != nil {
+            textField.text = ""
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tagView.delegate = self
         setTitle(titleText: "MY PROFILE")
         
         tagView.textFont = UIFont.systemFont(ofSize: 20)
-        tagView.alignment = .center
+        tagView.alignment = .left
 
         tagView.addTag("cars")
         tagView.addTag("technology")

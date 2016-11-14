@@ -80,5 +80,4 @@ extension EventDetailViewController: UITableViewDataSource {
             return String()
         }
     }
-    
 }

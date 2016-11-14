@@ -121,6 +121,7 @@ open class TagView: UIButton {
     @IBInspectable open var enableRemoveButton: Bool = false {
         didSet {
             removeButton.isHidden = !enableRemoveButton
+            removeButton.lineColor = UIColor.white
             updateRightInsets()
         }
     }
