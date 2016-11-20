@@ -10,52 +10,62 @@ import Foundation
 import UIKit
 import TagListView
 
-class MyProfileViewController: UIViewController, TagListViewDelegate {
+class MyProfileViewController:  UIViewController,
+                                UINavigationControllerDelegate,
+                                UIImagePickerControllerDelegate,
+                                TagListViewDelegate {
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var addTagButton: UIButton!
     @IBOutlet weak var tagView: TagListView!
+    @IBOutlet weak var profilePictureButton: UIButton!
+    
+    var imagePicker = UIImagePickerController()
+    
+    @IBAction func profilePictureTapped(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     @IBAction func addTag(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "Add tag", message: "Enter a keyword and press \"Ok\"", preferredStyle:
+        let newTagAlert = UIAlertController(title: "Add New Tag", message: "Enter a single keyword and press \"Ok\"", preferredStyle:
             UIAlertControllerStyle.alert)
         
-        alert.addTextField(configurationHandler: textFieldHandler)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ (UIAlertAction) in
-            if let fields = alert.textFields {
+        newTagAlert.addTextField(configurationHandler: textFieldHandler)
+        newTagAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{ (UIAlertAction) in
+            if let fields = newTagAlert.textFields {
                 if let tag = fields[0].text {
-                    self.tagView.addTag(tag)
+                    if self.isTagValid(tag: tag){
+                        self.tagView.addTag(tag)
+                    } else {
+                        AlertUtils.postAlert(viewController: self, title: "Tag not valid", message: "Enter a single word shorter than 20 characters.")
+                    }
                 }
             }
         }))
         
+        newTagAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:{ (UIAlertAction) in }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:{ (UIAlertAction) in }))
-        
-        self.present(alert, animated: true, completion: nil)
+        self.present(newTagAlert, animated: true, completion: nil)
         tagView.reloadInputViews()
     }
     
-    var isEditingState = false
-    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
-//        print("Tag pressed: \(title), \(sender)")
-        sender.removeTag(title)
-    }
-    
-    func textFieldHandler(textField: UITextField!) {
-        if (textField) != nil {
-            textField.text = ""
-        }
+    func isTagValid(tag: String) -> Bool {
+        if !tag.contains(" ") && tag.characters.count < 20 && !tag.isEmpty { return true }
+        return false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tagView.delegate = self
-        setTitle(titleText: "MY PROFILE")
+        imagePicker.delegate = self
         
+        setTitle(titleText: "MY PROFILE")
         tagView.textFont = UIFont.systemFont(ofSize: 20)
         tagView.alignment = .left
-
+        
         tagView.addTag("cars")
         tagView.addTag("technology")
         tagView.addTag("space")
@@ -65,18 +75,35 @@ class MyProfileViewController: UIViewController, TagListViewDelegate {
         tagView.addTag("astronomy")
         tagView.addTag("histroy")
         tagView.addTag("blablabla")
-    
-        applyButtonBorder(button: addTagButton)
         
+        applyButtonBorder(button: addTagButton)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        profileImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    var isEditingState = false
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        sender.removeTag(title)
+    }
+    
+    func textFieldHandler(textField: UITextField!) {
+        if (textField) != nil {
+            textField.text = ""
+        }
+    }
     
     func applyButtonBorder(button: UIButton) {
         button.backgroundColor = UIColor.white
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1).cgColor
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +133,5 @@ class MyProfileViewController: UIViewController, TagListViewDelegate {
         titleLable.textColor = UIColor.white
         titleLable.font = titleLable.font.withSize(CGFloat(24))
     }
-
-
+    
 }

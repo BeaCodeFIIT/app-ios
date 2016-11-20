@@ -38,6 +38,7 @@
 		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
 		EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */; };
 		EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */; };
+		EAD31D281DE1EDC7008AC6B6 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */; };
 		EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AC1DD0AA8E0049D28B /* EventDto.swift */; };
 		EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AE1DD0AC790049D28B /* EventConverter.swift */; };
 		EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019B01DD0B0570049D28B /* GetEventResource.swift */; };
@@ -79,6 +80,7 @@
 		EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFactory.swift; sourceTree = "<group>"; };
 		EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitTableViewCell.swift; sourceTree = "<group>"; };
 		EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDetailViewController.swift; sourceTree = "<group>"; };
+		EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		EAE019AC1DD0AA8E0049D28B /* EventDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDto.swift; sourceTree = "<group>"; };
 		EAE019AE1DD0AC790049D28B /* EventConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConverter.swift; sourceTree = "<group>"; };
 		EAE019B01DD0B0570049D28B /* GetEventResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetEventResource.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		2B4476C11DAAAD9700A27F4C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EAD31D241DE1ECC6008AC6B6 /* Utils */,
 				EA274A391DCB674000C005D9 /* Navigation */,
 				2B4476DB1DAAB24F00A27F4C /* Events */,
 				2B4476DA1DAAB24800A27F4C /* Login */,
@@ -258,6 +261,7 @@
 		2B4476DA1DAAB24800A27F4C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EAD31D231DE1ECA2008AC6B6 /* Controller */,
 				EA5EEE1F1DC9122000C30D69 /* View */,
 			);
 			name = Login;
@@ -400,6 +404,21 @@
 				EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */,
 			);
 			name = MockService;
+			sourceTree = "<group>";
+		};
+		EAD31D231DE1ECA2008AC6B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAD31D241DE1ECC6008AC6B6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		EAE019A21DD0A74E0049D28B /* Controller */ = {
@@ -612,6 +631,7 @@
 				2B2C77581DD9F65D00E9B1ED /* ServiceCall.swift in Sources */,
 				EA1C22AF1DC8E9B3005481AB /* MyEventsViewController.swift in Sources */,
 				EA274A381DCAC9D600C005D9 /* PhotoCell.swift in Sources */,
+				EAD31D281DE1EDC7008AC6B6 /* AlertUtils.swift in Sources */,
 				2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */,
 				EA5EEE261DC937E400C30D69 /* Event.swift in Sources */,
 				EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */,
