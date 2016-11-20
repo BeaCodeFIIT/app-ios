@@ -17,10 +17,23 @@ class MyProfileViewController:  UIViewController,
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var addTagButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tagView: TagListView!
     @IBOutlet weak var profilePictureButton: UIButton!
     
     var imagePicker = UIImagePickerController()
+    var editingEnabled = false
+    var tags = [String]()
+    
+    @IBAction func editTapped(_ sender: Any) {
+        if editingEnabled {
+            editingEnabled = false
+            reloadTagView(removeIconEnabled: false)
+        } else {
+            reloadTagView(removeIconEnabled: true)
+            editingEnabled = true
+        }
+    }
     
     @IBAction func profilePictureTapped(_ sender: Any) {
         imagePicker.allowsEditing = false
@@ -30,6 +43,9 @@ class MyProfileViewController:  UIViewController,
     }
     
     @IBAction func addTag(_ sender: Any) {
+        editingEnabled = false
+        reloadTagView(removeIconEnabled: false)
+        
         let newTagAlert = UIAlertController(title: "Add New Tag", message: "Enter a single keyword and press \"Ok\"", preferredStyle:
             UIAlertControllerStyle.alert)
         
@@ -38,6 +54,7 @@ class MyProfileViewController:  UIViewController,
             if let fields = newTagAlert.textFields {
                 if let tag = fields[0].text {
                     if self.isTagValid(tag: tag){
+                        self.tags.append(tag)
                         self.tagView.addTag(tag)
                     } else {
                         AlertUtils.postAlert(viewController: self, title: "Tag not valid", message: "Enter a single word shorter than 20 characters.")
@@ -66,19 +83,25 @@ class MyProfileViewController:  UIViewController,
         tagView.textFont = UIFont.systemFont(ofSize: 20)
         tagView.alignment = .left
         
-        tagView.addTag("cars")
-        tagView.addTag("technology")
-        tagView.addTag("space")
-        tagView.addTag("flight")
-        tagView.addTag("science")
-        tagView.addTag("nature")
-        tagView.addTag("astronomy")
-        tagView.addTag("histroy")
-        tagView.addTag("blablabla")
+        tagView.removeIconLineColor = UIColor.white
+        tagView.removeIconLineWidth = CGFloat(integerLiteral: 1)
+        tagView.removeButtonIconSize = CGFloat(integerLiteral: 10)
         
+        //mock tags
+        tags.append(contentsOf: ["technology", "automobile", "space", "flight", "science", "nature", "astronomy", "history", "startups"])
+        reloadTagView(removeIconEnabled: false)
+    
         applyButtonBorder(button: addTagButton)
+        applyButtonBorder(button: editButton)
     }
     
+    func reloadTagView(removeIconEnabled: Bool) {
+        let sufix = removeIconEnabled ? " ✕" : ""
+        tagView.removeAllTags()
+        for tag in tags {
+            tagView.addTag(tag + sufix)
+        }
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         profileImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
@@ -88,9 +111,15 @@ class MyProfileViewController:  UIViewController,
         dismiss(animated: true, completion: nil)
     }
     
-    var isEditingState = false
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
-        sender.removeTag(title)
+        if editingEnabled {
+            sender.removeTag(title)
+            if editingEnabled {
+                tags = sender.tagViews.map({(x: TagView) -> String in String(x.titleLabel!.text!.characters.dropLast(2))})
+            } else {
+                tags = sender.tagViews.map({(x: TagView) -> String in x.titleLabel!.text!})
+            }
+        }
     }
     
     func textFieldHandler(textField: UITextField!) {

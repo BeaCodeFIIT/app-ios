@@ -121,7 +121,10 @@ open class TagView: UIButton {
     @IBInspectable open var enableRemoveButton: Bool = false {
         didSet {
             removeButton.isHidden = !enableRemoveButton
+            //Set as default for problems with disabled remove icon after initial setup
             removeButton.lineColor = UIColor.white
+            removeButton.lineWidth = CGFloat(integerLiteral: 1)
+            removeButton.iconSize = CGFloat(integerLiteral: 10)
             updateRightInsets()
         }
     }

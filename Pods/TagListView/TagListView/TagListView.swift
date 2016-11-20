@@ -300,8 +300,8 @@ open class TagListView: UIView {
         tagView.textFont = textFont
         tagView.removeIconLineWidth = removeIconLineWidth
         tagView.removeButtonIconSize = removeButtonIconSize
-        tagView.enableRemoveButton = enableRemoveButton
         tagView.removeIconLineColor = removeIconLineColor
+        tagView.enableRemoveButton = enableRemoveButton
         tagView.addTarget(self, action: #selector(tagPressed(_:)), for: .touchUpInside)
         tagView.removeButton.addTarget(self, action: #selector(removeButtonPressed(_:)), for: .touchUpInside)
         
