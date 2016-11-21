@@ -13,12 +13,5 @@ target 'BeaCodeApp' do
   pod 'ObjectMapper', '~> 2.2'
   pod 'Fabric'
   pod 'Crashlytics'
-end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '3.0'
-        end
-    end
+  pod 'GSImageViewerController', '~> 1.2'
 end

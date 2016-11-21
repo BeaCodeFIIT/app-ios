@@ -13,17 +13,25 @@ import TagListView
 class MyProfileViewController:  UIViewController,
                                 UINavigationControllerDelegate,
                                 UIImagePickerControllerDelegate,
-                                TagListViewDelegate {
+                                TagListViewDelegate,
+                                UITextFieldDelegate {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var addTagButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tagView: TagListView!
     @IBOutlet weak var profilePictureButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
     
     var imagePicker = UIImagePickerController()
     var editingEnabled = false
     var tags = [String]()
+    
+    @IBAction func nameChanged(_ sender: Any) {
+        if nameTextField.text == nil || nameTextField.text!.isEmpty {
+            nameTextField.text = "anonymous"
+        }
+    }
     
     @IBAction func editTapped(_ sender: Any) {
         if editingEnabled {
@@ -78,6 +86,7 @@ class MyProfileViewController:  UIViewController,
         super.viewDidLoad()
         tagView.delegate = self
         imagePicker.delegate = self
+        nameTextField.delegate = self
         
         setTitle(titleText: "MY PROFILE")
         tagView.textFont = UIFont.systemFont(ofSize: 20)
@@ -93,6 +102,7 @@ class MyProfileViewController:  UIViewController,
     
         applyButtonBorder(button: addTagButton)
         applyButtonBorder(button: editButton)
+        self.hideKeyboardOnTap(#selector(self.dismissKeyboard))
     }
     
     func reloadTagView(removeIconEnabled: Bool) {
@@ -163,4 +173,26 @@ class MyProfileViewController:  UIViewController,
         titleLable.font = titleLable.font.withSize(CGFloat(24))
     }
     
+    override func dismissKeyboard() {
+        view.endEditing(true)
+        // do aditional stuff
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true
+    }
+    
+}
+
+extension UIViewController {
+    func hideKeyboardOnTap(_ selector: Selector) {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: selector)
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
 }
