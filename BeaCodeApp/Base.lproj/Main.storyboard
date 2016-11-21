@@ -365,7 +365,7 @@
             </objects>
             <point key="canvasLocation" x="2261.5999999999999" y="56.221889055472268"/>
         </scene>
-        <!--Exhibit Detail View Controller-->
+        <!--Title-->
         <scene sceneID="JqR-KH-PZc">
             <objects>
                 <viewController id="PfY-Le-vbR" customClass="ExhibitDetailViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -401,11 +401,17 @@
                             <constraint firstItem="e0H-y5-ywo" firstAttribute="leading" secondItem="LxC-SC-7oA" secondAttribute="leading" constant="8" id="wIn-nJ-o0I"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="VAe-hk-XRL"/>
-                    </toolbarItems>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="SyT-Tm-g9a">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="MBn-iW-Ky7">
+                            <connections>
+                                <action selector="exhibitAddButtonTapped:" destination="PfY-Le-vbR" id="fWc-3t-UiY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="exhibitAddButton" destination="MBn-iW-Ky7" id="ikY-rA-Vqu"/>
                         <outlet property="exhibitDescription" destination="e0H-y5-ywo" id="bod-NQ-ieb"/>
                         <outlet property="exhibitPhoto" destination="JfD-Mi-pXx" id="4ty-ap-znc"/>
                     </connections>

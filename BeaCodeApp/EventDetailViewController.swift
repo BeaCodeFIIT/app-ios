@@ -30,6 +30,10 @@ class EventDetailViewController: UIViewController {
         
         setTitle(titleText: SharingManager.sharedInstance.selectedEvent.title)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            eventDetailTable.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,6 +42,7 @@ class EventDetailViewController: UIViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent.exhibits[indexPath.row]
+        SharingManager.sharedInstance.selectedExhibit.position = indexPath.row
     }
     
     func setTitle(titleText: String) {

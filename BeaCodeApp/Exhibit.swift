@@ -13,10 +13,23 @@ class Exhibit {
     var title: String
     var photo: UIImage
     var descrition: String
+    var isSelected: Bool
+    var position: Int
 
-    init(title: String, description: String, thumbnail: UIImage) {
+    
+    init() {
+        self.title = ""
+        self.descrition = ""
+        self.photo = UIImage()
+        self.isSelected = false
+        self.position = 0
+    }
+    
+    init(title: String, description: String, thumbnail: UIImage, position: Int) {
         self.title = title
         self.descrition = description
         self.photo = thumbnail
+        self.isSelected = false
+        self.position = position
     }
 }

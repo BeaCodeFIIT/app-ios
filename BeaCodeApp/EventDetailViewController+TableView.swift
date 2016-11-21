@@ -35,7 +35,6 @@ extension EventDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +55,11 @@ extension EventDetailViewController: UITableViewDataSource {
             cell.exhibitTitle.text = exhibit.title
             cell.exhibitDescription.text = exhibit.descrition
             cell.exhibitPhoto.image = exhibit.photo
+            if exhibit.isSelected {
+                cell.checkbox.setTitle("☑\u{0000FE0E}", for: .normal)
+            } else {
+                cell.checkbox.setTitle("☐", for: .normal)
+            }
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)

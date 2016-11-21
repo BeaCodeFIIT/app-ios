@@ -12,6 +12,18 @@ import UIKit
 class ExhibitDetailViewController: UIViewController {
     @IBOutlet weak var exhibitPhoto: UIImageView!
     @IBOutlet weak var exhibitDescription: UILabel!
+    @IBOutlet weak var exhibitAddButton: UIBarButtonItem!
+    
+    @IBAction func exhibitAddButtonTapped(_ sender: Any) {
+        let selectedIndex = SharingManager.sharedInstance.selectedExhibit.position
+        if SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected {
+            exhibitAddButton.title = "Add"
+            SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected = false
+        } else {
+            exhibitAddButton.title = "Remove"
+            SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +31,8 @@ class ExhibitDetailViewController: UIViewController {
         exhibitDescription.text = SharingManager.sharedInstance.selectedExhibit.descrition
         setTitle(titleText: SharingManager.sharedInstance.selectedExhibit.title)
         
+        let selectedIndex = SharingManager.sharedInstance.selectedExhibit.position
+        exhibitAddButton.title = SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected ? "Remove" : "Add"
     }
     
     func buttonAction() {}
