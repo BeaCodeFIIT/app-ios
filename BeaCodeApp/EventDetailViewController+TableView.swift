@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GSImageViewerController
 
 extension EventDetailViewController: UITableViewDelegate {
     
@@ -37,10 +38,6 @@ extension EventDetailViewController: UITableViewDataSource {
         
     }
     
-//    func getUniqueDates(dates: [Date]) {
-//        
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
@@ -64,6 +61,14 @@ extension EventDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)
             return cell
         }
+    }
+    
+    func imageTapped() {
+        let tappedPhoto = SharingManager.sharedInstance.selectedEvent.photos[SharingManager.sharedInstance.selectedExhibitPhotoIndex]
+        let imageInfo      = GSImageInfo(image: tappedPhoto, imageMode: .aspectFit  , imageHD: nil)
+        let transitionInfo = GSTransitionInfo(fromView: self.view)
+        let imageViewer    = GSImageViewerController(imageInfo: imageInfo, transitionInfo: transitionInfo)
+        present(imageViewer, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

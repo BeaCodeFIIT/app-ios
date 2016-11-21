@@ -23,6 +23,11 @@ class EventDetailViewController: UIViewController {
         self.eventDetailTable.estimatedRowHeight = 100
         self.eventDetailTable.rowHeight = UITableViewAutomaticDimension
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(EventDetailViewController.imageTapped),
+                                               name: NSNotification.Name(rawValue: "photoFromSliderTapped"),
+                                               object: nil)
+        
         setTitle(titleText: SharingManager.sharedInstance.selectedEvent.title)
     }
 

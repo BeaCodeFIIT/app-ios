@@ -21,5 +21,6 @@ class SharingManager {
                                            description: "",
                                            thumbnail: UIImage())
     
+    var selectedExhibitPhotoIndex = 0
     static let sharedInstance = SharingManager()
 }

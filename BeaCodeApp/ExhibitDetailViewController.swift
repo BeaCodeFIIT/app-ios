@@ -21,6 +21,8 @@ class ExhibitDetailViewController: UIViewController {
         
     }
     
+    func buttonAction() {}
+    
     override func viewDidLayoutSubviews() {
         exhibitDescription.sizeToFit()
     }
