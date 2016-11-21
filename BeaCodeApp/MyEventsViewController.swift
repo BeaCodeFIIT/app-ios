@@ -21,9 +21,9 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
 
         //API TEST CALL
         var serviceCall = ServiceCall()
-        serviceCall.requestMethod = .get
+        serviceCall.requestMethod = .post
         serviceCall.requestParams = nil
-        serviceCall.requestUrl = "/app/starred-events/show"
+        serviceCall.requestUrl = "/app/events"
 
         NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
             print(result)
