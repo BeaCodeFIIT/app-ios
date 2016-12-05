@@ -15,7 +15,27 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        //MARK: - Call for event exhibits (1)
+        var serviceCall = ServiceCall()
+        serviceCall.requestMethod = .get
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/app/events/1/exhibits"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            print(result)
+        })
+
+        //MARK: - Call for selected exhibits for tour
+        serviceCall.requestMethod = .get
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/api/app/events/1/selected-exhibits-for-tour"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            print(result)
+        })
+
+
         //delete empty cells
         self.eventDetailTable.tableFooterView = UIView()
         
