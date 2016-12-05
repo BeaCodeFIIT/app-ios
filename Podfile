@@ -14,4 +14,6 @@ target 'BeaCodeApp' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'GSImageViewerController', '~> 1.2'
+	pod "NMPopUpViewSwift"
 end
+

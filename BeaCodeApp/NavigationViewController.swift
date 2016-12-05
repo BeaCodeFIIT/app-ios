@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import NMPopUpViewSwift
 
 class NavigationViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -33,6 +34,7 @@ class NavigationViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     var locationManager: CLLocationManager!
+    var popVC: PopUpViewControllerSwift!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,9 @@ class NavigationViewController: UIViewController, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        
+        let bundle = Bundle(for: PopUpViewControllerSwift.self)
+        popVC = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6Plus", bundle: bundle)
         
         initBeaconTracking()
     }
@@ -105,6 +110,10 @@ class NavigationViewController: UIViewController, CLLocationManagerDelegate {
                     minorLabel.text = closestBeacon!.minor
                     distanceLabel.text = roundedAvg
                     trackedBeacons = Dictionary<String, BeaconMeasuraments>()
+                    
+                    if closestBeacon!.avgDistance < 1.0 { //is closer than 1m
+                        presentPopup()
+                    }
                 }
             }
             
@@ -135,6 +144,18 @@ class NavigationViewController: UIViewController, CLLocationManagerDelegate {
             actualDistanceLabel.text = "0.0m"
             distanceLabel.text = "0.0m"
         }
+    }
+    
+    func presentPopup() {
+        if !SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty && !popVC.isActive {
+            popVC.title = "test popup view"
+            popVC.showInView(self.view,
+                             withImage: SharingManager.sharedInstance.selectedEvent.exhibits[0].photo,
+                             withMessage: SharingManager.sharedInstance.selectedEvent.exhibits[0].title,
+                             animated: true)
+        }
+        
+
     }
     
     func keyForBeacon(beacon: CLBeacon) -> String {

@@ -17,4 +17,14 @@ class AlertUtils {
         viewController.present(alert, animated: true, completion: nil)
     }
     
+    static func postAlert(viewController: UIViewController, title: String, message: String, image: UIImage, description: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        let imageView = UIImageView(frame: CGRect(x: 220, y: 10, width: 40, height: 40))
+        imageView.image = image
+        alert.view.addSubview(imageView)
+        viewController.present(alert, animated: true, completion: nil)
+    }
+    
 }
