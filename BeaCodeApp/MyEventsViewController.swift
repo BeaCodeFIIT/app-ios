@@ -20,14 +20,18 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         setTitle(titleText: "MY EVENTS")
 
         //API TEST CALL
-        var serviceCall = ServiceCall()
-        serviceCall.requestMethod = .post
-        serviceCall.requestParams = nil
-        serviceCall.requestUrl = "/app/events"
-
-        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
-            print(result)
-        })
+//        var serviceCall = ServiceCall()
+//        serviceCall.requestMethod = .post
+//        serviceCall.requestParams = nil
+//        serviceCall.requestUrl = "/app/events"
+//
+//        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+//            print(result)
+//        })
+        
+        //Beacon test call
+        print("Testing core location")
+        let clmanager = CoreLocationManager()
     }
     
     override func didReceiveMemoryWarning() {

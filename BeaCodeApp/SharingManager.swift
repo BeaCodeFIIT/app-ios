@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 class SharingManager {
-    var selectedEvent: Event = Event(title: "",
-                                     description: "",
-                                     date: Date(),
-                                     thumbnail: UIImage(),
-                                     organizer: "",
-                                     location: "")
+    var selectedEvent: Event = Event()
     
+    func getSelectedExhibit() -> Exhibit {
+        return selectedEvent.exhibits[selectedEvent.selectedExhibit]
+    }
     
-    var selectedExhibit: Exhibit = Exhibit()
+    func setSelectedExhibit(exhibit: Exhibit) {
+        selectedEvent.selectedExhibit = exhibit.position
+    }
     
     var selectedExhibitPhotoIndex = 0
     static let sharedInstance = SharingManager()

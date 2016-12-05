@@ -16,10 +16,20 @@ struct Event {
     var date: Date
     var organizer: String
     var location: String
+    var selectedExhibit: Int
     
     var photos = [UIImage]()
     var exhibits = [Exhibit]()
     
+    init() {
+        self.title = ""
+        self.description = ""
+        self.thumbnail = UIImage()
+        self.date = Date()
+        self.organizer = ""
+        self.location = ""
+        self.selectedExhibit = 0
+    }
     
     init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String) {
         self.title = title
@@ -28,6 +38,7 @@ struct Event {
         self.date = date
         self.organizer = organizer
         self.location = location
+        self.selectedExhibit = 0
     }
     
     init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String, photos: [UIImage]) {
@@ -38,6 +49,7 @@ struct Event {
         self.organizer = organizer
         self.location = location
         self.photos = photos
+        self.selectedExhibit = 0
     }
     
     func downloadImage(imageUrl: String) -> UIImage {

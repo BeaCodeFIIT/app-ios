@@ -27,7 +27,7 @@ class ExhibitTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkboxTapped(_ sender: Any) {
-        let selectedIndex = SharingManager.sharedInstance.selectedExhibit.position
+        let selectedIndex = SharingManager.sharedInstance.getSelectedExhibit().position
         
         if SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected {
             checkbox.setTitle("☐", for: .normal)
@@ -38,16 +38,6 @@ class ExhibitTableViewCell: UITableViewCell {
             checkbox.titleLabel?.font = UIFont(name: self.exhibitTitle.font.fontName, size: 32.0)
             SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected = true
         }
-
-//        if checkbox.titleLabel?.text == "☑\u{0000FE0E}" {
-//            checkbox.setTitle("☐", for: .normal)
-//            checkbox.titleLabel?.font = UIFont(name: self.exhibitTitle.font.fontName, size: 24.0)
-//            SharingManager.sharedInstance.selectedExhibit.isSelected = false
-//        } else {
-//            self.checkbox.setTitle("☑\u{0000FE0E}", for: .normal)
-//            checkbox.titleLabel?.font = UIFont(name: self.exhibitTitle.font.fontName, size: 32.0)
-//            SharingManager.sharedInstance.selectedExhibit.isSelected = true
-//        }
     }
     
 
