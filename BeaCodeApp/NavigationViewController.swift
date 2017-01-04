@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 import NMPopUpViewSwift
 
-class NavigationViewController: UIViewController, CLLocationManagerDelegate {
+public class NavigationViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var uuidLabel: UILabel!
     @IBOutlet weak var majorLabel: UILabel!
@@ -144,6 +144,10 @@ class NavigationViewController: UIViewController, CLLocationManagerDelegate {
             actualDistanceLabel.text = "0.0m"
             distanceLabel.text = "0.0m"
         }
+    }
+    
+    func getClosestBeaconByAverageDistance(trackedBeacons: Dictionary<String, BeaconMeasuraments>) -> BeaconMeasuraments? {
+        return Array(trackedBeacons.values).sorted(by: { $0.0.avgDistance < $0.1.avgDistance }).first
     }
     
     func presentPopup() {

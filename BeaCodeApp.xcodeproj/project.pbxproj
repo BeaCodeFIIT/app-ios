@@ -36,6 +36,7 @@
 		EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE271DC9381800C30D69 /* Exhibit.swift */; };
 		EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5EEE291DC93E6C00C30D69 /* Assets.xcassets */; };
 		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
+		EA6072411DFE720A008F6160 /* BeaCodeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */; };
 		EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */; };
 		EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */; };
 		EAD31D281DE1EDC7008AC6B6 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */; };
@@ -43,6 +44,16 @@
 		EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AE1DD0AC790049D28B /* EventConverter.swift */; };
 		EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019B01DD0B0570049D28B /* GetEventResource.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA6072431DFE720A008F6160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BABBEAE1DA2BD470074842A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BABBEB51DA2BD470074842A;
+			remoteInfo = BeaCodeApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22FCC914006020FCE9F45BC0 /* Pods-BeaCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaCodeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +89,9 @@
 		EA5EEE271DC9381800C30D69 /* Exhibit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exhibit.swift; sourceTree = "<group>"; };
 		EA5EEE291DC93E6C00C30D69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFactory.swift; sourceTree = "<group>"; };
+		EA60723E1DFE720A008F6160 /* BeaCodeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaCodeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaCodeAppTests.swift; sourceTree = "<group>"; };
+		EA6072421DFE720A008F6160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitTableViewCell.swift; sourceTree = "<group>"; };
 		EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDetailViewController.swift; sourceTree = "<group>"; };
 		EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
@@ -94,6 +108,13 @@
 				2B4476CD1DAAAE0600A27F4C /* CoreBluetooth.framework in Frameworks */,
 				2B4476CB1DAAAE0100A27F4C /* CoreLocation.framework in Frameworks */,
 				2F86F596CEFCE6ABE133766A /* Pods_BeaCodeApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA60723B1DFE720A008F6160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				2BABBEB81DA2BD470074842A /* BeaCodeApp */,
+				EA60723F1DFE720A008F6160 /* BeaCodeAppTests */,
 				2BABBEB71DA2BD470074842A /* Products */,
 				2B4476C91DAAAE0100A27F4C /* Frameworks */,
 				7289416C5907DDDDE4A29FE0 /* Pods */,
@@ -330,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				2BABBEB61DA2BD470074842A /* BeaCodeApp.app */,
+				EA60723E1DFE720A008F6160 /* BeaCodeAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -404,6 +427,15 @@
 				EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */,
 			);
 			name = MockService;
+			sourceTree = "<group>";
+		};
+		EA60723F1DFE720A008F6160 /* BeaCodeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */,
+				EA6072421DFE720A008F6160 /* Info.plist */,
+			);
+			path = BeaCodeAppTests;
 			sourceTree = "<group>";
 		};
 		EAD31D231DE1ECA2008AC6B6 /* Controller */ = {
@@ -505,13 +537,31 @@
 			productReference = 2BABBEB61DA2BD470074842A /* BeaCodeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EA60723D1DFE720A008F6160 /* BeaCodeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6072451DFE720A008F6160 /* Build configuration list for PBXNativeTarget "BeaCodeAppTests" */;
+			buildPhases = (
+				EA60723A1DFE720A008F6160 /* Sources */,
+				EA60723B1DFE720A008F6160 /* Frameworks */,
+				EA60723C1DFE720A008F6160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6072441DFE720A008F6160 /* PBXTargetDependency */,
+			);
+			name = BeaCodeAppTests;
+			productName = BeaCodeAppTests;
+			productReference = EA60723E1DFE720A008F6160 /* BeaCodeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2BABBEAE1DA2BD470074842A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Peter Augustín";
 				TargetAttributes = {
@@ -519,6 +569,12 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MN2MG2K2EN;
 						ProvisioningStyle = Automatic;
+					};
+					EA60723D1DFE720A008F6160 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = MN2MG2K2EN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BABBEB51DA2BD470074842A;
 					};
 				};
 			};
@@ -536,6 +592,7 @@
 			projectRoot = "";
 			targets = (
 				2BABBEB51DA2BD470074842A /* BeaCodeApp */,
+				EA60723D1DFE720A008F6160 /* BeaCodeAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -548,6 +605,13 @@
 				2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */,
 				EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA60723C1DFE720A008F6160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +715,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA60723A1DFE720A008F6160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6072411DFE720A008F6160 /* BeaCodeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA6072441DFE720A008F6160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BABBEB51DA2BD470074842A /* BeaCodeApp */;
+			targetProxy = EA6072431DFE720A008F6160 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2BABBEBD1DA2BD470074842A /* Main.storyboard */ = {
@@ -794,6 +874,36 @@
 			};
 			name = Release;
 		};
+		EA6072461DFE720A008F6160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MN2MG2K2EN;
+				INFOPLIST_FILE = BeaCodeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marekbruchaty.BeaCodeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaCodeApp.app/BeaCodeApp";
+			};
+			name = Debug;
+		};
+		EA6072471DFE720A008F6160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MN2MG2K2EN;
+				INFOPLIST_FILE = BeaCodeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marekbruchaty.BeaCodeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaCodeApp.app/BeaCodeApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -814,6 +924,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EA6072451DFE720A008F6160 /* Build configuration list for PBXNativeTarget "BeaCodeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6072461DFE720A008F6160 /* Debug */,
+				EA6072471DFE720A008F6160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
