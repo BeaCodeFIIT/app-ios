@@ -19,16 +19,25 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         events = mockEvents()
         setTitle(titleText: "MY EVENTS")
 
-        //API TEST CALL
-//        var serviceCall = ServiceCall()
-//        serviceCall.requestMethod = .post
-//        serviceCall.requestParams = nil
-//        serviceCall.requestUrl = "/app/events"
-//
-//        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
-//            print(result)
-//        })
-        
+        //MARK: - Call for all events
+        var serviceCall = ServiceCall()
+        serviceCall.requestMethod = .post
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/app/events"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            print(result)
+        })
+
+        //MARK: - Call for logged user
+        serviceCall.requestMethod = .get
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/api/app/logged-in-user"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+        print(result)
+        })
+
         //Beacon test call
         print("Testing core location")
         let clmanager = CoreLocationManager()

@@ -28,20 +28,20 @@ public class NetworkServiceManager: NetworkServiceManagerProtocol {
                           encoding: JSONEncoding.default,
                           headers: header).responseJSON { response in
 
-                            switch response.response!.statusCode {
-                                case 200:
-                                    print(response.result.debugDescription)
-                                    completition(true)
-                                case 400:
-                                    completition(false)
-                                case 401:
-                                    completition(false)
-                                case 404:
-                                    completition(false)
-                                case 500:
-                                    completition(false)
-                                default: break
-                            }
+            switch response.response!.statusCode {
+                case 200:
+                    print(response.result.debugDescription)
+                    completition(true)
+                case 400:
+                    completition(false)
+                case 401:
+                    completition(false)
+                case 404:
+                    completition(false)
+                case 500:
+                    completition(false)
+                default: break
+            }
         }
     }
 

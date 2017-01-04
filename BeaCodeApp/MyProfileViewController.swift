@@ -95,7 +95,25 @@ class MyProfileViewController:  UIViewController,
         tagView.removeIconLineColor = UIColor.white
         tagView.removeIconLineWidth = CGFloat(integerLiteral: 1)
         tagView.removeButtonIconSize = CGFloat(integerLiteral: 10)
-        
+
+        //MARK: - Call for user interests
+        var serviceCall = ServiceCall()
+        serviceCall.requestMethod = .get
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/api/app/interests"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            print(result)
+        })
+
+        serviceCall.requestMethod = .get
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/api/app/starred-events"
+
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            print(result)
+        })
+
         //mock tags
         tags.append(contentsOf: ["technology", "automobile", "space", "flight", "science", "nature", "astronomy", "history", "startups"])
         reloadTagView(removeIconEnabled: false)
