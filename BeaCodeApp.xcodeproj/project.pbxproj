@@ -291,6 +291,7 @@
 		2B4476DB1DAAB24F00A27F4C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				EA6239961E6B652100D3F13E /* Exhibit Detail */,
 				EAE019A41DD0A7E00049D28B /* Event Dashboard */,
 				EAE019A31DD0A7D80049D28B /* Event Detail */,
 				EA5EEE2B1DC93EF100C30D69 /* MockService */,
@@ -398,9 +399,6 @@
 			children = (
 				EA1C22AE1DC8E9B3005481AB /* MyEventsViewController.swift */,
 				EA1C22B01DC8EA0B005481AB /* SearchViewController.swift */,
-				EA1C22B61DC8EC12005481AB /* EventDetailViewController.swift */,
-				EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */,
-				EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -438,6 +436,14 @@
 			path = BeaCodeAppTests;
 			sourceTree = "<group>";
 		};
+		EA6239961E6B652100D3F13E /* Exhibit Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */,
+			);
+			name = "Exhibit Detail";
+			sourceTree = "<group>";
+		};
 		EAD31D231DE1ECA2008AC6B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +470,8 @@
 		EAE019A31DD0A7D80049D28B /* Event Detail */ = {
 			isa = PBXGroup;
 			children = (
+				EA1C22B61DC8EC12005481AB /* EventDetailViewController.swift */,
+				EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */,
 			);
 			name = "Event Detail";
 			sourceTree = "<group>";
@@ -932,6 +940,7 @@
 				EA6072471DFE720A008F6160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
