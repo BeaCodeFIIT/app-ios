@@ -9,26 +9,26 @@
 import UIKit
 import CoreLocation
 
-public protocol CoreLocationManagerProtocol {
+//public protocol CoreLocationManagerProtocol {
+//
+//    func getNearestBeacon() -> CLBeacon
+//    func setNearestBeacon(beacon: CLBeacon!)
+//}
 
-    func getNearestBeacon() -> CLBeacon
-    func setNearestBeacon(beacon: CLBeacon!)
-}
+public class CoreLocationManager: NSObject, CLLocationManagerDelegate {//, CoreLocationManagerProtocol {
 
-public class CoreLocationManager: NSObject, CLLocationManagerDelegate, CoreLocationManagerProtocol {
-
-    static let sharedInstance = CoreLocationManager()
     let locationManager = CLLocationManager()
-    private var nearestBeacon = CLBeacon()
+    
+//    static let sharedInstance = CoreLocationManager()
+//    private var nearestBeacon = CLBeacon()
 
     let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")! as UUID, identifier: "Estimotes")
 
-    private override init() {
+    public override init() {
         super.init()
     
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-
     }
 
     func startMonitoring() {
@@ -64,24 +64,28 @@ public class CoreLocationManager: NSObject, CLLocationManagerDelegate, CoreLocat
     }
 
     public func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        setNearestBeacon(beacon: beacons.first!)
+//        setNearestBeacon(beacon: beacons.first!)
+        print("\(beacons.count) beacons detected")
     }
 
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 
         if status == .authorizedAlways {
-
+            
+            print("Beacon location authorization always enabled")
             manager.startMonitoring(for: region)
             manager.requestState(for: region)
             
+        } else {
+            print("Beacon location authorization always disabled")
         }
     }
 
-    public func setNearestBeacon(beacon: CLBeacon!) {
-        nearestBeacon = beacon
-    }
-
-    public func getNearestBeacon() -> CLBeacon {
-        return nearestBeacon
-    }
+//    public func setNearestBeacon(beacon: CLBeacon!) {
+//        nearestBeacon = beacon
+//    }
+//
+//    public func getNearestBeacon() -> CLBeacon {
+//        return nearestBeacon
+//    }
 }
