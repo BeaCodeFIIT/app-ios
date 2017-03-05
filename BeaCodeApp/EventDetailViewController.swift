@@ -29,6 +29,9 @@ class EventDetailViewController: UIViewController {
                                                object: nil)
         
         setTitle(titleText: SharingManager.sharedInstance.selectedEvent.title)
+        prepareExhibits()
+        SharingManager.sharedInstance.lastIndexInCategory = 0
+        SharingManager.sharedInstance.lastCategory = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +67,21 @@ class EventDetailViewController: UIViewController {
         titleLable.textColor = UIColor.white
         titleLable.font = titleLable.font.withSize(CGFloat(24))
     }
-
     
+    func prepareExhibits() {
+//        let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits
+//        exhibits.categories.removeAll()
+//
+//        for exhibit in SharingManager.sharedInstance.selectedEvent.exhibits {
+//            if exhibits.categories[exhibit.category] == nil {
+//                exhibits.categories[exhibit.category] = Array<Exhibit>()
+//            }
+//            exhibits.categories[exhibit.category]?.append(exhibit)
+//        }
+        let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits.exhibits
+        for exhibit in SharingManager.sharedInstance.selectedEvent.exhibits {
+            
+        }
+    }
+
 }

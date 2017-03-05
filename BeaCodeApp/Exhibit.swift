@@ -10,26 +10,19 @@ import Foundation
 import UIKit
 
 class Exhibit {
-    var title: String
-    var photo: UIImage
-    var descrition: String
-    var isSelected: Bool
-    var position: Int
-
+    var title: String = ""
+    var photo: UIImage = UIImage()
+    var descrition: String = ""
+    var isSelected: Bool = false
+    var position: Int = 0
+    var category: String = ""
     
-    init() {
-        self.title = ""
-        self.descrition = ""
-        self.photo = UIImage()
-        self.isSelected = false
-        self.position = 0
-    }
-    
-    init(title: String, description: String, thumbnail: UIImage, position: Int) {
+    init(title: String, description: String, thumbnail: UIImage, position: Int, category: String) {
         self.title = title
         self.descrition = description
         self.photo = thumbnail
         self.isSelected = false
         self.position = position
+        self.category = category
     }
 }

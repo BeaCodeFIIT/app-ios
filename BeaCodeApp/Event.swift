@@ -20,6 +20,7 @@ struct Event {
     
     var photos = [UIImage]()
     var exhibits = [Exhibit]()
+    var categorizedExhibits = CategorizedExhibits()
     
     init() {
         self.title = ""

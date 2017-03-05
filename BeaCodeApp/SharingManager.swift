@@ -11,6 +11,7 @@ import UIKit
 
 class SharingManager {
     var selectedEvent: Event = Event()
+    var selectedCategories: [String] = [String]()
     
     func getSelectedExhibit() -> Exhibit {
         return selectedEvent.exhibits[selectedEvent.selectedExhibit]
@@ -21,5 +22,9 @@ class SharingManager {
     }
     
     var selectedExhibitPhotoIndex = 0
+    
+    var lastCategory = ""
+    var lastIndexInCategory = 0
+    
     static let sharedInstance = SharingManager()
 }
