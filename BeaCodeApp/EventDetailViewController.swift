@@ -12,6 +12,7 @@ import UIKit
 class EventDetailViewController: UIViewController {
     
     @IBOutlet weak var eventDetailTable: UITableView!
+    var numberOfRowsInSection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,7 @@ class EventDetailViewController: UIViewController {
         
         setTitle(titleText: SharingManager.sharedInstance.selectedEvent.title)
         prepareExhibits()
-        SharingManager.sharedInstance.lastIndexInCategory = 0
-        SharingManager.sharedInstance.lastCategory = ""
+        numberOfRowsInSection = SharingManager.sharedInstance.selectedEvent.sections.count
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,9 +43,15 @@ class EventDetailViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        SharingManager.sharedInstance.selectedEvent.selectedExhibit = indexPath.row
-        SharingManager.sharedInstance.getSelectedExhibit().position = indexPath.row
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        SharingManager.sharedInstance.selectedEvent.selectedExhibit = indexPath.row
+//        SharingManager.sharedInstance.getSelectedExhibit().position = indexPath.row
+
+//        let indexPath = IndexPath(row: 0, section: 2)
+//        tableView.beginUpdates()
+//        eventDetailTable.insertRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+//        numberOfRowsInSection += 1
+//        tableView.endUpdates()
     }
     
     func setTitle(titleText: String) {
@@ -69,18 +75,17 @@ class EventDetailViewController: UIViewController {
     }
     
     func prepareExhibits() {
-//        let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits
-//        exhibits.categories.removeAll()
-//
-//        for exhibit in SharingManager.sharedInstance.selectedEvent.exhibits {
-//            if exhibits.categories[exhibit.category] == nil {
-//                exhibits.categories[exhibit.category] = Array<Exhibit>()
-//            }
-//            exhibits.categories[exhibit.category]?.append(exhibit)
-//        }
-        let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits.exhibits
+        var dic = [String : Array<Exhibit>]()
+        
         for exhibit in SharingManager.sharedInstance.selectedEvent.exhibits {
-            
+            if dic[exhibit.category] == nil {
+                dic[exhibit.category] = Array<Exhibit>()
+            }
+            dic[exhibit.category]?.append(exhibit)
+        }
+        
+        for category in dic {
+            SharingManager.sharedInstance.selectedEvent.sections.append(Section(name: category.key, items: category.value, collapsed: false))
         }
     }
 

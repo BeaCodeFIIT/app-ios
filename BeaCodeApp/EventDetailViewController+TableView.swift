@@ -15,9 +15,7 @@ extension EventDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 2:
-            let count = SharingManager.sharedInstance.selectedEvent.categorizedExhibits.categories.values.count +
-                SharingManager.sharedInstance.selectedEvent.categorizedExhibits.categories.keys.count
-            return count-1
+            return numberOfRowsInSection
         default:
             return 1
         }
@@ -51,56 +49,33 @@ extension EventDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventPhotoSliderTableViewCell_ID", for: indexPath)
             return cell
         case 2:
-            let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
-                
-            if exhibits.categories.isEmpty {
-                return cell
-            }
+//            let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
+//            cell.hideExhibitFeatures()
+//            cell.categoryLabel.text = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name
             
-            var keys = Array(exhibits.categories.keys).sorted(by: >)
-            
-            if SharingManager.sharedInstance.lastCategory.isEmpty {
-                SharingManager.sharedInstance.lastCategory = keys[0]
-                SharingManager.sharedInstance.lastIndexInCategory = 0
-                cell.hideExhibitFeatures()
-                cell.categoryLabel.text = SharingManager.sharedInstance.lastCategory
-                print("New Category Cell \(cell.categoryLabel.text)")
-                return cell
-            }
-            
-            let exhibitsInCategory = exhibits.getExhibits(category: SharingManager.sharedInstance.lastCategory)
-            
-            if exhibitsInCategory.count == SharingManager.sharedInstance.lastIndexInCategory {
-                let previousCategoryIndex = keys.index(of: SharingManager.sharedInstance.lastCategory)
-                if previousCategoryIndex! + 1 >= keys.count {
-                    return cell
-                }
-                print("Keys.endIndex \(keys.count)")
-                print(previousCategoryIndex!)
-                SharingManager.sharedInstance.lastCategory = keys[previousCategoryIndex! + 1]
-                SharingManager.sharedInstance.lastIndexInCategory = 0
-                cell.hideExhibitFeatures()
-                cell.categoryLabel.text = SharingManager.sharedInstance.lastCategory
-                print("New Category Cell \(cell.categoryLabel.text)")
-                return cell
-            }
-
-            
-            var currentExhibits = exhibits.getExhibits(category: SharingManager.sharedInstance.lastCategory)
-            let currentExhibit = currentExhibits[SharingManager.sharedInstance.lastIndexInCategory]
-            cell.exhibitDescription.text = currentExhibit.descrition
-            cell.exhibitPhoto.image = currentExhibit.photo
-            cell.exhibitTitle.text = currentExhibit.title
-            cell.showExhibitFeatures()
-            SharingManager.sharedInstance.lastIndexInCategory = SharingManager.sharedInstance.lastIndexInCategory + 1
-        
-            print("New Simple Cell \(cell.exhibitTitle.text)")
-            return cell
+            let sectionCell = Bundle.main.loadNibNamed("SectionCell", owner: self, options: nil)?.first as! SectionCell
+            sectionCell.titleButton.setTitle(SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name, for: .normal)
+            sectionCell.exhibits = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].items
+            sectionCell.titleButton.tag = indexPath.row
+            sectionCell.titleButton.addTarget(self, action: #selector(addExhibit(_:)), for: .touchUpInside)
+            return sectionCell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)
             return cell
         }
+    }
+    
+    func addExhibit(_ sender: UIButton) {
+        print(sender.tag)
+        let exhibits = SharingManager.sharedInstance.selectedEvent.sections[sender.tag].items
+        
+        let indexPath = IndexPath(row: 0, section: 2)
+        eventDetailTable.beginUpdates()
+        eventDetailTable.insertRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        numberOfRowsInSection += 1
+        eventDetailTable.endUpdates()
+
     }
     
     func imageTapped() {
