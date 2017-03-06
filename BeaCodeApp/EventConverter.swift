@@ -11,23 +11,18 @@ import Foundation
 
 public  class EventConverter {
         //EventDto -> Event
+    
+    static let shared = EventConverter()
 
-    func convert(input: EventDto) throws -> Event? {
+    func convert(input: EventDto) -> Event? {
         
-        guard let title = input.name else {
-            return nil
-        }
+        var event = Event()
+        event.id = input.id
+        event.title = input.name
+        event.date = input.start
+        event.description = input.description
+        event.categories = input.categories
         
-        guard let description = input.description else {
-            return nil
-        }
-        
-        return Event(
-            title: title,
-            description: description,
-            date: (input.start?.toDateTime())!,
-            thumbnail: UIImage(),
-            organizer: "Marecek",
-            location: input.location!)
+        return event
     }
 }

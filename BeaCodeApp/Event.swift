@@ -10,13 +10,15 @@ import Foundation
 import UIKit
 
 struct Event {
-    var title: String
-    var description: String
-    var thumbnail: UIImage
-    var date: Date
-    var organizer: String
-    var location: String
-    var selectedExhibit: Int
+    var title: String?
+    var description: String?
+    var thumbnail: UIImage?
+    var date: String?
+    var organizer: String?
+    var location: String?
+    var selectedExhibit: Int?
+    var categories = [Category]()
+    var id: Int?
     
     var photos = [UIImage]()
     var exhibits = [Exhibit]()
@@ -27,13 +29,13 @@ struct Event {
         self.title = ""
         self.description = ""
         self.thumbnail = UIImage()
-        self.date = Date()
+        self.date = ""
         self.organizer = ""
         self.location = ""
         self.selectedExhibit = 0
     }
     
-    init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String) {
+    init(title: String, description: String, date: String, thumbnail: UIImage, organizer: String, location: String) {
         self.title = title
         self.description = description
         self.thumbnail = thumbnail
@@ -43,7 +45,7 @@ struct Event {
         self.selectedExhibit = 0
     }
     
-    init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String, photos: [UIImage]) {
+    init(title: String, description: String, date: String, thumbnail: UIImage, organizer: String, location: String, photos: [UIImage]) {
         self.title = title
         self.description = description
         self.thumbnail = thumbnail

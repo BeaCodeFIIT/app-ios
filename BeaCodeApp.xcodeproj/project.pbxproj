@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B2C77581DD9F65D00E9B1ED /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C77571DD9F65D00E9B1ED /* ServiceCall.swift */; };
+		2B37690A1E6D95C500E2F4F0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3769091E6D95C500E2F4F0 /* Category.swift */; };
 		2B4476C81DAAADC700A27F4C /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476C71DAAADC700A27F4C /* CoreLocationManager.swift */; };
 		2B4476CB1DAAAE0100A27F4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4476CA1DAAAE0100A27F4C /* CoreLocation.framework */; };
 		2B4476CD1DAAAE0600A27F4C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4476CC1DAAAE0600A27F4C /* CoreBluetooth.framework */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		22FCC914006020FCE9F45BC0 /* Pods-BeaCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaCodeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.release.xcconfig"; sourceTree = "<group>"; };
 		2B2C77571DD9F65D00E9B1ED /* ServiceCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
+		2B3769091E6D95C500E2F4F0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2B4476C71DAAADC700A27F4C /* CoreLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationManager.swift; sourceTree = "<group>"; };
 		2B4476CA1DAAAE0100A27F4C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2B4476CC1DAAAE0600A27F4C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -507,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5EEE251DC937E400C30D69 /* Event.swift */,
+				2B3769091E6D95C500E2F4F0 /* Category.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */,
 				EA1C22B11DC8EA0B005481AB /* SearchViewController.swift in Sources */,
 				EA5EEE211DC9126D00C30D69 /* EventDetailViewController+TableView.swift in Sources */,
+				2B37690A1E6D95C500E2F4F0 /* Category.swift in Sources */,
 				EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */,
 				EA5EEE1B1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift in Sources */,
 				EA90C2E61E6CC19A003372D9 /* Section.swift in Sources */,

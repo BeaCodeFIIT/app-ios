@@ -14,7 +14,7 @@ class SharingManager {
     var selectedCategories: [String] = [String]()
     
     func getSelectedExhibit() -> Exhibit {
-        return selectedEvent.exhibits[selectedEvent.selectedExhibit]
+        return selectedEvent.exhibits[selectedEvent.selectedExhibit!]
     }
     
     func setSelectedExhibit(exhibit: Exhibit) {
