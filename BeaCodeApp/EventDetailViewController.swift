@@ -54,6 +54,28 @@ class EventDetailViewController: UIViewController {
 //        tableView.endUpdates()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as! ExhibitTableViewCell? {
+            if !(cell.categoryLabel.text?.isEmpty)! {
+                
+                eventDetailTable.beginUpdates()
+                let sectionIndexPath = IndexPath(row: cell.rowIndex, section: 2)
+                for exhibit in cell.exhibits {
+                    eventDetailTable.insertRows(at: [sectionIndexPath], with: UITableViewRowAnimation.fade)
+                    let newCellIndexPath = IndexPath(row: cell.rowIndex + 1, section: 2)
+                    let newCell = eventDetailTable.cellForRow(at: newCellIndexPath) as! ExhibitTableViewCell
+                    newCell.exhibitPhoto.image = exhibit.photo
+                    newCell.exhibitDescription.text = exhibit.descrition
+                    newCell.exhibitTitle.text = exhibit.title
+                    eventDetailTable.insertRows(at: [sectionIndexPath], with: UITableViewRowAnimation.fade)
+                    numberOfRowsInSection += 1
+                }
+                eventDetailTable.endUpdates()
+            }
+            
+        }
+    }
+    
     func setTitle(titleText: String) {
         let navBar = self.navigationController!.navigationBar
         navBar.barTintColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1)

@@ -49,17 +49,18 @@ extension EventDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventPhotoSliderTableViewCell_ID", for: indexPath)
             return cell
         case 2:
-//            let exhibits = SharingManager.sharedInstance.selectedEvent.categorizedExhibits
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
-//            cell.hideExhibitFeatures()
-//            cell.categoryLabel.text = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
+            cell.hideExhibitFeatures()
+            cell.categoryLabel.text = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name
+            cell.rowIndex = indexPath.row
+            cell.exhibits = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].items
             
-            let sectionCell = Bundle.main.loadNibNamed("SectionCell", owner: self, options: nil)?.first as! SectionCell
-            sectionCell.titleButton.setTitle(SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name, for: .normal)
-            sectionCell.exhibits = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].items
-            sectionCell.titleButton.tag = indexPath.row
-            sectionCell.titleButton.addTarget(self, action: #selector(addExhibit(_:)), for: .touchUpInside)
-            return sectionCell
+//            let sectionCell = Bundle.main.loadNibNamed("SectionCell", owner: self, options: nil)?.first as! SectionCell
+//            sectionCell.titleButton.setTitle(SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name, for: .normal)
+//            sectionCell.exhibits = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].items
+//            sectionCell.titleButton.tag = indexPath.row
+//            sectionCell.titleButton.addTarget(self, action: #selector(addExhibit(_:)), for: .touchUpInside)
+            return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)
             return cell
@@ -75,7 +76,6 @@ extension EventDetailViewController: UITableViewDataSource {
         eventDetailTable.insertRows(at: [indexPath], with: UITableViewRowAnimation.fade)
         numberOfRowsInSection += 1
         eventDetailTable.endUpdates()
-
     }
     
     func imageTapped() {

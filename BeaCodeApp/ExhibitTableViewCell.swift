@@ -16,6 +16,9 @@ class ExhibitTableViewCell: UITableViewCell {
     @IBOutlet weak var checkbox: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
     
+    var exhibits: Array<Exhibit>!
+    var rowIndex: Int!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,6 +10,7 @@ import Foundation
 
 class Section {
     var name: String!
+    var headerRow: Int!
     var items: Array<Exhibit>!
     var collapsed: Bool!
     
