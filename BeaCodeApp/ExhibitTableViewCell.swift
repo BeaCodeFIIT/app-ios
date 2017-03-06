@@ -14,11 +14,6 @@ class ExhibitTableViewCell: UITableViewCell {
     @IBOutlet weak var exhibitTitle: UILabel!
     @IBOutlet weak var exhibitDescription: UILabel!
     @IBOutlet weak var checkbox: UIButton!
-    @IBOutlet weak var categoryLabel: UILabel!
-    
-    var exhibits: Array<Exhibit>!
-    var rowIndex: Int!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,20 +24,6 @@ class ExhibitTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func hideExhibitFeatures() {
-        exhibitPhoto.isHidden = true
-        exhibitTitle.isHidden = true
-        exhibitDescription.isHidden = true
-        checkbox.isHidden = true
-    }
-    
-    func showExhibitFeatures() {
-        exhibitPhoto.isHidden = false
-        exhibitTitle.isHidden = false
-        exhibitDescription.isHidden = false
-        checkbox.isHidden = false
     }
     
     @IBAction func checkboxTapped(_ sender: Any) {

@@ -27,7 +27,6 @@ class EventPhotoSliderTableViewCell: UITableViewCell {
 extension EventPhotoSliderTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("\n\n\n \(SharingManager.sharedInstance.selectedEvent.photos.count) \n\n\n")
         return SharingManager.sharedInstance.selectedEvent.photos.count
     }
     

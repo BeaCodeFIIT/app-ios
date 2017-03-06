@@ -285,12 +285,6 @@
                                                         <action selector="checkboxTapped:" destination="z4j-gA-gkL" eventType="touchUpInside" id="had-Ci-55u"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw5-nF-zs4">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="100"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="xa5-H0-zmT" secondAttribute="bottom" constant="27" id="8ZV-Wa-wdy"/>
@@ -298,14 +292,10 @@
                                                 <constraint firstItem="fZH-Kj-5ZS" firstAttribute="top" secondItem="v37-6O-fYq" secondAttribute="topMargin" id="RfX-Q3-LLh"/>
                                                 <constraint firstItem="Us7-vG-B6d" firstAttribute="leading" secondItem="fZH-Kj-5ZS" secondAttribute="trailing" constant="8" id="Rk0-je-xWO"/>
                                                 <constraint firstItem="HHk-jm-OeS" firstAttribute="top" secondItem="Us7-vG-B6d" secondAttribute="bottom" constant="7" id="TVp-iZ-1ya"/>
-                                                <constraint firstAttribute="trailing" secondItem="Rw5-nF-zs4" secondAttribute="trailing" constant="8" id="VAo-R2-GDh"/>
                                                 <constraint firstItem="fZH-Kj-5ZS" firstAttribute="leading" secondItem="v37-6O-fYq" secondAttribute="leadingMargin" id="ZS7-Fs-ZXn"/>
                                                 <constraint firstItem="xa5-H0-zmT" firstAttribute="trailing" secondItem="v37-6O-fYq" secondAttribute="trailingMargin" id="cha-bv-5NT"/>
-                                                <constraint firstAttribute="bottom" secondItem="Rw5-nF-zs4" secondAttribute="bottom" id="chs-l3-Ofu"/>
                                                 <constraint firstItem="HHk-jm-OeS" firstAttribute="trailing" secondItem="v37-6O-fYq" secondAttribute="trailingMargin" constant="-32" id="d19-br-8Ql"/>
                                                 <constraint firstItem="xa5-H0-zmT" firstAttribute="top" secondItem="v37-6O-fYq" secondAttribute="topMargin" constant="27" id="eom-t4-d6J"/>
-                                                <constraint firstItem="Rw5-nF-zs4" firstAttribute="leading" secondItem="v37-6O-fYq" secondAttribute="leading" constant="8" id="f8W-tq-nQu"/>
-                                                <constraint firstItem="Rw5-nF-zs4" firstAttribute="top" secondItem="v37-6O-fYq" secondAttribute="top" id="gzt-84-A4v"/>
                                                 <constraint firstItem="HHk-jm-OeS" firstAttribute="bottom" secondItem="v37-6O-fYq" secondAttribute="bottomMargin" id="hRG-5P-V1Y"/>
                                                 <constraint firstItem="HHk-jm-OeS" firstAttribute="leading" secondItem="fZH-Kj-5ZS" secondAttribute="trailing" constant="8" id="htv-hZ-V60"/>
                                                 <constraint firstItem="Us7-vG-B6d" firstAttribute="top" secondItem="v37-6O-fYq" secondAttribute="topMargin" id="j6g-al-kKN"/>
@@ -313,7 +303,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="categoryLabel" destination="Rw5-nF-zs4" id="4Pa-Nu-MvX"/>
                                             <outlet property="checkbox" destination="xa5-H0-zmT" id="i9a-eA-oqI"/>
                                             <outlet property="exhibitDescription" destination="HHk-jm-OeS" id="fNX-o8-PLw"/>
                                             <outlet property="exhibitPhoto" destination="fZH-Kj-5ZS" id="JbX-hv-r8L"/>

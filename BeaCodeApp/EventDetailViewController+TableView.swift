@@ -13,9 +13,10 @@ import GSImageViewerController
 extension EventDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let lastExhibitSection = SharingManager.sharedInstance.selectedEvent.sections.count + 2 //Two sections are before the exhibits
         switch section {
-        case 2:
-            return numberOfRowsInSection
+        case 2..<lastExhibitSection:
+            return SharingManager.sharedInstance.selectedEvent.sections[section-2].items.count
         default:
             return 1
         }
@@ -28,16 +29,16 @@ extension EventDetailViewController: UITableViewDelegate {
             return UITableViewAutomaticDimension
         }
     }
-    
 }
 
 extension EventDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3 + SharingManager.sharedInstance.selectedEvent.sections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let lastExhibitSection = SharingManager.sharedInstance.selectedEvent.sections.count + 2 //Two sections are before the exhibits
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell_ID", for: indexPath) as! EventDetailInfoTableViewCell
@@ -48,34 +49,21 @@ extension EventDetailViewController: UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventPhotoSliderTableViewCell_ID", for: indexPath)
             return cell
-        case 2:
+        case 2..<lastExhibitSection:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
-            cell.hideExhibitFeatures()
-            cell.categoryLabel.text = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name
-            cell.rowIndex = indexPath.row
-            cell.exhibits = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].items
+            let actSectionIndex = indexPath.section - 2
+            let actSection = SharingManager.sharedInstance.selectedEvent.sections[actSectionIndex]
+            print(actSection.items.count)
+            let actExhibit = actSection.items[indexPath.row]
             
-//            let sectionCell = Bundle.main.loadNibNamed("SectionCell", owner: self, options: nil)?.first as! SectionCell
-//            sectionCell.titleButton.setTitle(SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].name, for: .normal)
-//            sectionCell.exhibits = SharingManager.sharedInstance.selectedEvent.sections[indexPath.row].items
-//            sectionCell.titleButton.tag = indexPath.row
-//            sectionCell.titleButton.addTarget(self, action: #selector(addExhibit(_:)), for: .touchUpInside)
+            cell.exhibitPhoto.image = actExhibit.photo
+            cell.exhibitTitle.text = actExhibit.title
+            cell.exhibitDescription.text = actExhibit.descrition
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)
             return cell
         }
-    }
-    
-    func addExhibit(_ sender: UIButton) {
-        print(sender.tag)
-        let exhibits = SharingManager.sharedInstance.selectedEvent.sections[sender.tag].items
-        
-        let indexPath = IndexPath(row: 0, section: 2)
-        eventDetailTable.beginUpdates()
-        eventDetailTable.insertRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-        numberOfRowsInSection += 1
-        eventDetailTable.endUpdates()
     }
     
     func imageTapped() {
@@ -87,15 +75,16 @@ extension EventDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let lastExhibitSection = SharingManager.sharedInstance.selectedEvent.sections.count + 2 //Two sections are before the exhibits
         switch section {
         case 0:
             return "ABOUT"
         case 1:
             if SharingManager.sharedInstance.selectedEvent.photos.isEmpty {return String()}
             return "PHOTOS"
-        case 2:
+        case 2..<lastExhibitSection:
             if SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty {return String()}
-            return "EXHIBITS"
+            return SharingManager.sharedInstance.selectedEvent.sections[section-2].name
         default:
             return String()
         }

@@ -43,37 +43,9 @@ class EventDetailViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        SharingManager.sharedInstance.selectedEvent.selectedExhibit = indexPath.row
-//        SharingManager.sharedInstance.getSelectedExhibit().position = indexPath.row
-
-//        let indexPath = IndexPath(row: 0, section: 2)
-//        tableView.beginUpdates()
-//        eventDetailTable.insertRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-//        numberOfRowsInSection += 1
-//        tableView.endUpdates()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as! ExhibitTableViewCell? {
-            if !(cell.categoryLabel.text?.isEmpty)! {
-                
-                eventDetailTable.beginUpdates()
-                let sectionIndexPath = IndexPath(row: cell.rowIndex, section: 2)
-                for exhibit in cell.exhibits {
-                    eventDetailTable.insertRows(at: [sectionIndexPath], with: UITableViewRowAnimation.fade)
-                    let newCellIndexPath = IndexPath(row: cell.rowIndex + 1, section: 2)
-                    let newCell = eventDetailTable.cellForRow(at: newCellIndexPath) as! ExhibitTableViewCell
-                    newCell.exhibitPhoto.image = exhibit.photo
-                    newCell.exhibitDescription.text = exhibit.descrition
-                    newCell.exhibitTitle.text = exhibit.title
-                    eventDetailTable.insertRows(at: [sectionIndexPath], with: UITableViewRowAnimation.fade)
-                    numberOfRowsInSection += 1
-                }
-                eventDetailTable.endUpdates()
-            }
-            
-        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        SharingManager.sharedInstance.selectedEvent.selectedExhibit = indexPath.row
+        SharingManager.sharedInstance.getSelectedExhibit().position = indexPath.row
     }
     
     func setTitle(titleText: String) {
