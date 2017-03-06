@@ -14,7 +14,6 @@ import QuartzCore
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var logoImg: UIImageView!
-    @IBOutlet weak var closeButton: UIButton!
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,31 +25,25 @@ import QuartzCore
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         self.popUpView.layer.cornerRadius = 5
         self.popUpView.layer.shadowOpacity = 0.8
-        self.popUpView.layer.shadowColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1).cgColor
-        
-        closeButton.backgroundColor = UIColor.clear
-        closeButton.layer.cornerRadius = 5
-        closeButton.layer.borderWidth = 1
-        closeButton.layer.borderColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1).cgColor
-        
         self.popUpView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
     }
     
-    open func showInView(_ aView: UIView!, withImage image : UIImage!, withMessage message: String!, animated: Bool) {
+    open func showInView(_ aView: UIView!, withImage image : UIImage!, withMessage message: String!, animated: Bool)
+    {
         aView.addSubview(self.view)
         logoImg!.image = image
         messageLabel!.text = message
-        if animated {
+        if animated
+        {
             self.showAnimate()
         }
     }
     
-    open var isActive = false
-    func showAnimate() {
-        isActive = true
+    func showAnimate()
+    {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0;
         UIView.animate(withDuration: 0.25, animations: {
@@ -59,13 +52,14 @@ import QuartzCore
         });
     }
     
-    func removeAnimate() {
-        isActive = false
+    func removeAnimate()
+    {
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.view.alpha = 0.0;
             }, completion:{(finished : Bool)  in
-                if (finished) {
+                if (finished)
+                {
                     self.view.removeFromSuperview()
                 }
         });
