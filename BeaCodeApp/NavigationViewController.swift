@@ -112,7 +112,7 @@ public class NavigationViewController: UIViewController, CLLocationManagerDelega
                     trackedBeacons = Dictionary<String, BeaconMeasuraments>()
                     
                     if closestBeacon!.avgDistance < 1.0 { //is closer than 1m
-                        presentPopup()
+                        //presentPopup()
                     }
                 }
             }
@@ -150,17 +150,17 @@ public class NavigationViewController: UIViewController, CLLocationManagerDelega
         return Array(trackedBeacons.values).sorted(by: { $0.0.avgDistance < $0.1.avgDistance }).first
     }
     
-    func presentPopup() {
-        if !SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty && !popVC.isActive {
-            popVC.title = "test popup view"
-            popVC.showInView(self.view,
-                             withImage: SharingManager.sharedInstance.selectedEvent.exhibits[0].photo,
-                             withMessage: SharingManager.sharedInstance.selectedEvent.exhibits[0].title,
-                             animated: true)
-        }
-        
-
-    }
+//    func presentPopup() {
+//        if !SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty && !popVC.isActive {
+//            popVC.title = "test popup view"
+//            popVC.showInView(self.view,
+//                             withImage: SharingManager.sharedInstance.selectedEvent.exhibits[0].photo,
+//                             withMessage: SharingManager.sharedInstance.selectedEvent.exhibits[0].title,
+//                             animated: true)
+//        }
+//        
+//
+//    }
     
     func keyForBeacon(beacon: CLBeacon) -> String {
         return "\(uuid)+\(beacon.major)+\(beacon.minor)"
