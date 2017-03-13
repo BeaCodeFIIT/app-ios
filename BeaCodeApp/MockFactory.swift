@@ -23,7 +23,7 @@ class EventFactory {
         case .ces:
             var event = Event(title: "Consumer Electronics Show 2016",
                          description: "CES is a global consumer electronics and consumer technology tradeshow that takes place every January in Las Vegas, Nevada.",
-                         date: "2016-12-10 20:00:00",
+                         date: "2016-12-10 20:00:00".toDateTime(),
                          thumbnail: UIImage(named: "ces0")!,
                          organizer: "CES inc.",
                          location: "Las Vegas, Nevada",
@@ -41,7 +41,7 @@ class EventFactory {
         case .flora:
             return Event(title: "Flóra Bratislava 2016",
                          description: "Pozývame Vás na 36. ročník medzinárodného veľtrhu kvetín a záhradníctva.",
-                         date: "2016-12-01 09:00:00",
+                         date: "2016-12-01 09:00:00".toDateTime(),
                          thumbnail: UIImage(named: "flora0")!,
                          organizer: "Kulla s.r.o.",
                          location: "Bratislava, Slovakia",
@@ -49,7 +49,7 @@ class EventFactory {
         case .geneva:
             var event = Event(title: "Geneva Motor Show 2017",
                          description: "From the first car exhibition in Switzerland in 1905 to the international motor show of nowadays; the Geneva International Motor Show is one of the top five events worldwide not to be missed. An exciting adventure to discover.",
-                         date: "2017-02-18 19:00:00",
+                         date: "2017-02-18 19:00:00".toDateTime(),
                          thumbnail: UIImage(named: "geneva0")!,
                          organizer: "Comité Permanent du Salon International de l'Automobile à Genève",
                          location: "Geneva, Switzerland",
@@ -67,7 +67,7 @@ class EventFactory {
         case .tutan:
             return Event(title: "The treasures of Tutankhamun",
                          description: "Tutankhamun: His Tomb and His Treasures presents more than a thousand objects. Because they are museum-quality replicas of objects that are otherwise strongly guarded, the exhibition offers visitors the unique chance to explore a three-dimensional reconstruction of the pharaoh's actual tomb. Walk among the gold statues and other decorative items, just as Carter did nearly a century ago.",
-                         date: "2017-09-10 10:30:00",
+                         date: "2017-09-10 10:30:00".toDateTime(),
                          thumbnail: UIImage(named: "tutan0")!,
                          organizer: "Prague Museum",
                          location: "Prague, Czech Republic",
