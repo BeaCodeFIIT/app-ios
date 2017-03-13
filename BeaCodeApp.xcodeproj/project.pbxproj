@@ -47,6 +47,12 @@
 		EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */; };
 		EAA4FFB21E6BF8A200AD1DAE /* CategorizedExhibits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4FFB11E6BF8A200AD1DAE /* CategorizedExhibits.swift */; };
 		EAD31D281DE1EDC7008AC6B6 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */; };
+		EADAAC1F1E76F1FD00C12AEA /* CategoryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC1E1E76F1FD00C12AEA /* CategoryDto.swift */; };
+		EADAAC211E76F38400C12AEA /* LocationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC201E76F38400C12AEA /* LocationDto.swift */; };
+		EADAAC231E76F41800C12AEA /* ExhibitDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC221E76F41800C12AEA /* ExhibitDto.swift */; };
+		EADAAC251E76F49C00C12AEA /* ImageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC241E76F49C00C12AEA /* ImageDto.swift */; };
+		EADAAC271E76F55000C12AEA /* BeaconDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC261E76F55000C12AEA /* BeaconDto.swift */; };
+		EADAAC291E76F61D00C12AEA /* MapDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC281E76F61D00C12AEA /* MapDto.swift */; };
 		EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AC1DD0AA8E0049D28B /* EventDto.swift */; };
 		EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AE1DD0AC790049D28B /* EventConverter.swift */; };
 		EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019B01DD0B0570049D28B /* GetEventResource.swift */; };
@@ -109,6 +115,12 @@
 		EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDetailViewController.swift; sourceTree = "<group>"; };
 		EAA4FFB11E6BF8A200AD1DAE /* CategorizedExhibits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorizedExhibits.swift; sourceTree = "<group>"; };
 		EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
+		EADAAC1E1E76F1FD00C12AEA /* CategoryDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDto.swift; sourceTree = "<group>"; };
+		EADAAC201E76F38400C12AEA /* LocationDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDto.swift; sourceTree = "<group>"; };
+		EADAAC221E76F41800C12AEA /* ExhibitDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDto.swift; sourceTree = "<group>"; };
+		EADAAC241E76F49C00C12AEA /* ImageDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDto.swift; sourceTree = "<group>"; };
+		EADAAC261E76F55000C12AEA /* BeaconDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDto.swift; sourceTree = "<group>"; };
+		EADAAC281E76F61D00C12AEA /* MapDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDto.swift; sourceTree = "<group>"; };
 		EAE019AC1DD0AA8E0049D28B /* EventDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDto.swift; sourceTree = "<group>"; };
 		EAE019AE1DD0AC790049D28B /* EventConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConverter.swift; sourceTree = "<group>"; };
 		EAE019B01DD0B0570049D28B /* GetEventResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetEventResource.swift; sourceTree = "<group>"; };
@@ -305,6 +317,7 @@
 		2B4476DB1DAAB24F00A27F4C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				EAE019A81DD0A9FE0049D28B /* Dto */,
 				EA6239961E6B652100D3F13E /* Exhibit Detail */,
 				EAE019A41DD0A7E00049D28B /* Event Dashboard */,
 				EAE019A31DD0A7D80049D28B /* Event Detail */,
@@ -512,7 +525,6 @@
 			isa = PBXGroup;
 			children = (
 				EAE019A91DD0AA020049D28B /* Converter */,
-				EAE019A81DD0A9FE0049D28B /* Dto */,
 				EAE019A71DD0A9F70049D28B /* Domain */,
 				EAE019B01DD0B0570049D28B /* GetEventResource.swift */,
 			);
@@ -530,6 +542,12 @@
 			isa = PBXGroup;
 			children = (
 				EAE019AC1DD0AA8E0049D28B /* EventDto.swift */,
+				EADAAC1E1E76F1FD00C12AEA /* CategoryDto.swift */,
+				EADAAC201E76F38400C12AEA /* LocationDto.swift */,
+				EADAAC221E76F41800C12AEA /* ExhibitDto.swift */,
+				EADAAC241E76F49C00C12AEA /* ImageDto.swift */,
+				EADAAC261E76F55000C12AEA /* BeaconDto.swift */,
+				EADAAC281E76F61D00C12AEA /* MapDto.swift */,
 			);
 			name = Dto;
 			sourceTree = "<group>";
@@ -715,10 +733,12 @@
 				EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */,
 				EA85AF511E76297C00F48A5E /* Location.swift in Sources */,
 				EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */,
+				EADAAC1F1E76F1FD00C12AEA /* CategoryDto.swift in Sources */,
 				EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */,
 				2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */,
 				2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */,
 				EA1C22B11DC8EA0B005481AB /* SearchViewController.swift in Sources */,
+				EADAAC271E76F55000C12AEA /* BeaconDto.swift in Sources */,
 				EA5EEE211DC9126D00C30D69 /* EventDetailViewController+TableView.swift in Sources */,
 				2B37690A1E6D95C500E2F4F0 /* Category.swift in Sources */,
 				EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */,
@@ -738,11 +758,15 @@
 				EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */,
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
+				EADAAC251E76F49C00C12AEA /* ImageDto.swift in Sources */,
 				2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */,
+				EADAAC231E76F41800C12AEA /* ExhibitDto.swift in Sources */,
 				2B4476C81DAAADC700A27F4C /* CoreLocationManager.swift in Sources */,
 				EA1C22B71DC8EC12005481AB /* EventDetailViewController.swift in Sources */,
+				EADAAC211E76F38400C12AEA /* LocationDto.swift in Sources */,
 				EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */,
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
+				EADAAC291E76F61D00C12AEA /* MapDto.swift in Sources */,
 				EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */,
 				EA85AF551E762CC900F48A5E /* Beacon.swift in Sources */,
 				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,

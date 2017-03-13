@@ -9,14 +9,14 @@
 import Foundation
 
 class Beacon {
-    var id: String?
+    var id: Int?
     var UUID: String?
     var major: String?
     var minor: String?
     var coorX: String?
     var coorY: String?
     
-    init(id: String, UUID: String, major: String, minor: String, coorX: String, coorY: String) {
+    init(id: Int, UUID: String, major: String, minor: String, coorX: String, coorY: String) {
         self.id = id
         self.UUID = UUID
         self.major = major

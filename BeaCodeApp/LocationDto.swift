@@ -1,5 +1,5 @@
 //
-//  Location.swift
+//  LocationDto.swift
 //  BeaCodeApp
 //
 //  Created by Marek Bruchatý on 13/03/2017.
@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class Location {
+class LocationDto {
     var id: Int?
     var name: String?
     var latitude: String?
     var longitude: String?
     
-    init(id: Int, name: String, latitude: String, longitude: String) {
-        self.id = id
-        self.name = name
-        self.latitude = latitude
-        self.longitude = longitude
+    init(json: JSON) {
+        self.id = json["id"].int
+        self.name = json["name"].string
+        self.latitude = json["latitude"].string
+        self.longitude = json["longitude"].string
     }
 }

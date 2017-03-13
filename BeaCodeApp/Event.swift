@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Event {
-    var id: String?
+    var id: Int?
     var name: String?
     var start: Date?
     var end: Date?
@@ -18,4 +18,13 @@ struct Event {
     var location: Location?
     var categories: Array<Category>?
     
+    init(id: Int, name: String, start: Date, end: Date, description: String, location: Location, categories: Array<Category>) {
+        self.id = id
+        self.name = name
+        self.start = start
+        self.end = end
+        self.description = description
+        self.location = location
+        self.categories = categories
+    }
 }

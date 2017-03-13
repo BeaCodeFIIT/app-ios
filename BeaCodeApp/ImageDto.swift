@@ -1,5 +1,5 @@
 //
-//  Map.swift
+//  ImageDto.swift
 //  BeaCodeApp
 //
 //  Created by Marek Bruchatý on 13/03/2017.
@@ -7,16 +7,16 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class Map {
+class ImageDto {
     var id: Int?
     var description: String?
     var filePath: String?
     
-    init(id: Int, description: String, filePath: String) {
-        self.id = id
-        self.description = description
-        self.filePath = filePath
+    init(json: JSON) {
+        self.id = json["id"].int
+        self.description = json["description"].string
+        self.filePath = json["pathWithFile"].string
     }
-    
 }
