@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kWx-Ak-aKq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kWx-Ak-aKq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,7 +94,6 @@
                                             <outlet property="eventImage" destination="QmD-GE-EIG" id="6io-PG-944"/>
                                             <outlet property="eventSubtitle" destination="RMn-59-P2T" id="rNG-Ts-ksf"/>
                                             <outlet property="eventTitle" destination="lKo-MB-gLa" id="MfH-xf-J75"/>
-                                            <segue destination="C7V-S3-onu" kind="show" identifier="detail_segue" id="3pf-Nd-u7o"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -119,6 +118,7 @@
                     <navigationItem key="navigationItem" title="MY EVENTS" id="yGM-v9-poB"/>
                     <connections>
                         <outlet property="eventsTable" destination="4Ny-Ak-j8Y" id="5vm-S3-ntQ"/>
+                        <segue destination="C7V-S3-onu" kind="show" identifier="detail_segue" id="NM7-9E-bbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52l-gf-LgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -960,7 +960,7 @@
         <image name="ic_search_36pt" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5jq-iU-3AB"/>
+        <segue reference="NM7-9E-bbJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

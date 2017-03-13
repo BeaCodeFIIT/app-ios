@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PKHUD
 
 class MyEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var eventsTable: UITableView!
@@ -16,22 +17,41 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        events = mockEvents()
         setTitle(titleText: "MY EVENTS")
-
-        //API TEST CALL
-//        var serviceCall = ServiceCall()
-//        serviceCall.requestMethod = .post
-//        serviceCall.requestParams = nil
-//        serviceCall.requestUrl = "/app/events"
-//
-//        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
-//            print(result)
-//        })
         
         //Beacon test call
         print("Testing core location")
         let clmanager = CoreLocationManager()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
+        
+        //API TEST CALL
+        var serviceCall = ServiceCall()
+        serviceCall.requestMethod = .post
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/app/events"
+        
+        events.removeAll()
+        
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+        
+            if result != nil{
+                for event in (result?["data"])! {
+                    let eventDto = EventDto(json: event.1)
+                    self.events.append(EventConverter.shared.convert(input: eventDto)!)
+                }
+                self.eventsTable.reloadData()
+                
+                PKHUD.sharedHUD.hide()
+            } else {
+                PKHUD.sharedHUD.contentView = PKHUDErrorView(title: "Error", subtitle: "Internet or server error")
+                PKHUD.sharedHUD.hide(afterDelay: 1.0)
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,6 +74,29 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
+        
+        var serviceCall = ServiceCall()
+        serviceCall.requestMethod = .post
+        serviceCall.requestParams = nil
+        serviceCall.requestUrl = "/app/events/\(events[indexPath.row].id!)/exhibits"
+        
+        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
+            
+            if result != nil{
+                for event in (result?["data"])! {
+                    let eventDto = EventDto(json: event.1)
+                    self.events.append(EventConverter.shared.convert(input: eventDto)!)
+                }
+                self.eventsTable.reloadData()
+                
+                PKHUD.sharedHUD.hide()
+            } else {
+                PKHUD.sharedHUD.contentView = PKHUDErrorView(title: "Error", subtitle: "Internet or server error")
+                PKHUD.sharedHUD.hide(afterDelay: 1.0)
+            }
+        })
+        
+        self.performSegue(withIdentifier: "detail_segue", sender: self)
     }
     
     func fillCell(cell: MyEventTableViewCell, event: Event) -> MyEventTableViewCell {

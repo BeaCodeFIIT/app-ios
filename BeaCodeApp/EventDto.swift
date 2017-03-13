@@ -6,26 +6,27 @@
 //  Copyright © 2016 Peter Augustín. All rights reserved.
 //
 
-import ObjectMapper
+import SwiftyJSON
 
-struct EventDto: Mappable {
+struct EventDto {
     var id: Int?
     var name: String?
     var start: String?
     var end: String?
     var location: String?
     var description: String?
+    var categories = [Category]()
     
-    init?(map: Map) {
+    public init(json: JSON) {
+        self.id = json["id"].int
+        self.name = json["name"].string
+        self.start = json["start"].string
+        self.end = json["end"].string
+        self.location = json["location"].string
+        self.description = json["description"].string
         
-    }
-    
-    mutating func mapping(map: Map) {
-        id     <- map["id"]
-        name  <- map["name"]
-        start  <- map["start"]
-        end  <- map["end"]
-        location  <- map["location"]
-        description  <- map["description"]
+        for category in json["categories"] {
+            categories.append(Category(json: category.1))
+        }
     }
 }

@@ -20,7 +20,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func searchChange(_ sender: Any) {
         events = [Event]()
         for event in allEvents {
-            if event.title.lowercased().hasPrefix(searchBar.text!.lowercased()) {
+            if (event.title?.lowercased().hasPrefix(searchBar.text!.lowercased()))! {
                 events.append(event)
             }
         }

@@ -8,17 +8,16 @@
 
 //ALAMOFIRE
 import Alamofire
+import SwiftyJSON
 
-protocol NetworkServiceManagerProtocol {
-    func makeRequest(serviceCall: ServiceCall, completition: @escaping (_ result: Bool) -> Void)
-}
-
-public class NetworkServiceManager: NetworkServiceManagerProtocol {
+public class NetworkServiceManager {
     
     static let sharedInstance = NetworkServiceManager()
-    var header = ["Accept": "application/json"]
+    var header = ["Accept": "application/json",
+                  "deviceId": "15251512"
+                  ]
     
-    func makeRequest(serviceCall: ServiceCall, completition: @escaping (_ result: Bool) -> Void) {
+    func makeRequest(serviceCall: ServiceCall, completition: @escaping (_ result: JSON?) -> Void) {
 
         let requestUrl = SERVER_URL + serviceCall.requestUrl
 
@@ -31,15 +30,15 @@ public class NetworkServiceManager: NetworkServiceManagerProtocol {
                             switch response.response!.statusCode {
                                 case 200:
                                     print(response.result.debugDescription)
-                                    completition(true)
+                                    completition(JSON(data: response.data!))
                                 case 400:
-                                    completition(false)
+                                    completition(nil)
                                 case 401:
-                                    completition(false)
+                                    completition(nil)
                                 case 404:
-                                    completition(false)
+                                    completition(nil)
                                 case 500:
-                                    completition(false)
+                                    completition(nil)
                                 default: break
                             }
         }

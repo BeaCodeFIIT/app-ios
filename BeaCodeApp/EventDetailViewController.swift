@@ -78,7 +78,7 @@ class EventDetailViewController: UIViewController {
         print("Header button with tag \(sender.tag) tapped. Value \(SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed)")
     }
     
-    func setTitle(titleText: String) {
+    func setTitle(titleText: String?) {
         let navBar = self.navigationController!.navigationBar
         navBar.barTintColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1)
         navBar.tintColor = UIColor.white
