@@ -112,7 +112,7 @@ public class NavigationViewController: UIViewController, CLLocationManagerDelega
                     trackedBeacons = Dictionary<String, BeaconMeasuraments>()
                     
                     if closestBeacon!.avgDistance < 1.0 { //is closer than 1m
-                        //presentPopup()
+//                        presentPopup()
                     }
                 }
             }

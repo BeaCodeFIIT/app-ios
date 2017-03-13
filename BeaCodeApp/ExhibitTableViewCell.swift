@@ -27,7 +27,7 @@ class ExhibitTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkboxTapped(_ sender: Any) {
-        let selectedIndex = SharingManager.sharedInstance.getSelectedExhibit().position
+        let selectedIndex = SharingManager.sharedInstance.selectedEvent.selectedExhibit.position
         
         if SharingManager.sharedInstance.selectedEvent.exhibits[selectedIndex].isSelected {
             checkbox.setTitle("☐", for: .normal)

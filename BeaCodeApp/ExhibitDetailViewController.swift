@@ -15,22 +15,22 @@ class ExhibitDetailViewController: UIViewController {
     @IBOutlet weak var exhibitAddButton: UIBarButtonItem!
     
     @IBAction func exhibitAddButtonTapped(_ sender: Any) {
-        if SharingManager.sharedInstance.getSelectedExhibit().isSelected {
+        if SharingManager.sharedInstance.selectedEvent.selectedExhibit.isSelected {
             exhibitAddButton.title = "Add"
-            SharingManager.sharedInstance.getSelectedExhibit().isSelected = false
+            SharingManager.sharedInstance.selectedEvent.selectedExhibit.isSelected = false
         } else {
             exhibitAddButton.title = "Remove"
-            SharingManager.sharedInstance.getSelectedExhibit().isSelected = true
+            SharingManager.sharedInstance.selectedEvent.selectedExhibit.isSelected = true
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        exhibitPhoto.image = SharingManager.sharedInstance.getSelectedExhibit().photo
-        exhibitDescription.text = SharingManager.sharedInstance.getSelectedExhibit().descrition
-        setTitle(titleText: SharingManager.sharedInstance.getSelectedExhibit().title)
+        exhibitPhoto.image = SharingManager.sharedInstance.selectedEvent.selectedExhibit.photo
+        exhibitDescription.text = SharingManager.sharedInstance.selectedEvent.selectedExhibit.descrition
+        setTitle(titleText: SharingManager.sharedInstance.selectedEvent.selectedExhibit.title)
         
-        exhibitAddButton.title = SharingManager.sharedInstance.getSelectedExhibit().isSelected ? "Remove" : "Add"
+        exhibitAddButton.title = SharingManager.sharedInstance.selectedEvent.selectedExhibit.isSelected ? "Remove" : "Add"
     }
     
     func buttonAction() {}
