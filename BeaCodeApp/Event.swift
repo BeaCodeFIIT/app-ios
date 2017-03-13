@@ -10,18 +10,29 @@ import Foundation
 import UIKit
 
 struct Event {
-    var title: String
-    var description: String
-    var thumbnail: UIImage
-    var date: Date
-    var organizer: String
-    var location: String
-    var selectedExhibit: Int
+    var title: String!
+    var description: String!
+    var thumbnail: UIImage!
+    var date: Date!
+    var organizer: String!
+    var location: String!
+    var selectedExhibit: Exhibit!
     
     var photos = [UIImage]()
     var exhibits = [Exhibit]()
     var categorizedExhibits = CategorizedExhibits()
     var sections = Array<Section>()
+    
+    
+    func getExpandedSectionsCount() -> Int {
+        var expanded = 0
+        for section in sections {
+            if !section.collapsed {
+                expanded += 1
+            }
+        }
+        return expanded
+    }
     
     init() {
         self.title = ""
@@ -30,7 +41,6 @@ struct Event {
         self.date = Date()
         self.organizer = ""
         self.location = ""
-        self.selectedExhibit = 0
     }
     
     init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String) {
@@ -40,7 +50,6 @@ struct Event {
         self.date = date
         self.organizer = organizer
         self.location = location
-        self.selectedExhibit = 0
     }
     
     init(title: String, description: String, date: Date, thumbnail: UIImage, organizer: String, location: String, photos: [UIImage]) {
@@ -51,7 +60,6 @@ struct Event {
         self.organizer = organizer
         self.location = location
         self.photos = photos
-        self.selectedExhibit = 0
     }
     
     func downloadImage(imageUrl: String) -> UIImage {

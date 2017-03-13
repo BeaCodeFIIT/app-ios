@@ -44,8 +44,38 @@ class EventDetailViewController: UIViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        SharingManager.sharedInstance.selectedEvent.selectedExhibit = indexPath.row
-        SharingManager.sharedInstance.getSelectedExhibit().position = indexPath.row
+        let selectedExhibit = SharingManager.sharedInstance.selectedEvent.sections[indexPath.section-2].items[indexPath.row]
+        SharingManager.sharedInstance.selectedEvent.selectedExhibit =  selectedExhibit
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        button.tag = section
+        button.addTarget(self, action: #selector(headerButtonTap), for: .touchUpInside)
+        button.backgroundColor = UIColor.white
+        button.titleEdgeInsets.left = 10
+        
+        if section >= 2 && section <= SharingManager.sharedInstance.selectedEvent.sections.count + 2 {
+            button.setTitle(SharingManager.sharedInstance.selectedEvent.sections[section-2].name, for: .normal)
+        } else if section == 0 {
+            button.setTitle("ABOUT", for: .normal)
+        } else if section == 1 {
+            button.setTitle("PHOTOS", for: .normal)
+        }
+        
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel!.font = UIFont.systemFont(ofSize: 18)
+        button.contentHorizontalAlignment = .left
+        headerView.tintColor = UIColor.black
+        
+        headerView.addSubview(button)
+        return headerView
+    }
+    
+    func headerButtonTap(_ sender: UIButton) {
+        SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed = !SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed
+        print("Header button with tag \(sender.tag) tapped. Value \(SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed)")
     }
     
     func setTitle(titleText: String) {

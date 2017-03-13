@@ -84,7 +84,7 @@ extension EventDetailViewController: UITableViewDataSource {
             return "PHOTOS"
         case 2..<lastExhibitSection:
             if SharingManager.sharedInstance.selectedEvent.exhibits.isEmpty {return String()}
-            return SharingManager.sharedInstance.selectedEvent.sections[section-2].name
+            return SharingManager.sharedInstance.selectedEvent.sections[section - 2].name
         default:
             return String()
         }
