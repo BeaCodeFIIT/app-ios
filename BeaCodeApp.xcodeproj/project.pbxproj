@@ -38,6 +38,10 @@
 		EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5EEE291DC93E6C00C30D69 /* Assets.xcassets */; };
 		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
 		EA6072411DFE720A008F6160 /* BeaCodeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */; };
+		EA85AF511E76297C00F48A5E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF501E76297C00F48A5E /* Location.swift */; };
+		EA85AF531E762C1D00F48A5E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF521E762C1D00F48A5E /* Image.swift */; };
+		EA85AF551E762CC900F48A5E /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF541E762CC800F48A5E /* Beacon.swift */; };
+		EA85AF571E762D8600F48A5E /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF561E762D8600F48A5E /* Map.swift */; };
 		EA90C2E61E6CC19A003372D9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90C2E51E6CC19A003372D9 /* Section.swift */; };
 		EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */; };
 		EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */; };
@@ -96,6 +100,10 @@
 		EA60723E1DFE720A008F6160 /* BeaCodeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaCodeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaCodeAppTests.swift; sourceTree = "<group>"; };
 		EA6072421DFE720A008F6160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA85AF501E76297C00F48A5E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EA85AF521E762C1D00F48A5E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		EA85AF541E762CC800F48A5E /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		EA85AF561E762D8600F48A5E /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		EA90C2E51E6CC19A003372D9 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitTableViewCell.swift; sourceTree = "<group>"; };
 		EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDetailViewController.swift; sourceTree = "<group>"; };
@@ -420,9 +428,15 @@
 		EA5EEE241DC937D100C30D69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA85AF501E76297C00F48A5E /* Location.swift */,
+				EA5EEE251DC937E400C30D69 /* Event.swift */,
+				2B3769091E6D95C500E2F4F0 /* Category.swift */,
 				EA5EEE271DC9381800C30D69 /* Exhibit.swift */,
 				EAA4FFB11E6BF8A200AD1DAE /* CategorizedExhibits.swift */,
 				EA90C2E51E6CC19A003372D9 /* Section.swift */,
+				EA85AF521E762C1D00F48A5E /* Image.swift */,
+				EA85AF541E762CC800F48A5E /* Beacon.swift */,
+				EA85AF561E762D8600F48A5E /* Map.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -508,8 +522,6 @@
 		EAE019A71DD0A9F70049D28B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				EA5EEE251DC937E400C30D69 /* Event.swift */,
-				2B3769091E6D95C500E2F4F0 /* Category.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -701,6 +713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */,
+				EA85AF511E76297C00F48A5E /* Location.swift in Sources */,
 				EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */,
 				EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */,
 				2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */,
@@ -719,6 +732,7 @@
 				2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */,
 				EA5EEE261DC937E400C30D69 /* Event.swift in Sources */,
 				EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */,
+				EA85AF531E762C1D00F48A5E /* Image.swift in Sources */,
 				EA1C22B31DC8EABF005481AB /* MyEventTableViewCell.swift in Sources */,
 				EA274A3C1DCB676800C005D9 /* NavigationViewController.swift in Sources */,
 				EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */,
@@ -730,7 +744,9 @@
 				EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */,
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
 				EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */,
+				EA85AF551E762CC900F48A5E /* Beacon.swift in Sources */,
 				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,
+				EA85AF571E762D8600F48A5E /* Map.swift in Sources */,
 				EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

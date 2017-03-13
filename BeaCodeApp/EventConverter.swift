@@ -17,11 +17,11 @@ public  class EventConverter {
     func convert(input: EventDto) -> Event? {
         
         var event = Event()
-//        event.id = input.id
+        event.id = input.id
         event.title = input.name
-//        event.date = input.start
+        event.date = input.start
         event.description = input.description
-//        event.categories = input.categories
+        event.categories = input.categories
         
         return event
     }

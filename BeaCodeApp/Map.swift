@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class Map {
+    var id: String?
+    var description: String?
+    var filePath: String?
+    
+    init(id: String, description: String, filePath: String) {
+        self.id = id
+        self.description = description
+        self.filePath = filePath
+    }
+    
+}

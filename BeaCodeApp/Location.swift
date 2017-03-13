@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Location {
+    var id: String?
+    var name: String?
+    var latitude: String?
+    var longitude: String?
+    
+    init(id: String, name: String, latitude: String, longitude: String) {
+        self.id = id
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
