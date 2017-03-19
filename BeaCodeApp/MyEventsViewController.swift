@@ -78,7 +78,7 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         var serviceCall = ServiceCall()
         serviceCall.requestMethod = .post
         serviceCall.requestParams = nil
-//        serviceCall.requestUrl = "/app/events/\(events[indexPath.row].id!)/exhibits"
+        serviceCall.requestUrl = "/app/events/\(events[indexPath.row].id!)/exhibits"
         
         NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
             

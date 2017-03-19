@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct Event {
+    var id: Int!
     var title: String!
     var description: String!
     var thumbnail: UIImage!
