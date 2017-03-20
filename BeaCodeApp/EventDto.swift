@@ -13,20 +13,34 @@ struct EventDto {
     var name: String?
     var start: String?
     var end: String?
-    var location: String?
+    var location: LocationDto?
     var description: String?
-    var categories = [Category]()
+    var images = [ImageDto]()
+    var categories = [CategoryDto]()
+    var beacons = [BeaconDto]()
+    var map: MapDto?
     
     public init(json: JSON) {
         self.id = json["id"].int
         self.name = json["name"].string
         self.start = json["start"].string
         self.end = json["end"].string
-        self.location = json["location"].string
+        self.location = LocationDto(json: json["location"])
         self.description = json["description"].string
         
-        for category in json["categories"] {
-            categories.append(Category(json: category.1))
+        for image in json["images"] {
+            images.append(ImageDto(json: image.1))
         }
+        
+        for category in json["categories"] {
+            categories.append(CategoryDto(json: category.1))
+        }
+        
+        for beacon in json["beacons"] {
+            beacons.append(BeaconDto(json: beacon.1))
+        }
+        
+        self.map = MapDto(json: json["map"])
     }
+    
 }

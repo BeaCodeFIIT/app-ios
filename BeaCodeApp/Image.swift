@@ -7,15 +7,20 @@
 //
 
 import Foundation
+import UIKit
 
-class Image {
-    var id: String?
+struct Image {
+    var id: Int?
     var description: String?
     var filePath: String?
+    var image: UIImage?
     
-    init(id: String, description: String, filePath: String) {
+    init() {}
+    
+    init(id: Int, description: String, filePath: String, image: UIImage) {
         self.id = id
         self.description = description
         self.filePath = filePath
+        self.image = image
     }
 }

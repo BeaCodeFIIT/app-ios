@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 class SharingManager {
-    var selectedEvent: Event = Event()
-    var selectedCategories: [String] = [String]()
+    var selectedEvent: Event?
+    var selectedExhibit: Exhibit?
     
+    var selectedCategories: [String] = [String]()
     var selectedExhibitPhotoIndex = 0
     
     static let sharedInstance = SharingManager()

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import PKHUD
 
 class MyEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var eventsTable: UITableView!
@@ -17,41 +16,14 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadEvents()
         setTitle(titleText: "MY EVENTS")
-        
-        //Beacon test call
-        print("Testing core location")
-        let clmanager = CoreLocationManager()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        PKHUD.sharedHUD.contentView = PKHUDProgressView()
-        PKHUD.sharedHUD.show()
-        
-        //API TEST CALL
-        var serviceCall = ServiceCall()
-        serviceCall.requestMethod = .post
-        serviceCall.requestParams = nil
-        serviceCall.requestUrl = "/app/events"
-        
+    func loadEvents() {
         events.removeAll()
-        
-        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
-        
-            if result != nil{
-                for event in (result?["data"])! {
-                    let eventDto = EventDto(json: event.1)
-                    self.events.append(EventConverter.shared.convert(input: eventDto)!)
-                }
-                self.eventsTable.reloadData()
-                
-                PKHUD.sharedHUD.hide()
-            } else {
-                PKHUD.sharedHUD.contentView = PKHUDErrorView(title: "Error", subtitle: "Internet or server error")
-                PKHUD.sharedHUD.hide(afterDelay: 1.0)
-            }
-        })
+        events.append(contentsOf: mockEvents())
+        Logger.info(message: "Number of events: \(events.count)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,55 +37,24 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = self.eventsTable.dequeueReusableCell(withIdentifier: "MyEventTableViewCell_ID", for: indexPath) as! MyEventTableViewCell
         cell = fillCell(cell: cell, event: events[indexPath.row])
+        Logger.info(message: "Cell \"\(cell.eventTitle.text)\" created")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "TODAY"
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
-        
-        var serviceCall = ServiceCall()
-        serviceCall.requestMethod = .post
-        serviceCall.requestParams = nil
-        serviceCall.requestUrl = "/app/events/\(events[indexPath.row].id!)/exhibits"
-        
-        NetworkServiceManager.sharedInstance.makeRequest(serviceCall: serviceCall, completition: { result in
-            
-            if result != nil{
-                for event in (result?["data"])! {
-                    let eventDto = EventDto(json: event.1)
-                    self.events.append(EventConverter.shared.convert(input: eventDto)!)
-                }
-                self.eventsTable.reloadData()
-                
-                PKHUD.sharedHUD.hide()
-            } else {
-                PKHUD.sharedHUD.contentView = PKHUDErrorView(title: "Error", subtitle: "Internet or server error")
-                PKHUD.sharedHUD.hide(afterDelay: 1.0)
-            }
-        })
-        
-        self.performSegue(withIdentifier: "detail_segue", sender: self)
-    }
-    
     func fillCell(cell: MyEventTableViewCell, event: Event) -> MyEventTableViewCell {
-        cell.eventImage.image = event.thumbnail
-        cell.eventTitle.text = event.title
+        cell.eventImage.image = event.images?[0].image
+        cell.eventTitle.text = event.name
         cell.eventSubtitle.text = event.description
+        Logger.info(message: "TableCell \"\(cell.eventTitle.text)\" added")
         return cell
-    }
-    
-    func mockEvents() -> [Event] {
-        let eventFactory = EventFactory()
-        var events = [Event]()
-        events.append(eventFactory.getEvent(set: mockSet.ces))
-        events.append(eventFactory.getEvent(set: mockSet.flora))
-        events.append(eventFactory.getEvent(set: mockSet.geneva))
-        events.append(eventFactory.getEvent(set: mockSet.tutan))
-        return events
     }
     
     func setTitle(titleText: String) {
@@ -134,6 +75,16 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         titleLable.text = titleText
         titleLable.textColor = UIColor.white
         titleLable.font = titleLable.font.withSize(CGFloat(24))
+    }
+    
+    func mockEvents() -> [Event] {
+        let eventFactory = EventFactory()
+        var events = [Event]()
+        events.append(eventFactory.getEvent(set: mockSet.ces))
+        events.append(eventFactory.getEvent(set: mockSet.flora))
+        events.append(eventFactory.getEvent(set: mockSet.geneva))
+        events.append(eventFactory.getEvent(set: mockSet.tutan))
+        return events
     }
     
 }

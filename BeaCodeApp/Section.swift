@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Section {
-    var name: String!
-    var headerRow: Int!
-    var items: Array<Exhibit>!
-    var collapsed: Bool!
+struct Section {
+    var name: String?
+    var headerRow: Int?
+    var items: Array<Exhibit>?
+    var collapsed: Bool?
+    
+    init() {}
     
     init(name: String, items: Array<Exhibit>, collapsed: Bool) {
         self.name = name

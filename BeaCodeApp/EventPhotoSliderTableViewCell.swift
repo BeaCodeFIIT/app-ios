@@ -27,12 +27,12 @@ class EventPhotoSliderTableViewCell: UITableViewCell {
 extension EventPhotoSliderTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return SharingManager.sharedInstance.selectedEvent.photos.count
+        return (SharingManager.sharedInstance.selectedEvent?.images?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photo_cell", for: indexPath) as! PhotoCell
-        cell.photo.image = SharingManager.sharedInstance.selectedEvent.photos[indexPath.row]
+        cell.photo.image = SharingManager.sharedInstance.selectedEvent?.images?[indexPath.row].image
         
         cell.photo.isUserInteractionEnabled = true
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:)))

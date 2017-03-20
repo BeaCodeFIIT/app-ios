@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Location {
+struct Location {
     var id: Int?
     var name: String?
     var latitude: String?
     var longitude: String?
+    
+    init() {}
     
     init(id: Int, name: String, latitude: String, longitude: String) {
         self.id = id

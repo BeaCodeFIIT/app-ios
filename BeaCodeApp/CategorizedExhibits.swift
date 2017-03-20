@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CategorizedExhibits {
+struct CategorizedExhibits {
     var categories = [String : Array<Exhibit>]()
     
     func getExhibits(category: String) -> Array<Exhibit> {

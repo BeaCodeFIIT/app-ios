@@ -9,8 +9,8 @@
 import UIKit
 import Foundation
 
-public  class EventConverter {
-        //EventDto -> Event
+public class EventConverter {
+    //EventDto -> Event
     
     static let shared = EventConverter()
 
@@ -18,10 +18,23 @@ public  class EventConverter {
         
         var event = Event()
         event.id = input.id
-        event.title = input.name
-        event.date = input.start
+        event.name = input.name
+        event.start = input.start?.toDateTime()
+        event.end = input.end?.toDateTime()
+        event.location = LocationConverter.shared.convert(input: input.location!)
         event.description = input.description
-        event.categories = input.categories
+        
+        for imageDto in input.images {
+            event.images?.append(ImageConverter.shared.convert(input: imageDto)!)
+        }
+        
+        for categoryDto in input.categories {
+            event.categories?.append(CategoryConverter.shared.convert(input: categoryDto)!)
+        }
+        
+        for beaconDto in input.beacons {
+            event.beacons?.append(BeaconConverter.shared.convert(input: beaconDto)!)
+        }
         
         return event
     }

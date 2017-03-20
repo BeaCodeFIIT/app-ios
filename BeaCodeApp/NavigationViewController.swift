@@ -199,6 +199,7 @@ public class NavigationViewController: UIViewController, CLLocationManagerDelega
         return beaconMeasuraments
     }
 }
+
 struct BeaconMeasuraments {
     var key: String = ""
     var minor: String = ""

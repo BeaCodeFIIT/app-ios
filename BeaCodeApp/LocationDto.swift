@@ -21,4 +21,5 @@ class LocationDto {
         self.latitude = json["latitude"].string
         self.longitude = json["longitude"].string
     }
+    
 }

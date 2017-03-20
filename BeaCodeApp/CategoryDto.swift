@@ -10,7 +10,6 @@ import Foundation
 import SwiftyJSON
 
 struct CategoryDto {
-    
     var id: Int?
     var name: String?
     
@@ -18,4 +17,5 @@ struct CategoryDto {
         self.id = json["id"].int
         self.name = json["name"].string
     }
+    
 }

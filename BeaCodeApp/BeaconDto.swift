@@ -16,6 +16,7 @@ class BeaconDto {
     var minor: String?
     var coorX: String?
     var coorY: String?
+    var exhibitId: Int?
     
     init(json: JSON) {
         self.id = json["id"].int
@@ -24,5 +25,7 @@ class BeaconDto {
         self.minor = json["mino"].string
         self.coorX = json["coorX"].string
         self.coorY = json["coorY"].string
+        self.exhibitId = json["exhibitId"].int
     }
+    
 }

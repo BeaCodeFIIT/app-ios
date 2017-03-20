@@ -20,7 +20,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func searchChange(_ sender: Any) {
         events = [Event]()
         for event in allEvents {
-            if (event.title?.lowercased().hasPrefix(searchBar.text!.lowercased()))! {
+            if (event.name?.lowercased().hasPrefix(searchBar.text!.lowercased()))! {
                 events.append(event)
             }
         }
@@ -65,7 +65,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SharingManager.sharedInstance.selectedEvent = events[indexPath.row]
-        print(SharingManager.sharedInstance.selectedEvent.title)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +73,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.searchTable.dequeueReusableCell(withIdentifier: "SearchItemTableViewCell_ID", for: indexPath) as! SearchItemTableViewCell
-        cell.searchItemLabel.text = events[indexPath.row].title
+        cell.searchItemLabel.text = events[indexPath.row].name
         return cell
     }
     

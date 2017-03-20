@@ -16,15 +16,23 @@ struct Event {
     var end: Date?
     var description: String?
     var location: Location?
+    var images: Array<Image>?
     var categories: Array<Category>?
+    var beacons: Array<Beacon>?
+    var exhibits: Array<Exhibit>?
     
-    init(id: Int, name: String, start: Date, end: Date, description: String, location: Location, categories: Array<Category>) {
+    init() {}
+    
+    init(id: Int, name: String, start: Date, end: Date, description: String, location: Location, images: Array<Image>, categories: Array<Category>, beacons: Array<Beacon>, exhibits: Array<Exhibit>) {
         self.id = id
         self.name = name
         self.start = start
         self.end = end
         self.description = description
         self.location = location
+        self.images = images
         self.categories = categories
+        self.beacons = beacons
+        self.exhibits = exhibits
     }
 }

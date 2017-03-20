@@ -20,6 +20,7 @@
 		2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEBD1DA2BD470074842A /* Main.storyboard */; };
 		2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEC21DA2BD470074842A /* LaunchScreen.storyboard */; };
 		2F86F596CEFCE6ABE133766A /* Pods_BeaCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1C9EA0A19C097054D56FC9 /* Pods_BeaCodeApp.framework */; };
+		EA0F3DFE1E7F1B380012DAAB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F3DFD1E7F1B380012DAAB /* Logger.swift */; };
 		EA1C22AF1DC8E9B3005481AB /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22AE1DC8E9B3005481AB /* MyEventsViewController.swift */; };
 		EA1C22B11DC8EA0B005481AB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B01DC8EA0B005481AB /* SearchViewController.swift */; };
 		EA1C22B31DC8EABF005481AB /* MyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B21DC8EABF005481AB /* MyEventTableViewCell.swift */; };
@@ -53,6 +54,12 @@
 		EADAAC251E76F49C00C12AEA /* ImageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC241E76F49C00C12AEA /* ImageDto.swift */; };
 		EADAAC271E76F55000C12AEA /* BeaconDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC261E76F55000C12AEA /* BeaconDto.swift */; };
 		EADAAC291E76F61D00C12AEA /* MapDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC281E76F61D00C12AEA /* MapDto.swift */; };
+		EADAAC2B1E76F77B00C12AEA /* LocationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC2A1E76F77B00C12AEA /* LocationConverter.swift */; };
+		EADAAC2D1E76F79300C12AEA /* CategoryConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC2C1E76F79300C12AEA /* CategoryConverter.swift */; };
+		EADAAC2F1E76F7AB00C12AEA /* ExhibitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC2E1E76F7AB00C12AEA /* ExhibitConverter.swift */; };
+		EADAAC311E76F7BF00C12AEA /* ImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC301E76F7BF00C12AEA /* ImageConverter.swift */; };
+		EADAAC331E76F7CB00C12AEA /* BeaconConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC321E76F7CB00C12AEA /* BeaconConverter.swift */; };
+		EADAAC351E76F7D500C12AEA /* MapConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC341E76F7D500C12AEA /* MapConverter.swift */; };
 		EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AC1DD0AA8E0049D28B /* EventDto.swift */; };
 		EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019AE1DD0AC790049D28B /* EventConverter.swift */; };
 		EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE019B01DD0B0570049D28B /* GetEventResource.swift */; };
@@ -86,6 +93,7 @@
 		2BABBEC51DA2BD470074842A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74758EC089C261F10A6558DF /* Pods-BeaCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9E1C9EA0A19C097054D56FC9 /* Pods_BeaCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F3DFD1E7F1B380012DAAB /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EA1C22AE1DC8E9B3005481AB /* MyEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		EA1C22B01DC8EA0B005481AB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EA1C22B21DC8EABF005481AB /* MyEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +129,12 @@
 		EADAAC241E76F49C00C12AEA /* ImageDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDto.swift; sourceTree = "<group>"; };
 		EADAAC261E76F55000C12AEA /* BeaconDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDto.swift; sourceTree = "<group>"; };
 		EADAAC281E76F61D00C12AEA /* MapDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDto.swift; sourceTree = "<group>"; };
+		EADAAC2A1E76F77B00C12AEA /* LocationConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationConverter.swift; sourceTree = "<group>"; };
+		EADAAC2C1E76F79300C12AEA /* CategoryConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryConverter.swift; sourceTree = "<group>"; };
+		EADAAC2E1E76F7AB00C12AEA /* ExhibitConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitConverter.swift; sourceTree = "<group>"; };
+		EADAAC301E76F7BF00C12AEA /* ImageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConverter.swift; sourceTree = "<group>"; };
+		EADAAC321E76F7CB00C12AEA /* BeaconConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconConverter.swift; sourceTree = "<group>"; };
+		EADAAC341E76F7D500C12AEA /* MapConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConverter.swift; sourceTree = "<group>"; };
 		EAE019AC1DD0AA8E0049D28B /* EventDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDto.swift; sourceTree = "<group>"; };
 		EAE019AE1DD0AC790049D28B /* EventConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConverter.swift; sourceTree = "<group>"; };
 		EAE019B01DD0B0570049D28B /* GetEventResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetEventResource.swift; sourceTree = "<group>"; };
@@ -150,32 +164,14 @@
 		2B4476BF1DAAAD8F00A27F4C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EAF290A61E7DBB0C00107953 /* Resources */,
+				EA5EEE241DC937D100C30D69 /* Model */,
+				EAF290A21E7DBA6000107953 /* Controllers */,
+				2B4476D11DAAB0E000A27F4C /* Views */,
+				EAD31D241DE1ECC6008AC6B6 /* Utils */,
 				2B4476C21DAAAD9C00A27F4C /* Common */,
-				2B4476C11DAAAD9700A27F4C /* Feature */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		2B4476C01DAAAD9300A27F4C /* Generic */ = {
-			isa = PBXGroup;
-			children = (
-				2B4476C41DAAADA500A27F4C /* Common */,
-				2B4476C31DAAADA100A27F4C /* Feature */,
-			);
-			name = Generic;
-			sourceTree = "<group>";
-		};
-		2B4476C11DAAAD9700A27F4C /* Feature */ = {
-			isa = PBXGroup;
-			children = (
-				EAD31D241DE1ECC6008AC6B6 /* Utils */,
-				EA274A391DCB674000C005D9 /* Navigation */,
-				2B4476DB1DAAB24F00A27F4C /* Events */,
-				2B4476DA1DAAB24800A27F4C /* Login */,
-				2B4476D51DAAB12300A27F4C /* Initialiaze */,
-				2B4476D11DAAB0E000A27F4C /* UI */,
-			);
-			name = Feature;
 			sourceTree = "<group>";
 		};
 		2B4476C21DAAAD9C00A27F4C /* Common */ = {
@@ -185,20 +181,6 @@
 				2BABBEB91DA2BD470074842A /* AppDelegate.swift */,
 				2B4476C61DAAADBA00A27F4C /* Managers */,
 				2B4476C51DAAADAF00A27F4C /* Services */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		2B4476C31DAAADA100A27F4C /* Feature */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Feature;
-			sourceTree = "<group>";
-		};
-		2B4476C41DAAADA500A27F4C /* Common */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -238,7 +220,7 @@
 			name = CLLManager;
 			sourceTree = "<group>";
 		};
-		2B4476D11DAAB0E000A27F4C /* UI */ = {
+		2B4476D11DAAB0E000A27F4C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				2B4476DE1DAAB83B00A27F4C /* CollectionViewCells */,
@@ -246,7 +228,7 @@
 				2B4476D31DAAB0F300A27F4C /* Splash */,
 				2B4476D21DAAB0E700A27F4C /* Storyboard */,
 			);
-			name = UI;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		2B4476D21DAAB0E700A27F4C /* Storyboard */ = {
@@ -263,68 +245,6 @@
 				2BABBEC21DA2BD470074842A /* LaunchScreen.storyboard */,
 			);
 			name = Splash;
-			sourceTree = "<group>";
-		};
-		2B4476D51DAAB12300A27F4C /* Initialiaze */ = {
-			isa = PBXGroup;
-			children = (
-				2B4476D91DAAB13700A27F4C /* Resource */,
-				2B4476D81DAAB13300A27F4C /* View */,
-				2B4476D71DAAB12E00A27F4C /* Presentation */,
-				2B4476D61DAAB12A00A27F4C /* Controller */,
-			);
-			name = Initialiaze;
-			sourceTree = "<group>";
-		};
-		2B4476D61DAAB12A00A27F4C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		2B4476D71DAAB12E00A27F4C /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Presentation;
-			sourceTree = "<group>";
-		};
-		2B4476D81DAAB13300A27F4C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2BABBEBB1DA2BD470074842A /* InitialViewController.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		2B4476D91DAAB13700A27F4C /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resource;
-			sourceTree = "<group>";
-		};
-		2B4476DA1DAAB24800A27F4C /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				EAD31D231DE1ECA2008AC6B6 /* Controller */,
-				EA5EEE1F1DC9122000C30D69 /* View */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		2B4476DB1DAAB24F00A27F4C /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				EAE019A81DD0A9FE0049D28B /* Dto */,
-				EA6239961E6B652100D3F13E /* Exhibit Detail */,
-				EAE019A41DD0A7E00049D28B /* Event Dashboard */,
-				EAE019A31DD0A7D80049D28B /* Event Detail */,
-				EA5EEE2B1DC93EF100C30D69 /* MockService */,
-				EA5EEE241DC937D100C30D69 /* Model */,
-			);
-			name = Events;
 			sourceTree = "<group>";
 		};
 		2B4476DD1DAAB83400A27F4C /* TableViewCells */ = {
@@ -388,7 +308,6 @@
 		2BABBEB81DA2BD470074842A /* BeaCodeApp */ = {
 			isa = PBXGroup;
 			children = (
-				2B4476C01DAAAD9300A27F4C /* Generic */,
 				2B4476BF1DAAAD8F00A27F4C /* Core */,
 				2BABBEC51DA2BD470074842A /* Info.plist */,
 				EA5EEE291DC93E6C00C30D69 /* Assets.xcassets */,
@@ -405,40 +324,49 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		EA274A391DCB674000C005D9 /* Navigation */ = {
+		EA5EEE241DC937D100C30D69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA274A3A1DCB674A00C005D9 /* View */,
+				EAF290A51E7DBAAC00107953 /* DTOs */,
+				EAF290A41E7DBA9E00107953 /* Converters */,
+				EAF290A31E7DBA9900107953 /* Domain */,
 			);
-			name = Navigation;
+			name = Model;
 			sourceTree = "<group>";
 		};
-		EA274A3A1DCB674A00C005D9 /* View */ = {
+		EA60723F1DFE720A008F6160 /* BeaCodeAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */,
+				EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */,
+				EA6072421DFE720A008F6160 /* Info.plist */,
 			);
-			name = View;
+			path = BeaCodeAppTests;
 			sourceTree = "<group>";
 		};
-		EA5EEE1E1DC911E900C30D69 /* View */ = {
+		EAD31D241DE1ECC6008AC6B6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		EAF290A21E7DBA6000107953 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BABBEBB1DA2BD470074842A /* InitialViewController.swift */,
+				EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */,
 				EA1C22AE1DC8E9B3005481AB /* MyEventsViewController.swift */,
 				EA1C22B01DC8EA0B005481AB /* SearchViewController.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		EA5EEE1F1DC9122000C30D69 /* View */ = {
-			isa = PBXGroup;
-			children = (
+				EA1C22B61DC8EC12005481AB /* EventDetailViewController.swift */,
+				EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */,
 				EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */,
+				EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */,
 			);
-			name = View;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		EA5EEE241DC937D100C30D69 /* Model */ = {
+		EAF290A31E7DBA9900107953 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				EA85AF501E76297C00F48A5E /* Location.swift */,
@@ -451,94 +379,24 @@
 				EA85AF541E762CC800F48A5E /* Beacon.swift */,
 				EA85AF561E762D8600F48A5E /* Map.swift */,
 			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		EA5EEE2B1DC93EF100C30D69 /* MockService */ = {
-			isa = PBXGroup;
-			children = (
-				EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */,
-			);
-			name = MockService;
-			sourceTree = "<group>";
-		};
-		EA60723F1DFE720A008F6160 /* BeaCodeAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */,
-				EA6072421DFE720A008F6160 /* Info.plist */,
-			);
-			path = BeaCodeAppTests;
-			sourceTree = "<group>";
-		};
-		EA6239961E6B652100D3F13E /* Exhibit Detail */ = {
-			isa = PBXGroup;
-			children = (
-				EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */,
-			);
-			name = "Exhibit Detail";
-			sourceTree = "<group>";
-		};
-		EAD31D231DE1ECA2008AC6B6 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		EAD31D241DE1ECC6008AC6B6 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */,
-			);
-			name = Utils;
-			sourceTree = "<group>";
-		};
-		EAE019A21DD0A74E0049D28B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EA274A351DCAA46100C005D9 /* SharingManager.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		EAE019A31DD0A7D80049D28B /* Event Detail */ = {
-			isa = PBXGroup;
-			children = (
-				EA1C22B61DC8EC12005481AB /* EventDetailViewController.swift */,
-				EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */,
-			);
-			name = "Event Detail";
-			sourceTree = "<group>";
-		};
-		EAE019A41DD0A7E00049D28B /* Event Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				EAE019A61DD0A9F20049D28B /* Resource */,
-				EA5EEE1E1DC911E900C30D69 /* View */,
-				EAE019A21DD0A74E0049D28B /* Controller */,
-			);
-			name = "Event Dashboard";
-			sourceTree = "<group>";
-		};
-		EAE019A61DD0A9F20049D28B /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				EAE019A91DD0AA020049D28B /* Converter */,
-				EAE019A71DD0A9F70049D28B /* Domain */,
-				EAE019B01DD0B0570049D28B /* GetEventResource.swift */,
-			);
-			name = Resource;
-			sourceTree = "<group>";
-		};
-		EAE019A71DD0A9F70049D28B /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
 			name = Domain;
 			sourceTree = "<group>";
 		};
-		EAE019A81DD0A9FE0049D28B /* Dto */ = {
+		EAF290A41E7DBA9E00107953 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				EAE019AE1DD0AC790049D28B /* EventConverter.swift */,
+				EADAAC2A1E76F77B00C12AEA /* LocationConverter.swift */,
+				EADAAC2C1E76F79300C12AEA /* CategoryConverter.swift */,
+				EADAAC2E1E76F7AB00C12AEA /* ExhibitConverter.swift */,
+				EADAAC301E76F7BF00C12AEA /* ImageConverter.swift */,
+				EADAAC321E76F7CB00C12AEA /* BeaconConverter.swift */,
+				EADAAC341E76F7D500C12AEA /* MapConverter.swift */,
+			);
+			name = Converters;
+			sourceTree = "<group>";
+		};
+		EAF290A51E7DBAAC00107953 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
 				EAE019AC1DD0AA8E0049D28B /* EventDto.swift */,
@@ -549,15 +407,18 @@
 				EADAAC261E76F55000C12AEA /* BeaconDto.swift */,
 				EADAAC281E76F61D00C12AEA /* MapDto.swift */,
 			);
-			name = Dto;
+			name = DTOs;
 			sourceTree = "<group>";
 		};
-		EAE019A91DD0AA020049D28B /* Converter */ = {
+		EAF290A61E7DBB0C00107953 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EAE019AE1DD0AC790049D28B /* EventConverter.swift */,
+				EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */,
+				EA274A351DCAA46100C005D9 /* SharingManager.swift */,
+				EAE019B01DD0B0570049D28B /* GetEventResource.swift */,
+				EA0F3DFD1E7F1B380012DAAB /* Logger.swift */,
 			);
-			name = Converter;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -733,6 +594,7 @@
 				EA5EEE1D1DC90EEB00C30D69 /* EventPhotoSliderTableViewCell.swift in Sources */,
 				EA85AF511E76297C00F48A5E /* Location.swift in Sources */,
 				EAE019B11DD0B0570049D28B /* GetEventResource.swift in Sources */,
+				EADAAC351E76F7D500C12AEA /* MapConverter.swift in Sources */,
 				EADAAC1F1E76F1FD00C12AEA /* CategoryDto.swift in Sources */,
 				EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */,
 				2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */,
@@ -750,12 +612,15 @@
 				EAD31D281DE1EDC7008AC6B6 /* AlertUtils.swift in Sources */,
 				EAA4FFB21E6BF8A200AD1DAE /* CategorizedExhibits.swift in Sources */,
 				2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */,
+				EADAAC2D1E76F79300C12AEA /* CategoryConverter.swift in Sources */,
 				EA5EEE261DC937E400C30D69 /* Event.swift in Sources */,
 				EA5EEE281DC9381800C30D69 /* Exhibit.swift in Sources */,
 				EA85AF531E762C1D00F48A5E /* Image.swift in Sources */,
 				EA1C22B31DC8EABF005481AB /* MyEventTableViewCell.swift in Sources */,
 				EA274A3C1DCB676800C005D9 /* NavigationViewController.swift in Sources */,
+				EADAAC2F1E76F7AB00C12AEA /* ExhibitConverter.swift in Sources */,
 				EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */,
+				EA0F3DFE1E7F1B380012DAAB /* Logger.swift in Sources */,
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
 				EADAAC251E76F49C00C12AEA /* ImageDto.swift in Sources */,
@@ -766,11 +631,14 @@
 				EADAAC211E76F38400C12AEA /* LocationDto.swift in Sources */,
 				EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */,
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
+				EADAAC311E76F7BF00C12AEA /* ImageConverter.swift in Sources */,
 				EADAAC291E76F61D00C12AEA /* MapDto.swift in Sources */,
 				EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */,
+				EADAAC2B1E76F77B00C12AEA /* LocationConverter.swift in Sources */,
 				EA85AF551E762CC900F48A5E /* Beacon.swift in Sources */,
 				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,
 				EA85AF571E762D8600F48A5E /* Map.swift in Sources */,
+				EADAAC331E76F7CB00C12AEA /* BeaconConverter.swift in Sources */,
 				EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

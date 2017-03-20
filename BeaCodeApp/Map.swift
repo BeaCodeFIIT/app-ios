@@ -8,10 +8,12 @@
 
 import Foundation
 
-class Map {
+struct Map {
     var id: Int?
     var description: String?
     var filePath: String?
+    
+    init() {}
     
     init(id: Int, description: String, filePath: String) {
         self.id = id

@@ -19,4 +19,5 @@ class ImageDto {
         self.description = json["description"].string
         self.filePath = json["pathWithFile"].string
     }
+    
 }
