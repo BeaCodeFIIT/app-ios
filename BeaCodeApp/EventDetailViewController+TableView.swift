@@ -16,8 +16,13 @@ extension EventDetailViewController: UITableViewDelegate {
         let lastExhibitSection = (SharingManager.sharedInstance.selectedEvent?.categories?.count)! + 2 //Two sections are before the exhibits
         switch section {
         case 2..<lastExhibitSection:
-//            return SharingManager.sharedInstance.selectedEvent?.categories?.count .sections[section-2].items.count
-            return 0 //TODO
+            var numberOfItemsInCategory = 0
+            for exhibit in (SharingManager.sharedInstance.selectedEvent?.exhibits)! {
+                if exhibit.category == SharingManager.sharedInstance.selectedEvent?.categories?[section-2].name {
+                    numberOfItemsInCategory += 1
+                }
+            }
+            return numberOfItemsInCategory
         default:
             return 1
         }
@@ -52,13 +57,14 @@ extension EventDetailViewController: UITableViewDataSource {
             return cell
         case 2..<lastExhibitSection:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitCell_ID", for: indexPath) as! ExhibitTableViewCell
-//            let actSectionIndex = indexPath.section - 2
-//            let actSection = SharingManager.sharedInstance.selectedEvent?.categories?[actSectionIndex]
-            let actExhibit = SharingManager.sharedInstance.selectedExhibit
+            var exhibits = SharingManager.sharedInstance.selectedEvent?.exhibits?.filter { $0.category ==  SharingManager.sharedInstance.selectedEvent?.categories![indexPath.section - 2].name }
             
-            cell.exhibitPhoto.image = actExhibit?.images?[0].image
-            cell.exhibitTitle.text = actExhibit?.name
-            cell.exhibitDescription.text = actExhibit?.description
+            if let exhibit = exhibits?[indexPath.row] {
+                cell.exhibitPhoto.image = exhibit.images?[0].image
+                cell.exhibitTitle.text = exhibit.name
+                cell.exhibitDescription.text = exhibit.description
+            }
+            
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventNavigationStarterTableViewCell_ID", for: indexPath)

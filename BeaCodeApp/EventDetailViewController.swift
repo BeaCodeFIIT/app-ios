@@ -56,13 +56,13 @@ class EventDetailViewController: UIViewController {
         button.backgroundColor = UIColor.white
         button.titleEdgeInsets.left = 10
         
-//        if section >= 2 && section <= (SharingManager.sharedInstance.selectedEvent?.categories?.count)! + 2 {
-//            button.setTitle(SharingManager.sharedInstance.selectedEvent.sections[section-2].name, for: .normal)
-//        } else if section == 0 {
-//            button.setTitle("ABOUT", for: .normal)
-//        } else if section == 1 {
-//            button.setTitle("PHOTOS", for: .normal)
-//        }
+        if section >= 2 && section <= (SharingManager.sharedInstance.selectedEvent?.categories?.count)! + 2 {
+            button.setTitle(SharingManager.sharedInstance.selectedEvent?.categories?[section-2].name, for: .normal)
+        } else if section == 0 {
+            button.setTitle("ABOUT", for: .normal)
+        } else if section == 1 {
+            button.setTitle("PHOTOS", for: .normal)
+        }
         
         button.setTitleColor(UIColor.black, for: .normal)
         button.titleLabel!.font = UIFont.systemFont(ofSize: 18)
