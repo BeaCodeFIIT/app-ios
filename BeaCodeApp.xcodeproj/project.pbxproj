@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2925B61E7EBB6D00364A0E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925B51E7EBB6D00364A0E /* DataController.swift */; };
+		2B2925BB1E7EBB9900364A0E /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925B71E7EBB9900364A0E /* Beacon.swift */; };
+		2B2925BC1E7EBB9900364A0E /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925B81E7EBB9900364A0E /* Area.swift */; };
+		2B2925BD1E7EBB9900364A0E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925B91E7EBB9900364A0E /* Room.swift */; };
+		2B2925BE1E7EBB9900364A0E /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925BA1E7EBB9900364A0E /* Coordinate.swift */; };
+		2B2925C11E7EBEA800364A0E /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925BF1E7EBEA800364A0E /* Graph.swift */; };
+		2B2925C21E7EBEA800364A0E /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925C01E7EBEA800364A0E /* Queue.swift */; };
+		2B2925C41E7EBF5B00364A0E /* GraphMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2925C31E7EBF5B00364A0E /* GraphMapping.swift */; };
 		2B2C77581DD9F65D00E9B1ED /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C77571DD9F65D00E9B1ED /* ServiceCall.swift */; };
 		2B2F85271E76DB5800AE345D /* FIITBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F85261E76DB5800AE345D /* FIITBeacon.swift */; };
 		2B2F85291E76DB6400AE345D /* FIITBeaconDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F85281E76DB6400AE345D /* FIITBeaconDto.swift */; };
@@ -64,6 +72,14 @@
 
 /* Begin PBXFileReference section */
 		22FCC914006020FCE9F45BC0 /* Pods-BeaCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaCodeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.release.xcconfig"; sourceTree = "<group>"; };
+		2B2925B51E7EBB6D00364A0E /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2B2925B71E7EBB9900364A0E /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		2B2925B81E7EBB9900364A0E /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		2B2925B91E7EBB9900364A0E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		2B2925BA1E7EBB9900364A0E /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		2B2925BF1E7EBEA800364A0E /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		2B2925C01E7EBEA800364A0E /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		2B2925C31E7EBF5B00364A0E /* GraphMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphMapping.swift; sourceTree = "<group>"; };
 		2B2C77571DD9F65D00E9B1ED /* ServiceCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
 		2B2F85261E76DB5800AE345D /* FIITBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIITBeacon.swift; sourceTree = "<group>"; };
 		2B2F85281E76DB6400AE345D /* FIITBeaconDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIITBeaconDto.swift; sourceTree = "<group>"; };
@@ -147,6 +163,8 @@
 		2B4476C01DAAAD9300A27F4C /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				2B2925BF1E7EBEA800364A0E /* Graph.swift */,
+				2B2925C01E7EBEA800364A0E /* Queue.swift */,
 				2B4476C41DAAADA500A27F4C /* Common */,
 				2B4476C31DAAADA100A27F4C /* Feature */,
 			);
@@ -478,6 +496,7 @@
 		EAE019A21DD0A74E0049D28B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B2925B51E7EBB6D00364A0E /* DataController.swift */,
 				EA274A351DCAA46100C005D9 /* SharingManager.swift */,
 			);
 			name = Controller;
@@ -516,8 +535,13 @@
 		EAE019A71DD0A9F70049D28B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2B2925B71E7EBB9900364A0E /* Beacon.swift */,
+				2B2925B81E7EBB9900364A0E /* Area.swift */,
+				2B2925B91E7EBB9900364A0E /* Room.swift */,
+				2B2925BA1E7EBB9900364A0E /* Coordinate.swift */,
 				EA5EEE251DC937E400C30D69 /* Event.swift */,
 				2B3769091E6D95C500E2F4F0 /* Category.swift */,
+				2B2925C31E7EBF5B00364A0E /* GraphMapping.swift */,
 				2B2F85261E76DB5800AE345D /* FIITBeacon.swift */,
 				2B98DB4D1E76E07C0097933D /* Map.swift */,
 			);
@@ -737,14 +761,22 @@
 				EAE019AF1DD0AC790049D28B /* EventConverter.swift in Sources */,
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				2B2F85271E76DB5800AE345D /* FIITBeacon.swift in Sources */,
+				2B2925BC1E7EBB9900364A0E /* Area.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
+				2B2925C41E7EBF5B00364A0E /* GraphMapping.swift in Sources */,
+				2B2925C21E7EBEA800364A0E /* Queue.swift in Sources */,
 				2B2F85291E76DB6400AE345D /* FIITBeaconDto.swift in Sources */,
+				2B2925BE1E7EBB9900364A0E /* Coordinate.swift in Sources */,
 				2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */,
+				2B2925C11E7EBEA800364A0E /* Graph.swift in Sources */,
 				2B4476C81DAAADC700A27F4C /* CoreLocationManager.swift in Sources */,
+				2B2925BB1E7EBB9900364A0E /* Beacon.swift in Sources */,
 				EA1C22B71DC8EC12005481AB /* EventDetailViewController.swift in Sources */,
 				EA5EEE231DC91EC400C30D69 /* EventNavigationStarterTableViewCell.swift in Sources */,
 				2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */,
+				2B2925BD1E7EBB9900364A0E /* Room.swift in Sources */,
 				EA274A361DCAA46100C005D9 /* SharingManager.swift in Sources */,
+				2B2925B61E7EBB6D00364A0E /* DataController.swift in Sources */,
 				EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */,
 				2B98DB4E1E76E07C0097933D /* Map.swift in Sources */,
 				EAE019AD1DD0AA8E0049D28B /* EventDto.swift in Sources */,

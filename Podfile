@@ -14,6 +14,7 @@ target 'BeaCodeApp' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'PKHUD'
+  pod 'AlamofireImage'
   pod 'GSImageViewerController', '~> 1.2'
 	pod "NMPopUpViewSwift"
 end

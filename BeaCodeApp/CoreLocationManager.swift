@@ -18,6 +18,7 @@ import CoreLocation
 public class CoreLocationManager: NSObject, CLLocationManagerDelegate {//, CoreLocationManagerProtocol {
 
     let locationManager = CLLocationManager()
+    var beaconsArray = [Beacon]()
     
 //    static let sharedInstance = CoreLocationManager()
 //    private var nearestBeacon = CLBeacon()
@@ -65,6 +66,61 @@ public class CoreLocationManager: NSObject, CLLocationManagerDelegate {//, CoreL
 
     public func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
 //        setNearestBeacon(beacon: beacons.first!)
+        
+        for beacon in beacons {
+            for var currBeacon in self.beaconsArray {
+                if currBeacon == beacon {
+                    currBeacon.lastSeenBeacon = beacon
+                    
+                    if beacon.accuracy > 0.0 {
+                        
+                        currBeacon.distanceFromUser = beacon.accuracy
+                        
+                    } else {
+                        
+                        currBeacon.distanceFromUser = 99999
+                        
+                    }
+                    
+                    if DataController.sharedInstance.availableBeacons.isEmpty {
+                        
+                        DataController.sharedInstance.availableBeacons.append(currBeacon)
+                        
+                    } else {
+                        
+                        for existingBeacons in DataController.sharedInstance.availableBeacons {
+                            
+//                            if DataController.sharedInstance.availableBeacons.contains(where: (currBeacon as Beacon) {
+//                                result in
+//                                
+//                                if result {
+//                                    if existingBeacons == currBeacon && beacon.accuracy > 0.0 {
+//                                        
+//                                        existingBeacons.distanceFromUser = beacon.accuracy
+//                                        
+//                                    }
+//                                        
+//                                    else {
+//                                        
+//                                        DataController.sharedInstance.availableBeacons.append(currBeacon)
+//                                        
+//                                    }
+//                                }
+//                            })
+                        }
+                        
+                    }
+                    
+                    if DataController.sharedInstance.availableBeacons.count > 2 {
+                        
+                        DataController.sharedInstance.calculateDistance()
+                        
+                    }
+                }
+            }
+        }
+        
+        
         print("\(beacons.count) beacons detected")
     }
 
