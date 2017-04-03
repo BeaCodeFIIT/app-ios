@@ -39,6 +39,8 @@
 		EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5EEE291DC93E6C00C30D69 /* Assets.xcassets */; };
 		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
 		EA6072411DFE720A008F6160 /* BeaCodeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */; };
+		EA75CBBE1E91C4EA00B49480 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */; };
+		EA75CBC01E91C5CB00B49480 /* defaultmap.svg in Resources */ = {isa = PBXBuildFile; fileRef = EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */; };
 		EA85AF511E76297C00F48A5E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF501E76297C00F48A5E /* Location.swift */; };
 		EA85AF531E762C1D00F48A5E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF521E762C1D00F48A5E /* Image.swift */; };
 		EA85AF551E762CC900F48A5E /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF541E762CC800F48A5E /* Beacon.swift */; };
@@ -114,6 +116,8 @@
 		EA60723E1DFE720A008F6160 /* BeaCodeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaCodeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaCodeAppTests.swift; sourceTree = "<group>"; };
 		EA6072421DFE720A008F6160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultmap.svg; sourceTree = "<group>"; };
 		EA85AF501E76297C00F48A5E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		EA85AF521E762C1D00F48A5E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		EA85AF541E762CC800F48A5E /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		2BABBEAD1DA2BD470074842A = {
 			isa = PBXGroup;
 			children = (
+				EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */,
 				2BABBEB81DA2BD470074842A /* BeaCodeApp */,
 				EA60723F1DFE720A008F6160 /* BeaCodeAppTests */,
 				2BABBEB71DA2BD470074842A /* Products */,
@@ -362,6 +367,7 @@
 				EA5EEE201DC9126D00C30D69 /* EventDetailViewController+TableView.swift */,
 				EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */,
 				EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */,
+				EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -475,7 +481,7 @@
 				TargetAttributes = {
 					2BABBEB51DA2BD470074842A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = MN2MG2K2EN;
+						DevelopmentTeam = F6KASB6N3P;
 						ProvisioningStyle = Automatic;
 					};
 					EA60723D1DFE720A008F6160 = {
@@ -513,6 +519,7 @@
 				2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */,
 				EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
+				EA75CBC01E91C5CB00B49480 /* defaultmap.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +631,7 @@
 				EA1C22B91DC8EC3D005481AB /* MyProfileViewController.swift in Sources */,
 				EA1C22B51DC8EADE005481AB /* SearchItemTableViewCell.swift in Sources */,
 				EADAAC251E76F49C00C12AEA /* ImageDto.swift in Sources */,
+				EA75CBBE1E91C4EA00B49480 /* MapViewController.swift in Sources */,
 				2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */,
 				EADAAC231E76F41800C12AEA /* ExhibitDto.swift in Sources */,
 				2B4476C81DAAADC700A27F4C /* CoreLocationManager.swift in Sources */,
@@ -778,7 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = MN2MG2K2EN;
+				DEVELOPMENT_TEAM = F6KASB6N3P;
 				INFOPLIST_FILE = BeaCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beacodeapp.BeaCodeApp;
@@ -793,7 +801,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = MN2MG2K2EN;
+				DEVELOPMENT_TEAM = F6KASB6N3P;
 				INFOPLIST_FILE = BeaCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beacodeapp.BeaCodeApp;

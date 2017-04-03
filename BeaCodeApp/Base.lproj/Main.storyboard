@@ -17,7 +17,7 @@
                     <tabBarItem key="tabBarItem" title="" image="ic_menu_36pt" selectedImage="ic_menu_36pt" id="2g5-Gt-3xp">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iov-jR-8eI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Iov-jR-8eI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -343,11 +343,11 @@
                                                         <constraint firstAttribute="height" constant="40" id="chL-Ka-Chw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <state key="normal" title="START NAVIGATION">
+                                                    <state key="normal" title="SHOW MAP">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="sZ1-Zn-h2V" kind="show" id="6u5-uG-f6E"/>
+                                                        <segue destination="70z-X5-jPb" kind="show" id="zke-5v-7zu"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -384,6 +384,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64I-gK-s8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2261.5999999999999" y="56.221889055472268"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="8kd-KW-dSp">
+            <objects>
+                <viewController id="70z-X5-jPb" customClass="MapViewController" customModule="BeaCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pxH-Ra-raC"/>
+                        <viewControllerLayoutGuide type="bottom" id="oZi-xA-s1L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ofj-1p-6yI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiO-8Z-XlW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NiO-8Z-XlW" secondAttribute="bottom" id="5Gx-hA-MA0"/>
+                            <constraint firstItem="NiO-8Z-XlW" firstAttribute="leading" secondItem="Ofj-1p-6yI" secondAttribute="leading" id="8zJ-nZ-ATO"/>
+                            <constraint firstItem="NiO-8Z-XlW" firstAttribute="top" secondItem="Ofj-1p-6yI" secondAttribute="top" id="Q5J-3m-8zM"/>
+                            <constraint firstAttribute="trailing" secondItem="NiO-8Z-XlW" secondAttribute="trailing" id="US1-12-1Hz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="NiO-8Z-XlW" id="m4A-sg-PZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ash-9u-tF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3044" y="-255"/>
         </scene>
         <!--Title-->
         <scene sceneID="JqR-KH-PZc">
@@ -445,7 +478,7 @@
             <objects>
                 <navigationController id="sEK-pT-zv2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="ic_search_36pt" selectedImage="ic_search_36pt" id="Hmg-oj-e5e"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SM6-mE-yB6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SM6-mE-yB6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -489,7 +522,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZR4-JF-eYq" id="nQ9-W4-JVb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-52-5k8">
@@ -539,7 +572,7 @@
             <objects>
                 <navigationController id="PZi-0M-eyt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="ic_account_circle_36pt" selectedImage="ic_account_circle_36pt" id="XAe-Hm-t4d"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aHK-mx-G1l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aHK-mx-G1l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -970,7 +1003,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQb-Wq-w0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3044" y="-248.72563718140933"/>
+            <point key="canvasLocation" x="4583" y="-23"/>
         </scene>
     </scenes>
     <resources>

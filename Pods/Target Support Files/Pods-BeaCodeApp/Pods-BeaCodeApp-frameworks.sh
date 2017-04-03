@@ -87,8 +87,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DLRadioButton/DLRadioButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GSImageViewerController/GSImageViewerController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Macaw/Macaw.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NMPopUpViewSwift/NMPopUpViewSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PKHUD/PKHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TagListView/TagListView.framework"
 fi
@@ -96,8 +98,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DLRadioButton/DLRadioButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GSImageViewerController/GSImageViewerController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Macaw/Macaw.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NMPopUpViewSwift/NMPopUpViewSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PKHUD/PKHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TagListView/TagListView.framework"
 fi
