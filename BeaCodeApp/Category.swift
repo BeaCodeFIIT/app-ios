@@ -11,11 +11,13 @@ import SwiftyJSON
 struct Category {
     var id: Int?
     var name: String?
+    var hidden: Bool?
     
     init() {}
     
     init(id: Int, name: String) {
         self.id = id
         self.name = name
+        self.hidden = true
     }
 }

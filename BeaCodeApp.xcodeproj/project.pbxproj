@@ -39,6 +39,11 @@
 		EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5EEE291DC93E6C00C30D69 /* Assets.xcassets */; };
 		EA5EEE2D1DC93F3400C30D69 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EEE2C1DC93F3400C30D69 /* MockFactory.swift */; };
 		EA6072411DFE720A008F6160 /* BeaCodeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */; };
+		EA69F11C1E921A6B001D1880 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69F11B1E921A6B001D1880 /* SVGView.swift */; };
+		EA69F1231E9223E7001D1880 /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1211E9223E7001D1880 /* pin_red.png */; };
+		EA69F1261E92249D001D1880 /* pin_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1251E92249D001D1880 /* pin_blue.png */; };
+		EA69F1281E9233D7001D1880 /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1271E9233D7001D1880 /* beacons.json */; };
+		EA69F12A1E926D70001D1880 /* defaultmap.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1291E926D70001D1880 /* defaultmap.png */; };
 		EA75CBBE1E91C4EA00B49480 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */; };
 		EA75CBC01E91C5CB00B49480 /* defaultmap.svg in Resources */ = {isa = PBXBuildFile; fileRef = EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */; };
 		EA85AF511E76297C00F48A5E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF501E76297C00F48A5E /* Location.swift */; };
@@ -116,6 +121,11 @@
 		EA60723E1DFE720A008F6160 /* BeaCodeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaCodeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6072401DFE720A008F6160 /* BeaCodeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaCodeAppTests.swift; sourceTree = "<group>"; };
 		EA6072421DFE720A008F6160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA69F11B1E921A6B001D1880 /* SVGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGView.swift; sourceTree = "<group>"; };
+		EA69F1211E9223E7001D1880 /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
+		EA69F1251E92249D001D1880 /* pin_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_blue.png; sourceTree = "<group>"; };
+		EA69F1271E9233D7001D1880 /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
+		EA69F1291E926D70001D1880 /* defaultmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultmap.png; sourceTree = "<group>"; };
 		EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultmap.svg; sourceTree = "<group>"; };
 		EA85AF501E76297C00F48A5E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -239,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				2BABBEBD1DA2BD470074842A /* Main.storyboard */,
+				EA69F11B1E921A6B001D1880 /* SVGView.swift */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -292,6 +303,10 @@
 		2BABBEAD1DA2BD470074842A = {
 			isa = PBXGroup;
 			children = (
+				EA69F1291E926D70001D1880 /* defaultmap.png */,
+				EA69F1271E9233D7001D1880 /* beacons.json */,
+				EA69F1251E92249D001D1880 /* pin_blue.png */,
+				EA69F1211E9223E7001D1880 /* pin_red.png */,
 				EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */,
 				2BABBEB81DA2BD470074842A /* BeaCodeApp */,
 				EA60723F1DFE720A008F6160 /* BeaCodeAppTests */,
@@ -517,8 +532,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */,
+				EA69F1261E92249D001D1880 /* pin_blue.png in Resources */,
+				EA69F1281E9233D7001D1880 /* beacons.json in Resources */,
 				EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */,
+				EA69F12A1E926D70001D1880 /* defaultmap.png in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
+				EA69F1231E9223E7001D1880 /* pin_red.png in Resources */,
 				EA75CBC01E91C5CB00B49480 /* defaultmap.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +623,7 @@
 				EADAAC351E76F7D500C12AEA /* MapConverter.swift in Sources */,
 				EADAAC1F1E76F1FD00C12AEA /* CategoryDto.swift in Sources */,
 				EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */,
+				EA69F11C1E921A6B001D1880 /* SVGView.swift in Sources */,
 				2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */,
 				2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */,
 				EA1C22B11DC8EA0B005481AB /* SearchViewController.swift in Sources */,

@@ -35,6 +35,7 @@ class ExhibitDetailViewController: UIViewController {
     }
     
     func setTitle(titleText: String) {
+        if self.navigationController != nil {
         let navBar = self.navigationController!.navigationBar
         navBar.barTintColor = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1)
         navBar.tintColor = UIColor.white
@@ -52,6 +53,7 @@ class ExhibitDetailViewController: UIViewController {
         titleLable.text = titleText
         titleLable.textColor = UIColor.white
         titleLable.font = titleLable.font.withSize(CGFloat(24))
+        }
     }
     
 }

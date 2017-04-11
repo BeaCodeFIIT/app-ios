@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 enum mockSet {
     case ces
@@ -34,6 +35,31 @@ class EventFactory {
             images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "ces4")))
             images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "ces5")))
             
+            var beacons = Array<Beacon>()
+            do {
+                if let file = Bundle.main.url(forResource: "beacons", withExtension: "json") {
+                    print("LOADING BEACONS - FILE FOUND")
+                    let data = try Data(contentsOf: file)
+                    let json = JSON(data)
+                    print(json)
+                    
+                    var beaconsDto = [BeaconDto]()
+                    for beacon in json["data"] {
+                        beaconsDto.append(BeaconDto(json: beacon.1))
+                    }
+                    
+                    print("LOADING BEACONS - FILE FOUND - \(beaconsDto.count) beacons loaded")
+                    
+                    for beaconDto in beaconsDto {
+                        beacons.append(BeaconConverter.shared.convert(input: beaconDto)!)
+                    }
+                } else {
+                    print("LOADING BEACONS - No JSON file with beacons found")
+                }
+            } catch  {
+                print(error.localizedDescription)
+            }
+            
             var event = Event(id: 1,
                               name: "Consumer Electronics Show 2016",
                               start: "2016-12-01 09:00:00".toDateTime(),
@@ -42,7 +68,7 @@ class EventFactory {
                               location: Location(id: 1, name: "Las Vegas, Nevada", latitude: "123", longitude: "123"),
                               images: images,
                               categories: categories,
-                              beacons: Array<Beacon>(),
+                              beacons: beacons,
                               exhibits: Array<Exhibit>())
             
             var imagesExh1 = Array<Image>()

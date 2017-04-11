@@ -13,13 +13,13 @@ struct Beacon {
     var UUID: String?
     var major: String?
     var minor: String?
-    var coorX: String?
-    var coorY: String?
+    var coorX: Double?
+    var coorY: Double?
     var exhibitId: Int?
     
     init() {}
     
-    init(id: Int, UUID: String, major: String, minor: String, coorX: String, coorY: String, exhibitId: Int) {
+    init(id: Int, UUID: String, major: String, minor: String, coorX: Double, coorY: Double, exhibitId: Int) {
         self.id = id
         self.UUID = UUID
         self.major = major

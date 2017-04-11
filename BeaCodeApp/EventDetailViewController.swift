@@ -30,7 +30,6 @@ class EventDetailViewController: UIViewController {
                                                object: nil)
         
         setTitle(titleText: SharingManager.sharedInstance.selectedEvent?.name)
-//        prepareExhibits()
         numberOfRowsInSection = (SharingManager.sharedInstance.selectedEvent?.categories?.count)!
     }
     
@@ -43,27 +42,39 @@ class EventDetailViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let selectedExhibit = SharingManager.sharedInstance.selectedEvent.sections[indexPath.-2].items[indexPath.row]
-//        SharingManager.sharedInstance.selectedEvent.selectedExhibit =  selectedExhibit
+        if indexPath.section >= 2 {
+            tableView.deselectRow(at: indexPath, animated: true)
+            var exhibits = SharingManager.sharedInstance.selectedEvent?.exhibits?.filter { $0.category ==  SharingManager.sharedInstance.selectedEvent?.categories![indexPath.section - 2].name }
+            SharingManager.sharedInstance.selectedExhibit = exhibits?[indexPath.row]
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
-        button.tag = section
-        button.addTarget(self, action: #selector(headerButtonTap), for: .touchUpInside)
-        button.backgroundColor = UIColor.white
-        button.titleEdgeInsets.left = 10
+        var button = UIButton(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
         
         if section >= 2 && section <= (SharingManager.sharedInstance.selectedEvent?.categories?.count)! + 2 {
+            button = UIButton(frame: CGRect(x: 30, y: 0, width: tableView.bounds.size.width-30, height: 30))
             button.setTitle(SharingManager.sharedInstance.selectedEvent?.categories?[section-2].name, for: .normal)
+            
+            let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+            if (SharingManager.sharedInstance.selectedEvent?.categories?[section-2].hidden)! {
+                iconView.image = #imageLiteral(resourceName: "right_arrrow")
+            } else {
+                iconView.image = #imageLiteral(resourceName: "down_arrow")
+            }
+            iconView.backgroundColor = UIColor.white
+            headerView.addSubview(iconView)
         } else if section == 0 {
             button.setTitle("ABOUT", for: .normal)
         } else if section == 1 {
             button.setTitle("PHOTOS", for: .normal)
         }
         
+        button.tag = section
+        button.addTarget(self, action: #selector(headerButtonTap), for: .touchUpInside)
+        button.backgroundColor = UIColor.white
+        button.titleEdgeInsets.left = 10
         button.setTitleColor(UIColor.black, for: .normal)
         button.titleLabel!.font = UIFont.systemFont(ofSize: 18)
         button.contentHorizontalAlignment = .left
@@ -74,24 +85,64 @@ class EventDetailViewController: UIViewController {
     }
     
     func headerButtonTap(_ sender: UIButton) {
-//        SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed = !SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed
-//        print("Header button with tag \(sender.tag) tapped. Value \(SharingManager.sharedInstance.selectedEvent.sections[sender.tag-2].collapsed)")
+        
+        sender.superview?
+            .subviews
+            .flatMap{$0 as? UIImageView}
+            .forEach {view in
+
+                var selectedCategory = SharingManager.sharedInstance.selectedEvent?.categories?.filter {
+                    let buttons = view.superview?.subviews.flatMap{$0 as? UIButton}
+                    let button = buttons?[0]
+                    return $0.name == button?.titleLabel?.text
+                }[0]
+                
+                if view.image == #imageLiteral(resourceName: "right_arrrow") {
+                    
+                    for (index, category) in (SharingManager.sharedInstance.selectedEvent?.categories)!.enumerated() {
+                        if category.name == selectedCategory?.name {
+                            SharingManager.sharedInstance.selectedEvent?.categories?[index].hidden = false
+                            Logger.info(message: "Section \(String(describing: SharingManager.sharedInstance.selectedEvent?.categories?[index].name)) is now shown.")
+                        }
+                    }
+                    
+                    UIView.transition(with: view,
+                                      duration: 0.25,
+                                      options: .transitionCrossDissolve,
+                                      animations: { view.image = #imageLiteral(resourceName: "down_arrow")},
+                                      completion: nil)
+                    
+                    UIView.transition(with: eventDetailTable,
+                                      duration: 0.25,
+                                      options: .transitionCrossDissolve,
+                                      animations: {self.eventDetailTable.reloadData()},
+                                      completion: nil)
+                    
+                } else {
+                    
+                    
+                    for (index, category) in (SharingManager.sharedInstance.selectedEvent?.categories)!.enumerated() {
+                        if category.name == selectedCategory?.name {
+                            SharingManager.sharedInstance.selectedEvent?.categories?[index].hidden = true
+                            Logger.info(message: "Section \(String(describing: SharingManager.sharedInstance.selectedEvent?.categories?[index].name)) is now hidden.")
+                        }
+                    }
+                    
+                    UIView.transition(with: view,
+                                      duration: 0.25,
+                                      options: .transitionCrossDissolve,
+                                      animations: { view.image = #imageLiteral(resourceName: "right_arrrow")},
+                                      completion: nil)
+                    
+                    UIView.transition(with: eventDetailTable,
+                                      duration: 0.25,
+                                      options: .transitionCrossDissolve,
+                                      animations: {self.eventDetailTable.reloadData()},
+                                      completion: nil)
+
+                }
+            }
     }
-    
-//    func prepareExhibits() {
-//        var dic = [String : Array<Exhibit>]()
-//        
-//        for exhibit in (SharingManager.sharedInstance.selectedEvent?.exhibits)! {
-//            if dic[exhibit.category] == nil {
-//                dic[exhibit.category] = Array<Exhibit>()
-//            }
-//            dic[exhibit.category]?.append(exhibit)
-//        }
-//        
-//        for category in dic {
-//            SharingManager.sharedInstance.selectedEvent.sections.append(Section(name: category.key, items: category.value, collapsed: false))
-//        }
-//    }
     
     func setTitle(titleText: String?) {
         let navBar = self.navigationController!.navigationBar

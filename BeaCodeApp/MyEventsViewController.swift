@@ -20,6 +20,8 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         setTitle(titleText: "MY EVENTS")
     }
     
+
+    
     func loadEvents() {
         events.removeAll()
         events.append(contentsOf: mockEvents())
@@ -37,7 +39,7 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = self.eventsTable.dequeueReusableCell(withIdentifier: "MyEventTableViewCell_ID", for: indexPath) as! MyEventTableViewCell
         cell = fillCell(cell: cell, event: events[indexPath.row])
-        Logger.info(message: "Cell \"\(cell.eventTitle.text)\" created")
+        Logger.info(message: "Cell \"\(String(describing: cell.eventTitle.text))\" created")
         return cell
     }
     
@@ -53,7 +55,7 @@ class MyEventViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.eventImage.image = event.images?[0].image
         cell.eventTitle.text = event.name
         cell.eventSubtitle.text = event.description
-        Logger.info(message: "TableCell \"\(cell.eventTitle.text)\" added")
+        Logger.info(message: "TableCell \"\(String(describing: cell.eventTitle.text))\" added")
         return cell
     }
     

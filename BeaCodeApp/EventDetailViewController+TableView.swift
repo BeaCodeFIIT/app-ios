@@ -18,10 +18,12 @@ extension EventDetailViewController: UITableViewDelegate {
         case 2..<lastExhibitSection:
             var numberOfItemsInCategory = 0
             for exhibit in (SharingManager.sharedInstance.selectedEvent?.exhibits)! {
-                if exhibit.category == SharingManager.sharedInstance.selectedEvent?.categories?[section-2].name {
+                if exhibit.category == SharingManager.sharedInstance.selectedEvent?.categories?[section-2].name &&
+                    SharingManager.sharedInstance.selectedEvent?.categories?[section-2].hidden == false {
                     numberOfItemsInCategory += 1
                 }
             }
+            Logger.info(message: "Number of items in category: \(numberOfItemsInCategory)")
             return numberOfItemsInCategory
         default:
             return 1
