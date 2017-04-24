@@ -330,7 +330,7 @@
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="6nn-H4-QRZ" kind="show" id="PwA-Tc-zM3"/>
+                                                        <segue destination="70z-X5-jPb" kind="show" id="kJz-AM-iz6"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -381,7 +381,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fz-ws-d7E">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,34 +399,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ash-9u-tF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3044" y="-255.02248875562222"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2Dd-Bu-yW4">
-            <objects>
-                <viewController id="6nn-H4-QRZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bfe-xa-rKR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Crg-bB-vzD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FfH-bb-pG3" customClass="SVGExampleView" customModule="BeaCodeApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-KI-YWY">
-                                <rect key="frame" x="140" y="581" width="94" height="29"/>
-                            </stepper>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Crg-bB-vzD" firstAttribute="top" secondItem="FWe-KI-YWY" secondAttribute="bottom" constant="8" id="Q52-kz-ees"/>
-                            <constraint firstItem="FWe-KI-YWY" firstAttribute="leading" secondItem="FfH-bb-pG3" secondAttribute="leadingMargin" constant="124" id="cHs-HS-XRe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FWe-KI-YWY" secondAttribute="trailing" constant="125" id="vyo-bp-A9b"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bnu-gN-5Yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3745" y="-255"/>
         </scene>
         <!--Title-->
         <scene sceneID="JqR-KH-PZc">
