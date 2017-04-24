@@ -33,16 +33,24 @@ class MapViewController: UIViewController {
         
         scrollView.addSubview(mapImageView)
         
+        addBeaconsToMap()
+        
         // Do any additional setup after loading the view.
     }
     
     func addBeaconsToMap() {
         
-        for beacon in SharingManager.sharedInstance.selectedEvent?.beacons as Beacon {
-            
-            
-            
-        }
+        let pinImage = UIImage(named: "pin_blue.png")
+        let pin1 = UIImageView(frame: CGRect(x: 50, y: 50, width: 60, height: 60))
+        pin1.contentMode = UIViewContentMode.scaleAspectFit
+        
+        mapImageView.addSubview(pin1)
+        
+//        for beacon in SharingManager.sharedInstance.selectedEvent?.beacons as Beacon {
+//            
+//            
+//            
+//        }
         
     }
     
