@@ -15,6 +15,7 @@
 		2B4476E11DAAB88900A27F4C /* NetworkServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476E01DAAB88900A27F4C /* NetworkServiceManager.swift */; };
 		2B4476E31DAAB89300A27F4C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476E21DAAB89300A27F4C /* NetworkService.swift */; };
 		2B4476E61DAAB8F800A27F4C /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4476E51DAAB8F800A27F4C /* NetworkConfig.swift */; };
+		2B83E6BA1EAE0E4A00472536 /* groundFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B83E6B91EAE0E4A00472536 /* groundFloor.png */; };
 		2BABBEBA1DA2BD470074842A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABBEB91DA2BD470074842A /* AppDelegate.swift */; };
 		2BABBEBC1DA2BD470074842A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABBEBB1DA2BD470074842A /* InitialViewController.swift */; };
 		2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEBD1DA2BD470074842A /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		2B4476E01DAAB88900A27F4C /* NetworkServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceManager.swift; sourceTree = "<group>"; };
 		2B4476E21DAAB89300A27F4C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2B4476E51DAAB8F800A27F4C /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		2B83E6B91EAE0E4A00472536 /* groundFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groundFloor.png; sourceTree = "<group>"; };
 		2BABBEB61DA2BD470074842A /* BeaCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BABBEB91DA2BD470074842A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BABBEBB1DA2BD470074842A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				EA69F1291E926D70001D1880 /* defaultmap.png */,
+				2B83E6B91EAE0E4A00472536 /* groundFloor.png */,
 				EA69F1271E9233D7001D1880 /* beacons.json */,
 				EA69F1251E92249D001D1880 /* pin_blue.png */,
 				EA69F1211E9223E7001D1880 /* pin_red.png */,
@@ -535,6 +538,7 @@
 				EA69F1261E92249D001D1880 /* pin_blue.png in Resources */,
 				EA69F1281E9233D7001D1880 /* beacons.json in Resources */,
 				EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */,
+				2B83E6BA1EAE0E4A00472536 /* groundFloor.png in Resources */,
 				EA69F12A1E926D70001D1880 /* defaultmap.png in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
 				EA69F1231E9223E7001D1880 /* pin_red.png in Resources */,

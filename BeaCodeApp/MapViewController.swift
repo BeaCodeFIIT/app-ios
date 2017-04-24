@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MapViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class MapViewController: UIViewController {
         
         mapImageView.frame.size.width = 2000
         mapImageView.frame.size.height = 800
-        mapImageView.image = UIImage(named: "defaultmap.png")
+        mapImageView.image = UIImage(named: "groundFloor.png")
         scrollView.maximumZoomScale = 1.2
         scrollView.minimumZoomScale = 0.6
         
@@ -35,7 +36,15 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    func addBeaconsToMap() {
+        
+        for beacon in SharingManager.sharedInstance.selectedEvent?.beacons as Beacon {
+            
+            
+            
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
