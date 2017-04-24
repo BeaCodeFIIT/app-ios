@@ -9,21 +9,28 @@
 import UIKit
 
 class MapViewController: UIViewController {
-    @IBOutlet weak var webView: UIWebView!
+
+    var mapImageView : UIImageView = UIImageView()
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "defaultmap", ofType: "svg")!
-        if path != "" {
-            let fileURL:URL = URL(fileURLWithPath: path)
-            let req = URLRequest(url: fileURL)
-            self.webView.scalesPageToFit = true
-            self.webView.loadRequest(req)
-        }
-        else {
-            //handle here if path not found
-        }
+        scrollView.delegate = self
+        
+        mapImageView.frame.size.width = 2000
+        mapImageView.frame.size.height = 800
+        mapImageView.image = UIImage(named: "defaultmap.png")
+        scrollView.maximumZoomScale = 1.2
+        scrollView.minimumZoomScale = 0.6
+        
+        scrollView.contentSize.width = 2000
+        scrollView.contentSize.height = 800
+        
+        mapImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        scrollView.addSubview(mapImageView)
         
         // Do any additional setup after loading the view.
     }
