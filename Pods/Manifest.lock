@@ -8,10 +8,10 @@ PODS:
   - Macaw (0.8.1):
     - SWXMLHash (~> 3.0.0)
   - NMPopUpViewSwift (4.0.2)
-  - PKHUD (4.2.0)
+  - PKHUD (4.2.1)
   - SwiftyJSON (3.1.4)
   - SWXMLHash (3.0.4)
-  - TagListView (1.1.0)
+  - TagListView (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -19,7 +19,7 @@ DEPENDENCIES:
   - DLRadioButton (~> 1.4)
   - Fabric
   - GSImageViewerController (~> 1.2)
-  - Macaw (= 0.8.1)
+  - Macaw (~> 0.8.1)
   - NMPopUpViewSwift
   - PKHUD
   - SwiftyJSON
@@ -33,11 +33,11 @@ SPEC CHECKSUMS:
   GSImageViewerController: 73e84498743987560d24814828baa8f307e0e206
   Macaw: 4aeac5414dfbc650d5ad343b21224af927f1697c
   NMPopUpViewSwift: 9a2ea26dd7875804c478eb97bbc41cdab5d25da8
-  PKHUD: 48af884cf00c2213b0313b739d914e6cab1c0f5e
+  PKHUD: 957ce2a68b3c97a51839b30216120c1dbc0c3a78
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SWXMLHash: 29d20b84692fc319ea8ed933058fe7d8d005139b
-  TagListView: d0267a71393f3c73db5c9ea2f979ac1125fcab56
+  TagListView: 999e1df50c0f6b9ca927fae705c86a7e3b6ee9ba
 
-PODFILE CHECKSUM: ce8b922ecd04707553233994c6ab00f3f6817104
+PODFILE CHECKSUM: c5403d857409892d222cb2d44355d861b5c1c4de
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.2.0

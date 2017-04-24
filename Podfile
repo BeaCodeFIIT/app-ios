@@ -15,7 +15,7 @@ target 'BeaCodeApp' do
   pod 'Crashlytics'
   pod 'PKHUD'
   pod 'GSImageViewerController', '~> 1.2'
-	pod "NMPopUpViewSwift"
-	pod "Macaw", "0.8.1"
+  pod "NMPopUpViewSwift"
+  pod 'Macaw', '~>0.8.1'
 end
 

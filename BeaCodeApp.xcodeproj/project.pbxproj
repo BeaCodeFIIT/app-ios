@@ -520,7 +520,7 @@
 				TargetAttributes = {
 					2BABBEB51DA2BD470074842A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = F6KASB6N3P;
+						DevelopmentTeam = MN2MG2K2EN;
 						ProvisioningStyle = Automatic;
 					};
 					EA60723D1DFE720A008F6160 = {
@@ -838,7 +838,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = F6KASB6N3P;
+				DEVELOPMENT_TEAM = MN2MG2K2EN;
 				INFOPLIST_FILE = BeaCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beacodeapp.BeaCodeApp;
@@ -853,7 +853,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = F6KASB6N3P;
+				DEVELOPMENT_TEAM = MN2MG2K2EN;
 				INFOPLIST_FILE = BeaCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beacodeapp.BeaCodeApp;

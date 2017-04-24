@@ -239,7 +239,7 @@ class DataController: NSObject {
     
     }
     
-    func determinateArea(beacon : Beacon) -> Area? {
+    func determinateArea(beacon : BeaconL) -> Area? {
         
         for area in DataController.sharedInstance.maps {
             for availableBeacon in area.beacons! {

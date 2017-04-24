@@ -19,8 +19,8 @@ struct BeaconL {
     var uuid: NSUUID?
     var positionX : Float?
     var positionY : Float?
-    var majorValue: NSNumber?
-    var minorValue: NSNumber?
+    var majorValue: Int?
+    var minorValue: Int?
     var distanceFromUser : Double?
     
     var beaconEdge : Int?

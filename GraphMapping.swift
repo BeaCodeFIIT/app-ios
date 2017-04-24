@@ -37,7 +37,7 @@ public class Node : CustomStringConvertible, Equatable {
     }
     
     public func remove(edge: Edge) {
-        neighbors.remove(at: neighbors.indexOf{ $0 === edge }!)
+        neighbors.remove(at: neighbors.index{ $0 === edge }!)
     }
 }
 
@@ -84,14 +84,14 @@ public class Graph : CustomStringConvertible, Equatable {
         let duplicated = Graph()
         
         for node in nodes {
-            duplicated.addNode(node.label)
+            duplicated.addNode(label: node.label)
         }
         
         for node in nodes {
             for edge in node.neighbors {
-                let source = duplicated.findNodeWithLabel(node.label)
-                let neighbour = duplicated.findNodeWithLabel(edge.neighbor.label)
-                duplicated.addEdge(source, neighbor: neighbour)
+                let source = duplicated.findNodeWithLabel(label: node.label)
+                let neighbour = duplicated.findNodeWithLabel(label: edge.neighbor.label)
+                duplicated.addEdge(source: source, neighbor: neighbour)
             }
         }
         
@@ -101,4 +101,114 @@ public class Graph : CustomStringConvertible, Equatable {
 
 public func ==(lhs: Graph, rhs: Graph) -> Bool {
     return lhs.nodes == rhs.nodes
+}
+
+class GraphMapping {
+    
+    static var sharedInstance = GraphMapping()
+    var mappedPositions = [[BeaconL]]()
+    let graph = Graph()
+    
+    func createMapPositions(availableBeacons : [BeaconL]) {
+        
+        for beacon in availableBeacons {
+            
+            let edgeBeacon = availableBeacons.filter({$0.minorValue == beacon.beaconEdge})
+            
+            let position = [beacon, edgeBeacon[0]]
+            mappedPositions.append(position)
+        }
+        
+    }
+    
+    func constructMap(sourceMinorValue : String, destMinorvalue : String) -> [String] {
+        
+        //var keyNote = graph.addNode(String(minorValue))
+        var nodeArray = [Node]()
+        
+        for parents in mappedPositions {
+            
+            let node = graph.addNode(label: String(parents[0].minorValue!))
+            
+            nodeArray.append(node)
+            
+        }
+        for parents in mappedPositions {
+            for nodeFromArray in nodeArray {
+                for nodeFromGraph in graph.nodes {
+                    
+                    if nodeFromArray.label == String(parents[0].minorValue!) {
+                        
+                        if nodeFromGraph.label == String(parents[1].minorValue!) {
+                            
+                            graph.addEdge(source: nodeFromArray, neighbor: nodeFromGraph)
+                            graph.addEdge(source: nodeFromGraph, neighbor: nodeFromArray)
+                        }
+                    }
+                }
+            }
+        }
+        
+        var source : Node?
+        
+        for node in graph.nodes {
+            
+            if node.label == sourceMinorValue {
+                
+                source = node
+                
+            }
+        }
+        
+        var nodesExplored = breadthFirstSearch(graph: graph, source: source!,dest: destMinorvalue)
+        nodesExplored = nodesExplored.reversed()
+        
+        return nodesExplored
+    }
+    
+    func breadthFirstSearch(graph: Graph, source: Node, dest : String) -> [String] {
+        var queue = Queue<Node>()
+        queue.enqueue(element: source)
+        var finded = false
+        var nodesExplored = [source]
+        source.visited = true
+        source.parent = nil
+        
+        while let node = queue.dequeue() {
+            for edge in node.neighbors {
+                let neighborNode = edge.neighbor
+                if !neighborNode.visited {
+                    queue.enqueue(element: neighborNode)
+                    neighborNode.visited = true
+                    neighborNode.parent = node
+                    nodesExplored.append(neighborNode)
+                }
+                if neighborNode.label == dest {
+                    
+                    finded = true
+                    break
+                    
+                }
+            }
+            
+            if finded {
+                
+                break
+            }
+        }
+        
+        var tmpNode = nodesExplored.last
+        var resultArray = [String]()
+        
+        while tmpNode?.parent != nil {
+            
+            resultArray.append((tmpNode?.label)!)
+            tmpNode = tmpNode?.parent
+            
+        }
+        
+        resultArray.append((tmpNode?.label)!)
+        
+        return resultArray
+    }
 }
