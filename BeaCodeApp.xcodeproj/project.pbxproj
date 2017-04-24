@@ -43,7 +43,7 @@
 		EA69F1231E9223E7001D1880 /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1211E9223E7001D1880 /* pin_red.png */; };
 		EA69F1261E92249D001D1880 /* pin_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1251E92249D001D1880 /* pin_blue.png */; };
 		EA69F1281E9233D7001D1880 /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1271E9233D7001D1880 /* beacons.json */; };
-		EA69F12A1E926D70001D1880 /* defaultmap.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1291E926D70001D1880 /* defaultmap.png */; };
+		EA69F12A1E926D70001D1880 /* defaultmap3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA69F1291E926D70001D1880 /* defaultmap3.png */; };
 		EA75CBBE1E91C4EA00B49480 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */; };
 		EA75CBC01E91C5CB00B49480 /* defaultmap.svg in Resources */ = {isa = PBXBuildFile; fileRef = EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */; };
 		EA85AF511E76297C00F48A5E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85AF501E76297C00F48A5E /* Location.swift */; };
@@ -54,7 +54,9 @@
 		EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */; };
 		EA9611B31DD06C2200B27290 /* ExhibitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */; };
 		EAA4FFB21E6BF8A200AD1DAE /* CategorizedExhibits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4FFB11E6BF8A200AD1DAE /* CategorizedExhibits.swift */; };
+		EAAE6C2A1EAE2685002BED5A /* MapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE6C291EAE2685002BED5A /* MapperViewController.swift */; };
 		EAD31D281DE1EDC7008AC6B6 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */; };
+		EAD432091EAE21B000D16211 /* defaultmap.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD432081EAE21B000D16211 /* defaultmap.png */; };
 		EADAAC1F1E76F1FD00C12AEA /* CategoryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC1E1E76F1FD00C12AEA /* CategoryDto.swift */; };
 		EADAAC211E76F38400C12AEA /* LocationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC201E76F38400C12AEA /* LocationDto.swift */; };
 		EADAAC231E76F41800C12AEA /* ExhibitDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAAC221E76F41800C12AEA /* ExhibitDto.swift */; };
@@ -125,7 +127,7 @@
 		EA69F1211E9223E7001D1880 /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
 		EA69F1251E92249D001D1880 /* pin_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_blue.png; sourceTree = "<group>"; };
 		EA69F1271E9233D7001D1880 /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
-		EA69F1291E926D70001D1880 /* defaultmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultmap.png; sourceTree = "<group>"; };
+		EA69F1291E926D70001D1880 /* defaultmap3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultmap3.png; sourceTree = "<group>"; };
 		EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaultmap.svg; sourceTree = "<group>"; };
 		EA85AF501E76297C00F48A5E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -136,7 +138,9 @@
 		EA9611B01DD0043700B27290 /* ExhibitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitTableViewCell.swift; sourceTree = "<group>"; };
 		EA9611B21DD06C2200B27290 /* ExhibitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDetailViewController.swift; sourceTree = "<group>"; };
 		EAA4FFB11E6BF8A200AD1DAE /* CategorizedExhibits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorizedExhibits.swift; sourceTree = "<group>"; };
+		EAAE6C291EAE2685002BED5A /* MapperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperViewController.swift; sourceTree = "<group>"; };
 		EAD31D271DE1EDC7008AC6B6 /* AlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
+		EAD432081EAE21B000D16211 /* defaultmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultmap.png; sourceTree = "<group>"; };
 		EADAAC1E1E76F1FD00C12AEA /* CategoryDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDto.swift; sourceTree = "<group>"; };
 		EADAAC201E76F38400C12AEA /* LocationDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDto.swift; sourceTree = "<group>"; };
 		EADAAC221E76F41800C12AEA /* ExhibitDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitDto.swift; sourceTree = "<group>"; };
@@ -303,7 +307,8 @@
 		2BABBEAD1DA2BD470074842A = {
 			isa = PBXGroup;
 			children = (
-				EA69F1291E926D70001D1880 /* defaultmap.png */,
+				EAD432081EAE21B000D16211 /* defaultmap.png */,
+				EA69F1291E926D70001D1880 /* defaultmap3.png */,
 				EA69F1271E9233D7001D1880 /* beacons.json */,
 				EA69F1251E92249D001D1880 /* pin_blue.png */,
 				EA69F1211E9223E7001D1880 /* pin_red.png */,
@@ -383,6 +388,7 @@
 				EA1C22B81DC8EC3D005481AB /* MyProfileViewController.swift */,
 				EA274A3B1DCB676800C005D9 /* NavigationViewController.swift */,
 				EA75CBBD1E91C4EA00B49480 /* MapViewController.swift */,
+				EAAE6C291EAE2685002BED5A /* MapperViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -535,7 +541,8 @@
 				EA69F1261E92249D001D1880 /* pin_blue.png in Resources */,
 				EA69F1281E9233D7001D1880 /* beacons.json in Resources */,
 				EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */,
-				EA69F12A1E926D70001D1880 /* defaultmap.png in Resources */,
+				EAD432091EAE21B000D16211 /* defaultmap.png in Resources */,
+				EA69F12A1E926D70001D1880 /* defaultmap3.png in Resources */,
 				2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */,
 				EA69F1231E9223E7001D1880 /* pin_red.png in Resources */,
 				EA75CBC01E91C5CB00B49480 /* defaultmap.svg in Resources */,
@@ -630,6 +637,7 @@
 				EADAAC271E76F55000C12AEA /* BeaconDto.swift in Sources */,
 				EA5EEE211DC9126D00C30D69 /* EventDetailViewController+TableView.swift in Sources */,
 				2B37690A1E6D95C500E2F4F0 /* Category.swift in Sources */,
+				EAAE6C2A1EAE2685002BED5A /* MapperViewController.swift in Sources */,
 				EA9611B11DD0043700B27290 /* ExhibitTableViewCell.swift in Sources */,
 				EA5EEE1B1DC8F29C00C30D69 /* EventDetailInfoTableViewCell.swift in Sources */,
 				EA90C2E61E6CC19A003372D9 /* Section.swift in Sources */,

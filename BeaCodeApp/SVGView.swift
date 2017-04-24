@@ -12,16 +12,6 @@ import Macaw
 class SVGExampleView: MacawView {
     
     required init?(coder aDecoder: NSCoder) {
-//        do {
-//            try super.init(node: SVGParser.parse(path: "defaultmap"), coder: aDecoder)
-//
-//        } catch  {
-//            print("File not found")
-//            super.init(coder: aDecoder)
-//        }
-        
-//        let rect = Rect(x: 100, y: 75, w: 175, h: 30).round(r: 5).fill(with: Color(val: 0xfcc07c))
-//        let circle = Circle(cx: 100, cy: 100, r: 100).fill(with: Color.blue)
         let group = Group(contents: [])
         group.contents.append(Macaw.Image(src: "defaultmap.png", w: 750, place: .move(dx: 0, dy: 0)))
         
@@ -49,8 +39,7 @@ class SVGExampleView: MacawView {
                         
                         SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent?.exhibits?[0];
                         
-                        let vc = topVc!.storyboard!.instantiateViewController(withIdentifier: "ExhibitDetailViewControllerId")
-                        topVc?.present(vc, animated: true, completion: nil)
+                        NotificationCenter.default.post(Notification(name: Notification.Name.init(rawValue: "showDetail"), object: nil, userInfo: nil))
                     }
                     
                     group.contents.append(image)
