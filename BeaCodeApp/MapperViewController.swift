@@ -25,9 +25,9 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
             
-            let beac1 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 50, positionY: 50, majorValue: 3, minorValue: 38, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
-            let beac2 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 70, positionY: 70, majorValue: 3, minorValue: 40, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
-            let beac3 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 20, positionY: 20, majorValue: 3, minorValue: 44, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
+            let beac1 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 50, positionY: 50, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
+            let beac2 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 50, positionY: 70, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
+            let beac3 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 70, positionY: 50, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
             beaconsArray.append(beac1)
             beaconsArray.append(beac2)
             beaconsArray.append(beac3)
@@ -130,13 +130,13 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
                         for var existingBeacons in DataController.sharedInstance.availableBeacons {
                             
                             if DataController.sharedInstance.availableBeacons.contains(where: { currBeacon -> Bool in
-                                if currBeacon.name != nil {
+                                if currBeacon.majorValue != nil {
                                     return true
                                 }
                                 return false
                             }) != false {
                              
-                                if existingBeacons.name == currBeacon.name {
+                                if existingBeacons.majorValue == currBeacon.majorValue {
                                     if beacon.accuracy > 0.0 {
                                         existingBeacons.distanceFromUser = beacon.accuracy
                                         
