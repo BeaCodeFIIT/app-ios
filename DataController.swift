@@ -83,7 +83,9 @@ class DataController: NSObject {
             trilateratedCoordinates.add(x)
             trilateratedCoordinates.add(y)
             
-            setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
+            if holdArea(positX: ((trilateratedCoordinates[0]) as AnyObject).integerValue, positY: (trilateratedCoordinates[1] as AnyObject).integerValue) {
+                setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
+            }
             
             //different positions of all points
         } else if beaconLocation1[0] == beaconLocation2[0] && beaconLocation1[0] == beaconLocation3[0] {
@@ -129,7 +131,18 @@ class DataController: NSObject {
             trilateratedCoordinates.add(x)
             trilateratedCoordinates.add(y)
             
+            if holdArea(positX: ((trilateratedCoordinates[0]) as AnyObject).integerValue, positY: (trilateratedCoordinates[1] as AnyObject).integerValue) {
+                setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
+            }
+            
+        } else if availableBeacons[0].distanceFromUser! < 2.5 {
+            
+            let trilateratedCoordinates = NSMutableArray()
+            trilateratedCoordinates.add(availableBeacons[0].positionX)
+            trilateratedCoordinates.add(availableBeacons[0].positionY)
             setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
+            return
+            
             
         } else if DataController.sharedInstance.availableBeacons.count > 2 {
             
@@ -222,7 +235,9 @@ class DataController: NSObject {
                 
             }
             
-            setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
+            if holdArea(positX: ((trilateratedCoordinates[0]) as AnyObject).integerValue, positY: (trilateratedCoordinates[1] as AnyObject).integerValue) {
+                setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
+            }
             
         }
     }
@@ -237,6 +252,14 @@ class DataController: NSObject {
         
         print("PositionX : " + String(actualPosition.positionX!) + "\nPositionY : " + String(actualPosition.positionY!) + "\n\n")
     
+    }
+    
+    func holdArea(positX: Int!, positY: Int!) -> Bool {
+        
+        if positX! < 817 || positX! > 1020 || positY! < 354 || positY! > 550 {
+            return false
+        }
+        return true
     }
     
     func determinateArea(beacon : BeaconL) -> Area? {

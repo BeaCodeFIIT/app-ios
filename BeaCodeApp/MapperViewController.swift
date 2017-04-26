@@ -14,7 +14,7 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
     @IBOutlet weak var svgExampleView: SVGExampleView!
     
     let locationManager = CLLocationManager()
-    let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")! as UUID, identifier: "beacodeapp.BeaCodeApp")
+    let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")! as UUID, identifier: "beacodeapp.BeaCodeApp")
     var beaconsArray = [BeaconL]()
     
     var userPinImage = UIImageView()
@@ -26,22 +26,17 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 969, positionY: 112.7, majorValue: 1, minorValue: 102, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 840, positionY: 458, majorValue: 10, minorValue: 15, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1024, positionY: 130.7, majorValue: 1, minorValue: 103, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 896, positionY: 476, majorValue: 10, minorValue: 16, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 972, positionY: 166.7, majorValue: 1, minorValue: 106, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 967, positionY: 509, majorValue: 10, minorValue: 17, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 221, majorValue: 1, minorValue: 107, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 1007, positionY: 441, majorValue: 10, minorValue: 18, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 957, positionY: 270, majorValue: 1, minorValue: 108, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 930, positionY: 398, majorValue: 10, minorValue: 19, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 309.9, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
-
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 957, positionY: 348.3, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
-
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 370.3, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
-
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 865, positionY: 383, majorValue: 10, minorValue: 20, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
 
         //}
 
