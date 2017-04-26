@@ -128,21 +128,13 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
                     } else {
                         
                         for var existingBeacons in DataController.sharedInstance.availableBeacons {
-                            
-                            if DataController.sharedInstance.availableBeacons.contains(where: { currBeacon -> Bool in
-                                if currBeacon.majorValue != nil {
-                                    return true
-                                }
-                                return false
-                            }) != false {
-                             
-                                if existingBeacons.majorValue == currBeacon.majorValue {
-                                    if beacon.accuracy > 0.0 {
-                                        existingBeacons.distanceFromUser = beacon.accuracy
-                                        
-                                    } else {
-                                        DataController.sharedInstance.availableBeacons.append(currBeacon)
-                                    }
+
+                            if DataController.sharedInstance.availableBeacons.contains(where: { $0.majorValue == currBeacon.majorValue }) {
+                        
+                                if existingBeacons.majorValue == currBeacon.majorValue && beacon.accuracy > 0.0 {
+                                  
+                                    existingBeacons.distanceFromUser = beacon.accuracy
+                                    
                                 }
                                 
                             } else {
