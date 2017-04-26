@@ -9,7 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
-
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +20,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
 //        _ = CoreLocationManager.sharedInstance
+        
+        registerForNotifications()
+        
         return true
+    }
+    
+    func registerForNotifications() {
+        // iOS 10 support
+        if #available(iOS 10, *) {
+        
+            let center = UNUserNotificationCenter.current()
+            let options: UNAuthorizationOptions = [.alert, .sound];
+
+            center.requestAuthorization(options: options) {
+                (granted, error) in
+                if !granted {
+                    print("Something went wrong")
+                }
+            }
+        }
+            // iOS 9 support
+        else if #available(iOS 9, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+            
+        }
+            // iOS 8 support
+        else if #available(iOS 8, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

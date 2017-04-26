@@ -8,12 +8,14 @@
 
 import CoreLocation
 import UIKit
+import UserNotifications
 
 class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var svgExampleView: SVGExampleView!
     
+    @IBOutlet weak var popUpView: UIView!
     let locationManager = CLLocationManager()
-    let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")! as UUID, identifier: "beacodeapp.BeaCodeApp")
+    let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")! as UUID, identifier: "beacodeapp.BeaCodeApp")
     var beaconsArray = [BeaconL]()
     
     var userPinImage = UIImageView()
@@ -25,27 +27,23 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 969, positionY: 112.7, majorValue: 1, minorValue: 102, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 840, positionY: 458, majorValue: 10, minorValue: 15, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1024, positionY: 130.7, majorValue: 1, minorValue: 103, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 896, positionY: 476, majorValue: 10, minorValue: 16, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 972, positionY: 166.7, majorValue: 1, minorValue: 106, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 967, positionY: 509, majorValue: 10, minorValue: 17, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 221, majorValue: 1, minorValue: 107, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 1007, positionY: 441, majorValue: 10, minorValue: 18, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 957, positionY: 270, majorValue: 1, minorValue: 108, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 930, positionY: 398, majorValue: 10, minorValue: 19, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 309.9, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
-
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 957, positionY: 348.3, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
-
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 370.3, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
-
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 865, positionY: 383, majorValue: 10, minorValue: 20, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
 
         //}
 
-
+        popUpView.alpha = 0
         NotificationCenter.default.addObserver(self, selector: #selector(showDetail), name: Notification.Name.init(rawValue: "showDetail"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showPopUp), name: Notification.Name.init("locatedBeacon"), object: nil)
     
         scrollView.delegate = self
         scrollView.minimumZoomScale = 0.4
@@ -66,12 +64,31 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         // Do any additional setup after loading the view.
     }
     
+    func showPopUp() {
+        UIView.animate(withDuration: 0.4, animations: {
+            
+            self.popUpView.alpha = 1
+        })
+    }
+    
     func updateLocation() {
         
         userPinImage.frame.origin.y = CGFloat(DataController.sharedInstance.actualPosition.positionY!)
         userPinImage.frame.origin.x = CGFloat(DataController.sharedInstance.actualPosition.positionX!)
-        
 
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showPopUp()
+    }
+    
+    @IBAction func okBtnWasPressed(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.4, animations: {
+        
+            self.popUpView.alpha = 0
+        })
     }
     
     func showDetail() {
@@ -166,8 +183,6 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
                 }
             }
         }
-        
-
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -181,32 +196,56 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
     
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        
-        if notificationStatus {
+    
+        if #available(iOS 10, *) {
+            let content = UNMutableNotificationContent()
+            content.title = "Welcome at FIIT STU"
+            content.body = "Have a nice IITSRC conference!"
+            content.sound = UNNotificationSound.default()
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: "enterNotification", content: content, trigger: trigger)
             
+            UNUserNotificationCenter.current().add(request) {(error) in
+                if let error = error {
+                    print("Uh oh! We had an error: \(error)")
+                }
+            }
+            
+        } else {
             let notification = UILocalNotification()
             notification.alertBody = "Welcome at FIIT STU"
             notification.soundName = UILocalNotificationDefaultSoundName
             UIApplication.shared.presentLocalNotificationNow(notification)
-            
         }
         
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
-        manager.stopRangingBeacons(in: self.region)
+//        manager.stopRangingBeacons(in: self.region)
         
-        if notificationStatus {
+            if #available(iOS 10, *) {
+                let content = UNMutableNotificationContent()
+                content.title = "You are leaving FIIT STU."
+                content.body = "Thanks for coming."
+                content.sound = UNNotificationSound.default()
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                let request = UNNotificationRequest(identifier: "exitNotification", content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request) {(error) in
+                    if let error = error {
+                        print("Uh oh! We had an error: \(error)")
+                    }
+                }
+                
+            } else {
             
-            let notification = UILocalNotification()
-            notification.alertBody = "You are leaving FIIT STU."
-            notification.soundName = UILocalNotificationDefaultSoundName
-            UIApplication.shared.presentLocalNotificationNow(notification)
-            
-            DataController.sharedInstance.availableArea = nil
-            
-        }
+                let notification = UILocalNotification()
+                notification.alertBody = "You are leaving FIIT STU."
+                notification.soundName = UILocalNotificationDefaultSoundName
+                UIApplication.shared.presentLocalNotificationNow(notification)
+                
+            }
     }
 
     /*

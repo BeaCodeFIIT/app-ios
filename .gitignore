@@ -71,3 +71,126 @@ Pods/Target Support Files/AlamofireImage/AlamofireImage-umbrella.h
 Pods/Target Support Files/AlamofireImage/AlamofireImage.modulemap
 Pods/Target Support Files/AlamofireImage/AlamofireImage.xcconfig
 Pods/Target Support Files/AlamofireImage/Info.plist
+Pods/Macaw/LICENSE
+Pods/Macaw/README.md
+Pods/Macaw/Source/Info.plist
+Pods/Macaw/Source/animation/AnimatableVariable.swift
+Pods/Macaw/Source/animation/Animation.swift
+Pods/Macaw/Source/animation/AnimationImpl.swift
+Pods/Macaw/Source/animation/AnimationProducer.swift
+Pods/Macaw/Source/animation/AnimationUtils.swift
+Pods/Macaw/Source/animation/Easing.swift
+Pods/Macaw/Source/animation/layer_animation/CGExtensions.swift
+Pods/Macaw/Source/animation/layer_animation/FuncBounds.swift
+Pods/Macaw/Source/animation/layer_animation/PathBounds.swift
+Pods/Macaw/Source/animation/layer_animation/PathFunctions.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/AnimOperators.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/ContentsInterpolation.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/DoubleInterpolation.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/FillInterpolation.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/Interpolable.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/LocusInterpolation.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/ShapeInterpolation.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/StrokeInterpolation.swift
+Pods/Macaw/Source/animation/layer_animation/Extensions/TransformInterpolation.swift
+Pods/Macaw/Source/animation/types/AnimationSequence.swift
+Pods/Macaw/Source/animation/types/CombineAnimation.swift
+Pods/Macaw/Source/animation/types/ContentsAnimation.swift
+Pods/Macaw/Source/animation/types/MorphingAnimation.swift
+Pods/Macaw/Source/animation/types/OpacityAnimation.swift
+Pods/Macaw/Source/animation/types/ShapeAnimation.swift
+Pods/Macaw/Source/animation/types/TransformAnimation.swift
+Pods/Macaw/Source/animation/types/animation_generators/MorphingGenerator.swift
+Pods/Macaw/Source/animation/types/animation_generators/OpacityGenerator.swift
+Pods/Macaw/Source/animation/types/animation_generators/ShapeAnimationGenerator.swift
+Pods/Macaw/Source/animation/types/animation_generators/TimingFunction.swift
+Pods/Macaw/Source/animation/types/animation_generators/TransformGenerator.swift
+Pods/Macaw/Source/animation/types/animation_generators/Cache/AnimationCache.swift
+Pods/Macaw/Source/animation/types/animation_generators/Cache/AnimationRestorer.swift
+Pods/Macaw/Source/animation/types/animation_generators/Cache/NodeHashable.swift
+Pods/Macaw/Source/animation/types/animation_generators/Cache/TransformHashable.swift
+Pods/Macaw/Source/bindings/Disposable.swift
+Pods/Macaw/Source/bindings/GroupDisposable.swift
+Pods/Macaw/Source/bindings/Variable.swift
+Pods/Macaw/Source/events/Event.swift
+Pods/Macaw/Source/events/PanEvent.swift
+Pods/Macaw/Source/events/PinchEvent.swift
+Pods/Macaw/Source/events/RotateEvent.swift
+Pods/Macaw/Source/events/TapEvent.swift
+Pods/Macaw/Source/events/TouchEvent.swift
+Pods/Macaw/Source/model/draw/Align.swift
+Pods/Macaw/Source/model/draw/AspectRatio.swift
+Pods/Macaw/Source/model/draw/Baseline.swift
+Pods/Macaw/Source/model/draw/Color.swift
+Pods/Macaw/Source/model/draw/Drawable.swift
+Pods/Macaw/Source/model/draw/DropShadow.swift
+Pods/Macaw/Source/model/draw/Effect.swift
+Pods/Macaw/Source/model/draw/Fill.swift
+Pods/Macaw/Source/model/draw/Font.swift
+Pods/Macaw/Source/model/draw/GaussianBlur.swift
+Pods/Macaw/Source/model/draw/Gradient.swift
+Pods/Macaw/Source/model/draw/LinearGradient.swift
+Pods/Macaw/Source/model/draw/LineCap.swift
+Pods/Macaw/Source/model/draw/LineJoin.swift
+Pods/Macaw/Source/model/draw/RadialGradient.swift
+Pods/Macaw/Source/model/draw/Stop.swift
+Pods/Macaw/Source/model/draw/Stroke.swift
+Pods/Macaw/Source/model/geom2d/Arc.swift
+Pods/Macaw/Source/model/geom2d/Circle.swift
+Pods/Macaw/Source/model/geom2d/Ellipse.swift
+Pods/Macaw/Source/model/geom2d/GeomUtils.swift
+Pods/Macaw/Source/model/geom2d/Insets.swift
+Pods/Macaw/Source/model/geom2d/Line.swift
+Pods/Macaw/Source/model/geom2d/Locus.swift
+Pods/Macaw/Source/model/geom2d/MoveTo.swift
+Pods/Macaw/Source/model/geom2d/Path.swift
+Pods/Macaw/Source/model/geom2d/PathBuilder.swift
+Pods/Macaw/Source/model/geom2d/PathSegment.swift
+Pods/Macaw/Source/model/geom2d/PathSegmentType.swift
+Pods/Macaw/Source/model/geom2d/Point.swift
+Pods/Macaw/Source/model/geom2d/Polygon.swift
+Pods/Macaw/Source/model/geom2d/Polyline.swift
+Pods/Macaw/Source/model/geom2d/Rect.swift
+Pods/Macaw/Source/model/geom2d/RoundRect.swift
+Pods/Macaw/Source/model/geom2d/Size.swift
+Pods/Macaw/Source/model/geom2d/Transform.swift
+Pods/Macaw/Source/model/scene/Group.swift
+Pods/Macaw/Source/model/scene/Image.swift
+Pods/Macaw/Source/model/scene/Node.swift
+Pods/Macaw/Source/model/scene/SceneUtils.swift
+Pods/Macaw/Source/model/scene/Shape.swift
+Pods/Macaw/Source/model/scene/Text.swift
+Pods/Macaw/Source/render/GroupRenderer.swift
+Pods/Macaw/Source/render/ImageRenderer.swift
+Pods/Macaw/Source/render/NodeRenderer.swift
+Pods/Macaw/Source/render/RenderContext.swift
+Pods/Macaw/Source/render/RenderUtils.swift
+Pods/Macaw/Source/render/ShapeRenderer.swift
+Pods/Macaw/Source/render/TextRenderer.swift
+Pods/Macaw/Source/svg/SVGConstants.swift
+Pods/Macaw/Source/svg/SVGParser.swift
+Pods/Macaw/Source/svg/SVGParserError.swift
+Pods/Macaw/Source/svg/SVGParserRegexHelper.swift
+Pods/Macaw/Source/svg/SVGView.swift
+Pods/Macaw/Source/thirdparty/CAAnimationClosure.swift
+Pods/Macaw/Source/thirdparty/CGFloat+Double.swift
+Pods/Macaw/Source/thirdparty/NSTimer+Closure.swift
+Pods/Macaw/Source/views/MacawView.swift
+Pods/Macaw/Source/views/NodesMap.swift
+Pods/Macaw/Source/views/ShapeLayer.swift
+Pods/SWXMLHash/LICENSE
+Pods/SWXMLHash/README.md
+Pods/SWXMLHash/Source/SWXMLHash+TypeConversion.swift
+Pods/SWXMLHash/Source/SWXMLHash.swift
+Pods/Target Support Files/Macaw/Info.plist
+Pods/Target Support Files/Macaw/Macaw-dummy.m
+Pods/Target Support Files/Macaw/Macaw-prefix.pch
+Pods/Target Support Files/Macaw/Macaw-umbrella.h
+Pods/Target Support Files/Macaw/Macaw.modulemap
+Pods/Target Support Files/Macaw/Macaw.xcconfig
+Pods/Target Support Files/SWXMLHash/Info.plist
+Pods/Target Support Files/SWXMLHash/SWXMLHash-dummy.m
+Pods/Target Support Files/SWXMLHash/SWXMLHash-prefix.pch
+Pods/Target Support Files/SWXMLHash/SWXMLHash-umbrella.h
+Pods/Target Support Files/SWXMLHash/SWXMLHash.modulemap
+Pods/Target Support Files/SWXMLHash/SWXMLHash.xcconfig
