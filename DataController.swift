@@ -137,12 +137,13 @@ class DataController: NSObject {
             
         } else if availableBeacons[0].distanceFromUser! < 2.5 {
             
+            NotificationCenter.default.post(name: NSNotification.Name("locatedBeacon"), object: nil)
+            
             let trilateratedCoordinates = NSMutableArray()
             trilateratedCoordinates.add(availableBeacons[0].positionX)
             trilateratedCoordinates.add(availableBeacons[0].positionY)
             setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
             return
-            
             
         } else if DataController.sharedInstance.availableBeacons.count > 2 {
             

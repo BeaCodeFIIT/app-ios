@@ -13,6 +13,7 @@ import UserNotifications
 class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var svgExampleView: SVGExampleView!
     
+    @IBOutlet weak var popUpView: UIView!
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")! as UUID, identifier: "beacodeapp.BeaCodeApp")
     var beaconsArray = [BeaconL]()
@@ -40,8 +41,9 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
 
         //}
 
-
+        popUpView.alpha = 0
         NotificationCenter.default.addObserver(self, selector: #selector(showDetail), name: Notification.Name.init(rawValue: "showDetail"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showPopUp), name: Notification.Name.init("locatedBeacon"), object: nil)
     
         scrollView.delegate = self
         scrollView.minimumZoomScale = 0.4
@@ -62,12 +64,31 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         // Do any additional setup after loading the view.
     }
     
+    func showPopUp() {
+        UIView.animate(withDuration: 0.4, animations: {
+            
+            self.popUpView.alpha = 1
+        })
+    }
+    
     func updateLocation() {
         
         userPinImage.frame.origin.y = CGFloat(DataController.sharedInstance.actualPosition.positionY!)
         userPinImage.frame.origin.x = CGFloat(DataController.sharedInstance.actualPosition.positionX!)
-        
 
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showPopUp()
+    }
+    
+    @IBAction func okBtnWasPressed(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.4, animations: {
+        
+            self.popUpView.alpha = 0
+        })
     }
     
     func showDetail() {

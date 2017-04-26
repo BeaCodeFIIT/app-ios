@@ -426,11 +426,72 @@
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJq-8G-nIx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6q5-y6-Fop">
+                                        <rect key="frame" x="48" y="198" width="279" height="270"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k94-ZV-WPp">
+                                                <rect key="frame" x="94" y="21" width="90" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="0hk-5M-1bx"/>
+                                                    <constraint firstAttribute="height" constant="34" id="abc-Bf-LmT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="giyuahoglwknkoagnwioagnaoiwgln awlkgnawglknaw glkjawnglkawngakljwgnawlkgnawklgnawg" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAe-B5-6ds">
+                                                <rect key="frame" x="30" y="82" width="219" height="107"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="107" id="MFP-lh-W13"/>
+                                                    <constraint firstAttribute="width" constant="219" id="ye1-yX-y03"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv1-0s-S9Q">
+                                                <rect key="frame" x="80" y="211" width="118" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="0w9-II-aOd"/>
+                                                    <constraint firstAttribute="width" constant="118" id="Uqc-fR-MS0"/>
+                                                </constraints>
+                                                <state key="normal" title="Ok"/>
+                                                <connections>
+                                                    <action selector="okBtnWasPressed:" destination="6nn-H4-QRZ" eventType="touchUpInside" id="fCO-OF-PJ8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="k94-ZV-WPp" firstAttribute="top" secondItem="6q5-y6-Fop" secondAttribute="top" constant="21" id="AVy-Cn-c0b"/>
+                                            <constraint firstItem="dAe-B5-6ds" firstAttribute="top" secondItem="k94-ZV-WPp" secondAttribute="bottom" constant="27" id="C2y-k6-CSq"/>
+                                            <constraint firstAttribute="height" constant="270" id="Roh-1v-TPj"/>
+                                            <constraint firstItem="uv1-0s-S9Q" firstAttribute="centerX" secondItem="6q5-y6-Fop" secondAttribute="centerX" id="Run-Hu-trT"/>
+                                            <constraint firstItem="uv1-0s-S9Q" firstAttribute="top" secondItem="dAe-B5-6ds" secondAttribute="bottom" constant="22" id="bbQ-1c-ecK"/>
+                                            <constraint firstItem="k94-ZV-WPp" firstAttribute="centerX" secondItem="6q5-y6-Fop" secondAttribute="centerX" id="h6X-GZ-TNy"/>
+                                            <constraint firstAttribute="width" constant="279" id="qfR-Tz-008"/>
+                                            <constraint firstItem="dAe-B5-6ds" firstAttribute="centerX" secondItem="6q5-y6-Fop" secondAttribute="centerX" id="ulf-dn-FdT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81776230569948183" green="0.81776230569948183" blue="0.81776230569948183" alpha="0.60373569542253525" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="6q5-y6-Fop" firstAttribute="centerX" secondItem="wJq-8G-nIx" secondAttribute="centerX" id="DQg-Nh-0ah"/>
+                                    <constraint firstItem="6q5-y6-Fop" firstAttribute="centerY" secondItem="wJq-8G-nIx" secondAttribute="centerY" id="I43-7n-eO2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wJq-8G-nIx" secondAttribute="bottom" id="2vi-1L-fuJ"/>
                             <constraint firstItem="Uae-YY-uhA" firstAttribute="top" secondItem="bfe-xa-rKR" secondAttribute="bottom" id="3Jl-Ly-mSS"/>
+                            <constraint firstItem="wJq-8G-nIx" firstAttribute="leading" secondItem="FfH-bb-pG3" secondAttribute="leading" id="DAY-1A-zPW"/>
                             <constraint firstItem="Uae-YY-uhA" firstAttribute="leading" secondItem="FfH-bb-pG3" secondAttribute="leading" id="H9g-aa-ljS"/>
+                            <constraint firstAttribute="trailing" secondItem="wJq-8G-nIx" secondAttribute="trailing" id="X9L-Gw-kjL"/>
+                            <constraint firstItem="wJq-8G-nIx" firstAttribute="top" secondItem="FfH-bb-pG3" secondAttribute="top" id="dxN-RN-703"/>
                             <constraint firstItem="Crg-bB-vzD" firstAttribute="top" secondItem="Uae-YY-uhA" secondAttribute="bottom" id="h4m-4O-sj9"/>
                             <constraint firstItem="Uae-YY-uhA" firstAttribute="top" secondItem="bfe-xa-rKR" secondAttribute="bottom" id="izK-aS-KBZ"/>
                             <constraint firstAttribute="trailing" secondItem="Uae-YY-uhA" secondAttribute="trailing" id="jna-QG-Flb"/>
@@ -442,6 +503,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="popUpView" destination="wJq-8G-nIx" id="k2j-d8-4ko"/>
                         <outlet property="scrollView" destination="Uae-YY-uhA" id="5eb-yQ-sg5"/>
                         <outlet property="svgExampleView" destination="Cl8-La-hVL" id="GxC-DK-AUj"/>
                         <segue destination="PfY-Le-vbR" kind="show" identifier="showFuckinDetail" id="Bvi-OP-rvh"/>
