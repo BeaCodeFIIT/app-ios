@@ -3,7 +3,7 @@
 //  BeaCodeApp
 //
 //  Created by Marek Bruchatý on 24/04/2017.
-//  Copyright © 2017 Peter Augustín. All rights reserved.
+//  Copyright © 2017 Marek. All rights reserved.
 //
 
 import CoreLocation
@@ -25,19 +25,22 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 98.50, positionY: 50, majorValue: 1, minorValue: 105, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 969, positionY: 112.7, majorValue: 1, minorValue: 102, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 106, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1024, positionY: 130.7, majorValue: 1, minorValue: 103, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 107, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 972, positionY: 166.7, majorValue: 1, minorValue: 106, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 108, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 221, majorValue: 1, minorValue: 107, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 957, positionY: 270, majorValue: 1, minorValue: 108, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 309.9, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
 
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 957, positionY: 348.3, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
 
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 1016, positionY: 370.3, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
 
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
 
         //}
 
