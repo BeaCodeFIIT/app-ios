@@ -27,6 +27,8 @@ struct BeaconL {
     
     var lastSeenBeacon: CLBeacon?
     
+    var visited = false
+    
 }
 
 func ==(item: BeaconL, beacon: CLBeacon) -> Bool {

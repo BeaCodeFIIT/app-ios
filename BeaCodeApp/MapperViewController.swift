@@ -28,17 +28,17 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 840, positionY: 458, majorValue: 10, minorValue: 15, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 840, positionY: 458, majorValue: 10, minorValue: 6, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil, visited: false))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 896, positionY: 476, majorValue: 10, minorValue: 16, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 896, positionY: 476, majorValue: 10, minorValue: 16, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil, visited: false))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 967, positionY: 509, majorValue: 10, minorValue: 17, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 967, positionY: 509, majorValue: 10, minorValue: 17, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil, visited: false))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 1007, positionY: 441, majorValue: 10, minorValue: 18, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 1007, positionY: 441, majorValue: 10, minorValue: 18, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil, visited: false))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 930, positionY: 398, majorValue: 10, minorValue: 19, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 930, positionY: 398, majorValue: 10, minorValue: 19, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil, visited: false))
         
-        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 865, positionY: 383, majorValue: 10, minorValue: 20, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")!, positionX: 865, positionY: 383, majorValue: 10, minorValue: 3, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil, visited: false))
 
         //}
 

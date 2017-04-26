@@ -135,8 +135,9 @@ class DataController: NSObject {
                 setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
             }
             
-        } else if availableBeacons[0].distanceFromUser! < 2.5 {
-            
+        } else if availableBeacons[0].distanceFromUser! < 2 && !availableBeacons[0].visited {
+            print("BeaconL minor: \(availableBeacons[0].minorValue) visited: \(availableBeacons[0].visited)")
+            availableBeacons[0].visited = true
             NotificationCenter.default.post(name: NSNotification.Name("locatedBeacon"), object: nil)
             
             let trilateratedCoordinates = NSMutableArray()
