@@ -14,6 +14,7 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
     @IBOutlet weak var svgExampleView: SVGExampleView!
     
     @IBOutlet weak var popUpView: UIView!
+    
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "E555447F-D91C-4668-A32B-78304DB132D6")! as UUID, identifier: "beacodeapp.BeaCodeApp")
     var beaconsArray = [BeaconL]()
@@ -89,6 +90,55 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
             self.popUpView.alpha = 0
         })
+    }
+    
+    let bc = UIColor(red: 4/255, green: 135/255, blue: 1, alpha: 1)
+    let gc = UIColor.lightGray
+    
+    @IBOutlet weak var star1: UIButton!
+    @IBOutlet weak var star2: UIButton!
+    @IBOutlet weak var star3: UIButton!
+    @IBOutlet weak var star4: UIButton!
+    @IBOutlet weak var star5: UIButton!
+    
+    @IBAction func star1tapped(_ sender: Any) {
+        star1.setTitleColor(bc, for: .normal)
+        star2.setTitleColor(gc, for: .normal)
+        star3.setTitleColor(gc, for: .normal)
+        star4.setTitleColor(gc, for: .normal)
+        star5.setTitleColor(gc, for: .normal)
+    }
+    
+    @IBAction func star2tapped(_ sender: Any) {
+        star1.setTitleColor(bc, for: .normal)
+        star2.setTitleColor(bc, for: .normal)
+        star3.setTitleColor(gc, for: .normal)
+        star4.setTitleColor(gc, for: .normal)
+        star5.setTitleColor(gc, for: .normal)
+    }
+    
+    @IBAction func star3tapped(_ sender: Any) {
+        star1.setTitleColor(bc, for: .normal)
+        star2.setTitleColor(bc, for: .normal)
+        star3.setTitleColor(bc, for: .normal)
+        star4.setTitleColor(gc, for: .normal)
+        star5.setTitleColor(gc, for: .normal)
+    }
+    
+    @IBAction func star4tapped(_ sender: Any) {
+        star1.setTitleColor(bc, for: .normal)
+        star2.setTitleColor(bc, for: .normal)
+        star3.setTitleColor(bc, for: .normal)
+        star4.setTitleColor(bc, for: .normal)
+        star5.setTitleColor(gc, for: .normal)
+    }
+    
+    @IBAction func star5tapped(_ sender: Any) {
+        star1.setTitleColor(bc, for: .normal)
+        star2.setTitleColor(bc, for: .normal)
+        star3.setTitleColor(bc, for: .normal)
+        star4.setTitleColor(bc, for: .normal)
+        star5.setTitleColor(bc, for: .normal)
     }
     
     func showDetail() {

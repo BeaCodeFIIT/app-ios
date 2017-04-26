@@ -15,11 +15,39 @@ enum mockSet {
     case flora
     case geneva
     case tutan
+    case tp
 }
 
 class EventFactory {
     
+    var beacons = Array<Beacon>()
+    
     func getEvent(set: mockSet) -> Event {
+        
+        do {
+            if let file = Bundle.main.url(forResource: "beacons", withExtension: "json") {
+                print("LOADING BEACONS - FILE FOUND")
+                let data = try Data(contentsOf: file)
+                let json = JSON(data)
+                print(json)
+                
+                var beaconsDto = [BeaconDto]()
+                for beacon in json["data"] {
+                    beaconsDto.append(BeaconDto(json: beacon.1))
+                }
+                
+                print("LOADING BEACONS - FILE FOUND - \(beaconsDto.count) beacons loaded")
+                
+                for beaconDto in beaconsDto {
+                    beacons.append(BeaconConverter.shared.convert(input: beaconDto)!)
+                }
+            } else {
+                print("LOADING BEACONS - No JSON file with beacons found")
+            }
+        } catch  {
+            print(error.localizedDescription)
+        }
+        
         switch set {
         case .ces:
             
@@ -35,31 +63,6 @@ class EventFactory {
             images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "ces4")))
             images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "ces5")))
             
-            var beacons = Array<Beacon>()
-            do {
-                if let file = Bundle.main.url(forResource: "beacons", withExtension: "json") {
-                    print("LOADING BEACONS - FILE FOUND")
-                    let data = try Data(contentsOf: file)
-                    let json = JSON(data)
-                    print(json)
-                    
-                    var beaconsDto = [BeaconDto]()
-                    for beacon in json["data"] {
-                        beaconsDto.append(BeaconDto(json: beacon.1))
-                    }
-                    
-                    print("LOADING BEACONS - FILE FOUND - \(beaconsDto.count) beacons loaded")
-                    
-                    for beaconDto in beaconsDto {
-                        beacons.append(BeaconConverter.shared.convert(input: beaconDto)!)
-                    }
-                } else {
-                    print("LOADING BEACONS - No JSON file with beacons found")
-                }
-            } catch  {
-                print(error.localizedDescription)
-            }
-            
             var event = Event(id: 1,
                               name: "Consumer Electronics Show 2016",
                               start: "2016-12-01 09:00:00".toDateTime(),
@@ -68,7 +71,7 @@ class EventFactory {
                               location: Location(id: 1, name: "Las Vegas, Nevada", latitude: "123", longitude: "123"),
                               images: images,
                               categories: categories,
-                              beacons: beacons,
+                              beacons: Array<Beacon>(),
                               exhibits: Array<Exhibit>())
             
             var imagesExh1 = Array<Image>()
@@ -209,6 +212,132 @@ class EventFactory {
                               beacons: Array<Beacon>(),
                               exhibits: Array<Exhibit>())
             return event
+        case .tp:
+            var images = Array<Image>()
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp0")))
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp1")))
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp2")))
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp3")))
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp4")))
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp5")))
+            images.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp6")))
+            
+            var categories = Array<Category>()
+            categories.append(Category(id: 1, name: "TP CUP"))
+            categories.append(Category(id: 2, name: "FIITAPIXEL"))
+            
+            
+            
+            var event = Event(id: 5,
+                              name: "IIT.SRC 2017",
+                              start: "2017-04-27 09:00:00".toDateTime(),
+                              end: "2017-04-27 09:00:00".toDateTime(),
+                              description: "Fakulta informatiky a informačných technológií Slovenskej technickej univerzity v Bratislave pripravuje študentskú vedeckú konferenciu zameranú na informatiku a informačné technológie – IIT.SRC 2017, ktorá sa uskutoční 27. apríla 2017. Cieľom konferencie je prezentácia výsledkov výskumu študentov informatiky a informačných technológií vo všetkých troch stupňoch štúdia. Najlepšie príspevky dostanú ponuku na publikovanie vo vedeckom časopise Information Sciences and Technologies.",
+                              location: Location(id: 5, name: "Bratislava, Slovakia", latitude: "123", longitude: "123"),
+                              images: images,
+                              categories: categories,
+                              beacons: beacons,
+                              exhibits: Array<Exhibit>())
+            
+            var imagesExh7 = Array<Image>()
+            imagesExh7.append(Image(id: 7, description: "", filePath: "", image: #imageLiteral(resourceName: "tp17")))
+            
+            event.exhibits!.append(Exhibit(id: 7,
+                                           name: "BEACODE",
+                                           description: "V súčasnosti sa okolo nás neustále konajú rôzne podujatia, ako napríklad autosalón, prezentácia pracovných príležitostí, alebo výstava obrazov. Cieľom takýchto podujatí je zaujať návštevníka a dosiahnuť, aby z podujatia odchádzal spokojný s tým čo videl a zažil. Pri veľkom množstve informácií zahlcujúcich návštevníka z každej strany to nemusí byť jednoduché. Našim riešením je aplikácia BeaCode!",
+                                           category: "TP CUP",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh7,
+                                           beacons: Array<Beacon>()))
+            
+            var imagesExh3 = Array<Image>()
+            imagesExh3.append(Image(id: 3, description: "", filePath: "", image: #imageLiteral(resourceName: "tp15")))
+            
+            event.exhibits!.append(Exhibit(id: 3,
+                                           name: "FIIT SONDA",
+                                           description: "Oblasť stratosférických letov je mimoriadne zaujímavá a sama o sebe značne špecifická. Touto prácou by sme chceli nadviazať na úspešné vypustenie stratosférického balóna v máji 2016. Cieľom nášho projektu je plne funkčný a spoľahlivý servisný modul umožňujúci pravidelné vypúšťanie balónov s experimentami rôznych projektov našej fakulty.",
+                                           category: "TP CUP",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh3,
+                                           beacons: Array<Beacon>()))
+            
+            var imagesExh2 = Array<Image>()
+            imagesExh2.append(Image(id: 2, description: "", filePath: "", image: #imageLiteral(resourceName: "tp13")))
+            
+            event.exhibits!.append(Exhibit(id: 2,
+                                           name: "EDUSIM",
+                                           description: "Typická scénka zo strednej školy. Učiteľ čosi čmára po tabuli. Nie je nič vidieť, lebo jeho rukopis sa podobá Egyptským hieroglyfom. Po asi desiatich minútach ste úplne unudený. Hlava vám už klesla na stôl a snažíte sa byť nenápadný, aby si nevšimol, že nedávate pozor. O týždeň je test. Ničomu nechápete a netušíte ako sa to naučiť. Škola je hrozná!",
+                                           category: "TP CUP",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh2,
+                                           beacons: Array<Beacon>()))
+            
+            var imagesExh1 = Array<Image>()
+            imagesExh1.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp11")))
+            
+            event.exhibits!.append(Exhibit(id: 1,
+                                           name: "eMotion",
+                                           description: "Počuli ste už niekedy o nervovom alebo mentálnom zrútení? Nervové zrútenie predstavuje stav, kedy človek prekročí svoju pomyselnú hranicu, ktorú dokáže psychicky zvládnuť. Poviete si: Veď mňa sa to predsa netýka. Nervové zrútenia sú napriek tomu častejšie než vôbec predpokladáme.",
+                                           category: "TP CUP",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh1,
+                                           beacons: Array<Beacon>()))
+            //FITTAPIXEL
+            
+            var imagesExh4 = Array<Image>()
+            imagesExh4.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp20")))
+            
+            event.exhibits!.append(Exhibit(id: 4,
+                                           name: "Sleduj svoje kroky",
+                                           description:
+                "Fotograf: Marek Bruchaty\n" +
+                "Opis: Sleduj svoje kroky\n" +
+                "Téma: M(i)esto, kde práve som\n" +
+                "Tagy: kroky, steps, schody, spiral",
+                                           category: "FIITAPIXEL",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh4,
+                                           beacons: Array<Beacon>()))
+            
+            var imagesExh5 = Array<Image>()
+            imagesExh5.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp21")))
+            
+            event.exhibits!.append(Exhibit(id: 5,
+                                           name: "Všetko má svoj čas...",
+                                           description:
+                "Fotograf: Nicol Urbanová\n" +
+                "Opis: Všetko má svoj čas...\n" +
+                "Téma: M(i)esto, kde práve som\n" +
+                "Tagy: vlak, muž, cestovanie, starý, výhľad, okná, vagon",
+                                           category: "FIITAPIXEL",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh5,
+                                           beacons: Array<Beacon>()))
+            
+            var imagesExh6 = Array<Image>()
+            imagesExh6.append(Image(id: 1, description: "", filePath: "", image: #imageLiteral(resourceName: "tp22")))
+            
+            event.exhibits!.append(Exhibit(id: 6,
+                                           name: "Man with 2 faces",
+                                           description:
+                "Fotograf: Filip Slimák\n" +
+                "Opis: Man with 2 faces\n" +
+                "Téma: Akí sme? Akí sú?\n" +
+                "Tagy: Two, faces",
+                                           category: "FIITAPIXEL",
+                                           start: "2016-12-01 09:00:00".toDateTime(),
+                                           end: "2016-12-01 09:00:00".toDateTime(),
+                                           images: imagesExh6,
+                                           beacons: Array<Beacon>()))
+
+            return event
+
         }
     }
     

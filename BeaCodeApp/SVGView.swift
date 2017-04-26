@@ -19,9 +19,9 @@ class SVGExampleView: MacawView {
         if let beacons = SharingManager.sharedInstance.selectedEvent?.beacons {
             for beacon in beacons {
                 print("processing beacon n. \(beacon.id ?? 0)")
-                if beacon.coorX != nil && beacon.coorY != nil {
+                if beacon.coorX != nil && beacon.coorY != nil && beacon.id! < 5 {
                     
-                    let image = Macaw.Image(src: "pin_blue.png", w: 10, place: .move(dx: beacon.coorX! / 10, dy: beacon.coorY! / 10))
+                    let image = Macaw.Image(src: "pin_blue.png", w: 30, place: .move(dx: beacon.coorX!, dy: beacon.coorY!-15))
 
                     image.onTap { event in
                         if image.src == "pin_blue.png" {
@@ -32,14 +32,13 @@ class SVGExampleView: MacawView {
                     }
                     
                     image.onTap { event in
-                        print("Beacon image id: \(beacon.id ?? -1) tapped")
+                        print("Beacon minor: \(beacon.id!) tapped")
                         var topVc = UIApplication.shared.keyWindow?.rootViewController
                         while (topVc!.presentedViewController) != nil {
                             topVc = topVc!.presentedViewController
                         }
                         
-                        SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent?.exhibits?[0];
-                        
+                        SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent?.exhibits?[beacon.id!-1];
                         NotificationCenter.default.post(Notification(name: Notification.Name.init(rawValue: "showDetail"), object: nil, userInfo: nil))
                     }
                     
