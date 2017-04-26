@@ -24,14 +24,21 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         super.viewDidLoad()
         
         //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
-            
-            let beac1 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 50, positionY: 50, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
-            let beac2 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 50, positionY: 70, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
-            let beac3 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 70, positionY: 50, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
-            beaconsArray.append(beac1)
-            beaconsArray.append(beac2)
-            beaconsArray.append(beac3)
-            
+        
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 98.50, positionY: 50, majorValue: 1, minorValue: 105, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 106, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 107, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+        
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 108, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 109, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 110, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+
+        beaconsArray.append(BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 120, positionY: 50, majorValue: 1, minorValue: 111, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil))
+
         //}
 
 
@@ -43,8 +50,9 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         scrollView.contentSize.width = 1199
         scrollView.contentSize.height = 800
-        scrollView.addSubview(userPinImage)
+        
         scrollView.addSubview(svgExampleView)
+        svgExampleView.addSubview(userPinImage)
         
         userPinImage.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         userPinImage.image = UIImage(named: "position.png")
@@ -129,11 +137,13 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
                         
                         for var existingBeacons in DataController.sharedInstance.availableBeacons {
 
-                            if DataController.sharedInstance.availableBeacons.contains(where: { $0.majorValue == currBeacon.majorValue }) {
+                            if DataController.sharedInstance.availableBeacons.contains(where: { $0.minorValue == currBeacon.minorValue }) {
                         
-                                if existingBeacons.majorValue == currBeacon.majorValue && beacon.accuracy > 0.0 {
+                                let i = DataController.sharedInstance.availableBeacons.index(where: { $0.minorValue == currBeacon.minorValue })
+                                
+                                if existingBeacons.minorValue == currBeacon.minorValue && beacon.accuracy > 0.0 {
                                   
-                                    existingBeacons.distanceFromUser = beacon.accuracy
+                                    DataController.sharedInstance.availableBeacons[i!].distanceFromUser = beacon.accuracy
                                     
                                 }
                                 
