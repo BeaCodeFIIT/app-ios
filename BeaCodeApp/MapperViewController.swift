@@ -8,6 +8,7 @@
 
 import CoreLocation
 import UIKit
+import UserNotifications
 
 class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var svgExampleView: SVGExampleView!
@@ -166,8 +167,6 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
                 }
             }
         }
-        
-
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -181,32 +180,56 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
     
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        
-        if notificationStatus {
+    
+        if #available(iOS 10, *) {
+            let content = UNMutableNotificationContent()
+            content.title = "Welcome at FIIT STU"
+            content.body = "Have a nice IITSRC conference!"
+            content.sound = UNNotificationSound.default()
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: "enterNotification", content: content, trigger: trigger)
             
+            UNUserNotificationCenter.current().add(request) {(error) in
+                if let error = error {
+                    print("Uh oh! We had an error: \(error)")
+                }
+            }
+            
+        } else {
             let notification = UILocalNotification()
             notification.alertBody = "Welcome at FIIT STU"
             notification.soundName = UILocalNotificationDefaultSoundName
             UIApplication.shared.presentLocalNotificationNow(notification)
-            
         }
         
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
-        manager.stopRangingBeacons(in: self.region)
+//        manager.stopRangingBeacons(in: self.region)
         
-        if notificationStatus {
+            if #available(iOS 10, *) {
+                let content = UNMutableNotificationContent()
+                content.title = "You are leaving FIIT STU."
+                content.body = "Thanks for coming."
+                content.sound = UNNotificationSound.default()
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                let request = UNNotificationRequest(identifier: "exitNotification", content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request) {(error) in
+                    if let error = error {
+                        print("Uh oh! We had an error: \(error)")
+                    }
+                }
+                
+            } else {
             
-            let notification = UILocalNotification()
-            notification.alertBody = "You are leaving FIIT STU."
-            notification.soundName = UILocalNotificationDefaultSoundName
-            UIApplication.shared.presentLocalNotificationNow(notification)
-            
-            DataController.sharedInstance.availableArea = nil
-            
-        }
+                let notification = UILocalNotification()
+                notification.alertBody = "You are leaving FIIT STU."
+                notification.soundName = UILocalNotificationDefaultSoundName
+                UIApplication.shared.presentLocalNotificationNow(notification)
+                
+            }
     }
 
     /*
