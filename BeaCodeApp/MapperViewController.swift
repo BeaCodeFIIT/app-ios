@@ -13,13 +13,27 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
     @IBOutlet weak var svgExampleView: SVGExampleView!
     
     let locationManager = CLLocationManager()
-    let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")! as UUID, identifier: "sk.bc.IndoorNav")
+    let region = CLBeaconRegion(proximityUUID: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")! as UUID, identifier: "beacodeapp.BeaCodeApp")
     var beaconsArray = [BeaconL]()
+    
+    var userPinImage = UIImageView()
     var notificationStatus = false
 
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //for beacon in (SharingManager.sharedInstance.selectedEvent?.beacons)! {
+            
+            let beac1 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 50, positionY: 50, majorValue: 3, minorValue: 38, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
+            let beac2 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 70, positionY: 70, majorValue: 3, minorValue: 40, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
+            let beac3 = BeaconL(name: nil, uuid: NSUUID(uuidString: "DEADBEEF-CA1F-BABE-FEED-FEEDC0DEFACE")!, positionX: 20, positionY: 20, majorValue: 3, minorValue: 44, distanceFromUser: nil, beaconEdge: nil, lastSeenBeacon: nil)
+            beaconsArray.append(beac1)
+            beaconsArray.append(beac2)
+            beaconsArray.append(beac3)
+            
+        //}
+
 
         NotificationCenter.default.addObserver(self, selector: #selector(showDetail), name: Notification.Name.init(rawValue: "showDetail"), object: nil)
     
@@ -29,9 +43,11 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
         
         scrollView.contentSize.width = 1199
         scrollView.contentSize.height = 800
-        
+        scrollView.addSubview(userPinImage)
         scrollView.addSubview(svgExampleView)
         
+        userPinImage.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        userPinImage.image = UIImage(named: "position.png")
         NotificationCenter.default.addObserver(self, selector: #selector(updateLocation), name: NSNotification.Name(rawValue: "updateLocation"), object: nil)
         
         locationManager.delegate = self
@@ -40,8 +56,11 @@ class MapperViewController: UIViewController, UIScrollViewDelegate, CLLocationMa
     }
     
     func updateLocation() {
-//        pinImageFrame.origin.x = CGFloat(DataController.sharedInstance.actualPosition.positionX!)
-//        pinImageFrame.origin.y = CGFloat(DataController.sharedInstance.actualPosition.positionY!)
+        
+        userPinImage.frame.origin.y = CGFloat(DataController.sharedInstance.actualPosition.positionY!)
+        userPinImage.frame.origin.x = CGFloat(DataController.sharedInstance.actualPosition.positionX!)
+        
+
     }
     
     func showDetail() {

@@ -73,7 +73,7 @@ class DataController: NSObject {
                 
                 if GraphMapping.sharedInstance.mappedPositions.count == 0 {
                     
-                    GraphMapping.sharedInstance.createMapPositions(availableBeacons: (DataController.sharedInstance.availableArea?.beacons)!)
+                    GraphMapping.sharedInstance.createMapPositions(availableBeacons: self.availableBeacons)
                     
                 }
                 
@@ -216,7 +216,7 @@ class DataController: NSObject {
                 
                 if GraphMapping.sharedInstance.mappedPositions.count == 0 {
                     
-                    GraphMapping.sharedInstance.createMapPositions(availableBeacons: (DataController.sharedInstance.availableArea?.beacons)!)
+                    GraphMapping.sharedInstance.createMapPositions(availableBeacons: self.availableBeacons)
                     
                 }
                 

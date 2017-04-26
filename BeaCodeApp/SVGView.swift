@@ -13,6 +13,7 @@ class SVGExampleView: MacawView {
     
     required init?(coder aDecoder: NSCoder) {
         let group = Group(contents: [])
+        
         group.contents.append(Macaw.Image(src: "defaultmap.png", w: 750, place: .move(dx: 0, dy: 0)))
         
         if let beacons = SharingManager.sharedInstance.selectedEvent?.beacons {

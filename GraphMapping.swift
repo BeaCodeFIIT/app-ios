@@ -115,7 +115,7 @@ class GraphMapping {
             
             let edgeBeacon = availableBeacons.filter({$0.minorValue == beacon.beaconEdge})
             
-            let position = [beacon, edgeBeacon[0]]
+            let position = [beacon, beacon]
             mappedPositions.append(position)
         }
         

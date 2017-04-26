@@ -20,6 +20,8 @@
 		2BABBEBF1DA2BD470074842A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEBD1DA2BD470074842A /* Main.storyboard */; };
 		2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BABBEC21DA2BD470074842A /* LaunchScreen.storyboard */; };
 		2F86F596CEFCE6ABE133766A /* Pods_BeaCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1C9EA0A19C097054D56FC9 /* Pods_BeaCodeApp.framework */; };
+		EA03F4371EAE5477007FF65D /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = EA03F4361EAE5477007FF65D /* location.png */; };
+		EA03F4391EAE56B3007FF65D /* position.png in Resources */ = {isa = PBXBuildFile; fileRef = EA03F4381EAE56B3007FF65D /* position.png */; };
 		EA0F3DFE1E7F1B380012DAAB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F3DFD1E7F1B380012DAAB /* Logger.swift */; };
 		EA1C22AF1DC8E9B3005481AB /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22AE1DC8E9B3005481AB /* MyEventsViewController.swift */; };
 		EA1C22B11DC8EA0B005481AB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C22B01DC8EA0B005481AB /* SearchViewController.swift */; };
@@ -108,6 +110,8 @@
 		2BABBEC51DA2BD470074842A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74758EC089C261F10A6558DF /* Pods-BeaCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaCodeApp/Pods-BeaCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9E1C9EA0A19C097054D56FC9 /* Pods_BeaCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA03F4361EAE5477007FF65D /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		EA03F4381EAE56B3007FF65D /* position.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = position.png; sourceTree = "<group>"; };
 		EA0F3DFD1E7F1B380012DAAB /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EA1C22AE1DC8E9B3005481AB /* MyEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		EA1C22B01DC8EA0B005481AB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 		2BABBEAD1DA2BD470074842A = {
 			isa = PBXGroup;
 			children = (
+				EA03F4361EAE5477007FF65D /* location.png */,
 				EAAE6C351EAE3B27002BED5A /* Queue.swift */,
 				EAAE6C2B1EAE385A002BED5A /* DataController.swift */,
 				EAAE6C2C1EAE385A002BED5A /* GraphMapping.swift */,
@@ -328,6 +333,7 @@
 				EAD432081EAE21B000D16211 /* defaultmap.png */,
 				EA69F1291E926D70001D1880 /* defaultmap3.png */,
 				EA69F1271E9233D7001D1880 /* beacons.json */,
+				EA03F4381EAE56B3007FF65D /* position.png */,
 				EA69F1251E92249D001D1880 /* pin_blue.png */,
 				EA69F1211E9223E7001D1880 /* pin_red.png */,
 				EA75CBBF1E91C5CB00B49480 /* defaultmap.svg */,
@@ -556,7 +562,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BABBEC41DA2BD470074842A /* LaunchScreen.storyboard in Resources */,
+				EA03F4391EAE56B3007FF65D /* position.png in Resources */,
 				EA69F1261E92249D001D1880 /* pin_blue.png in Resources */,
+				EA03F4371EAE5477007FF65D /* location.png in Resources */,
 				EA69F1281E9233D7001D1880 /* beacons.json in Resources */,
 				EA5EEE2A1DC93E6C00C30D69 /* Assets.xcassets in Resources */,
 				EAD432091EAE21B000D16211 /* defaultmap.png in Resources */,
