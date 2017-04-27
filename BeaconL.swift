@@ -15,6 +15,7 @@ let CONST_DISTANCE = 99999
 
 struct BeaconL {
 
+    var id: Int?
     var name: String?
     var uuid: NSUUID?
     var positionX : Float?
@@ -28,6 +29,7 @@ struct BeaconL {
     var lastSeenBeacon: CLBeacon?
     
     var visited = false
+    var feedback = false
     
 }
 

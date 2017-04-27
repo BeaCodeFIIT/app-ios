@@ -26,9 +26,7 @@ class SVGExampleView: MacawView {
                     image.onTap { event in
                         if image.src == "pin_blue.png" {
                             image.src = "pin_red.png"
-                        } else {
-                            image.src = "pin_blue.png"
-                        }
+                        } 
                     }
                     
                     image.onTap { event in
@@ -37,7 +35,6 @@ class SVGExampleView: MacawView {
                         while (topVc!.presentedViewController) != nil {
                             topVc = topVc!.presentedViewController
                         }
-                        
                         SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent?.exhibits?[beacon.id!-1];
                         NotificationCenter.default.post(Notification(name: Notification.Name.init(rawValue: "showDetail"), object: nil, userInfo: nil))
                     }

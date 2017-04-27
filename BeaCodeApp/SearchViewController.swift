@@ -80,6 +80,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func mockEvents() -> [Event] {
         let eventFactory = EventFactory()
         var events = [Event]()
+        events.append(eventFactory.getEvent(set: mockSet.tp))
         events.append(eventFactory.getEvent(set: mockSet.ces))
         events.append(eventFactory.getEvent(set: mockSet.flora))
         events.append(eventFactory.getEvent(set: mockSet.geneva))

@@ -19,6 +19,8 @@ class DataController: NSObject {
     
     var actualPosition = Coordinate()
     var goalPosition = Coordinate()
+    
+    var lastAproxId = -1
 
     override init() {
 
@@ -135,11 +137,15 @@ class DataController: NSObject {
                 setActualPositioning(trilateratedCoordinates: trilateratedCoordinates)
             }
             
-        } else if availableBeacons[0].distanceFromUser! < 2 && !availableBeacons[0].visited {
-            print("BeaconL minor: \(availableBeacons[0].minorValue) visited: \(availableBeacons[0].visited)")
-            availableBeacons[0].visited = true
-            NotificationCenter.default.post(name: NSNotification.Name("locatedBeacon"), object: nil)
-            
+        } else if availableBeacons[0].distanceFromUser! < 2 {
+            print("availableBeacons[0].id: \(availableBeacons[0].id) distance < 2")
+            if (!availableBeacons[0].visited && availableBeacons[0].id! < 5) {
+                lastAproxId = availableBeacons[0].id!
+                availableBeacons[0].visited = true
+                SharingManager.sharedInstance.selectedExhibit = SharingManager.sharedInstance.selectedEvent?.exhibits?[availableBeacons[0].id!-1];
+                NotificationCenter.default.post(Notification(name: Notification.Name.init(rawValue: "showDetail"), object: nil, userInfo: nil))
+            }
+                
             let trilateratedCoordinates = NSMutableArray()
             trilateratedCoordinates.add(availableBeacons[0].positionX)
             trilateratedCoordinates.add(availableBeacons[0].positionY)
@@ -147,6 +153,21 @@ class DataController: NSObject {
             return
             
         } else if DataController.sharedInstance.availableBeacons.count > 2 {
+            print("availableBeacons[0].id: \(availableBeacons[0].id) distance > 2")
+            if (lastAproxId != -1 && !availableBeacons[0].feedback && availableBeacons[0].visited) {
+                
+                var lastBeacon = BeaconL()
+                for beacon in availableBeacons {
+                    if beacon.id == lastAproxId {
+                        lastBeacon = beacon
+                    }
+                }
+                
+                if lastBeacon.visited {
+                    availableBeacons[0].feedback = true
+                    NotificationCenter.default.post(name: NSNotification.Name("locatedBeacon"), object: nil)
+                }
+            }
             
             let ex = NSMutableArray()
             var temp = 0.0
